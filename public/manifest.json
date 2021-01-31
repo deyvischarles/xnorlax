@@ -1,0 +1,34 @@
+{
+  "short_name": "Supermachine",
+  "name": "Supermachine",
+  "theme_color": "#005662",
+  "background_color": "#00838f",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "orientation": "portrait",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "adaptive-icon.svg",
+      "type": "image/svg",
+      "sizes": "150x150",
+      "purpose": "maskable"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
