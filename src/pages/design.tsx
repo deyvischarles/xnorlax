@@ -25,7 +25,13 @@ import Extension from '../components/Icons/Extencion'
 import Favorite from '../components/Icons/Favorite'
 import FavoriteBorder from '../components/Icons/FavoriteBorder'
 import FeedBack from '../components/Icons/FeedBack'
+import FilterAlt from '../components/Icons/FilterAlt'
 import Help from '../components/Icons/Help'
+import Home from '../components/Icons/Home'
+import Info from '../components/Icons/Info'
+import Label from '../components/Icons/Label'
+import Language from '../components/Icons/Language'
+import Lightbulb from '../components/Icons/Lightbulb'
 
 const Design = () => {
   return (
@@ -93,7 +99,7 @@ const Design = () => {
                     <div className="row">
                         <div className="col sm12">
                             <h4>SvgIcon</h4>
-                            <p>Nós padronizamos mais de 26 ícones de uso comun (veja abaixo). Para cada ícone SVG, exportamos o respectivo componente React do nosso caminho components/icons. Você pode pesquisar na lista completa destes ícones.</p>
+                            <p>Nós padronizamos mais de 32 ícones de uso comun (veja abaixo). Para cada ícone SVG, exportamos o respectivo componente React do nosso caminho components/icons. Você pode pesquisar na lista completa destes ícones.</p>
                         </div>
                     </div>
 
@@ -209,8 +215,44 @@ const Design = () => {
                         </div>
                         <div className="col sm4 md2 pad-16">
                             <div className="flex-box flex-col pad-16 nowrap outlined transparent">
+                                <FilterAlt width="32" height="32" className="space-botton"/>
+                                <p>FilterAlt</p>
+                            </div>
+                        </div>
+                        <div className="col sm4 md2 pad-16">
+                            <div className="flex-box flex-col pad-16 nowrap outlined transparent">
                                 <Help width="32" height="32" className="space-botton"/>
                                 <p>Help</p>
+                            </div>
+                        </div>
+                        <div className="col sm4 md2 pad-16">
+                            <div className="flex-box flex-col pad-16 nowrap outlined transparent">
+                                <Home width="32" height="32" className="space-botton"/>
+                                <p>Home</p>
+                            </div>
+                        </div>
+                        <div className="col sm4 md2 pad-16">
+                            <div className="flex-box flex-col pad-16 nowrap outlined transparent">
+                                <Info width="32" height="32" className="space-botton"/>
+                                <p>Info</p>
+                            </div>
+                        </div>
+                        <div className="col sm4 md2 pad-16">
+                            <div className="flex-box flex-col pad-16 nowrap outlined transparent">
+                                <Label width="32" height="32" className="space-botton"/>
+                                <p>Label</p>
+                            </div>
+                        </div>
+                        <div className="col sm4 md2 pad-16">
+                            <div className="flex-box flex-col pad-16 nowrap outlined transparent">
+                                <Language width="32" height="32" className="space-botton"/>
+                                <p>Language</p>
+                            </div>
+                        </div>
+                        <div className="col sm4 md2 pad-16">
+                            <div className="flex-box flex-col pad-16 nowrap outlined transparent">
+                                <Lightbulb width="32" height="32" className="space-botton"/>
+                                <p>Lightbulb</p>
                             </div>
                         </div>
                     </div>
