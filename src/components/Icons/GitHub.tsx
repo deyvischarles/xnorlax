@@ -1,4 +1,3 @@
-import React from 'react'
 import SvgIcon from '../../styles/SvgIcon'
 
 interface IGitHub {

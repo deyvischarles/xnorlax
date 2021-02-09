@@ -35,6 +35,10 @@ export default createGlobalStyle`
     p {
         color: ${props => props.theme.colors.primaryText};
     }
+
+    span {
+        display: inline;
+    }
     
     ul:not(.browser-default) {
         list-style-type: none;
@@ -735,5 +739,128 @@ export default createGlobalStyle`
 
     &.marg-48 {
         margin: 48px;
+    }
+    
+
+    pre {
+        display: block;
+        font-family: monospace;
+        white-space: pre-wrap;
+        margin: 24px auto;
+        padding: 16px;
+        overflow: auto;
+        direction: ltr;
+        max-width: calc(100vw - 32px);
+        border-radius: 4px;
+        background-color: ${props => props.theme.colors.box} !important;
+    }
+
+    code[class*="language-"] {
+        display: inline-block;
+        line-height: 1.5;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        tab-size: 4;
+    }
+
+    :not(pre) > code[class*="language-"] {
+        background-color: ${props => props.theme.colors.box};
+        color: ${props => props.theme.colors.pink};
+        display: inline-block;
+    }
+
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+        color: ${props => props.theme.colors.blueGray};
+    }
+
+    .token.operator {
+        color: ${props => props.theme.colors.purple};
+    }
+
+    .token.namespace {
+        opacity: .7;
+    }
+
+    .token.constant,
+    .token.symbol,
+    .token.deleted {
+        color: ${props => props.theme.colors.blue};
+    }
+
+    .token.property {
+        color: ${props => props.theme.colors.cyan};
+    }
+
+    .token.boolean,
+    .token.number {
+        color: ${props => props.theme.colors.purple};
+    }
+
+    .token.tag {
+        color: ${props => props.theme.colors.indigo};
+    }
+
+    .token.punctuation,
+    .token.entity,
+    .token.url,
+    .language-css .token.string,
+    .style .token.string,
+    .token.variable,
+    .token.spread {
+        color: ${props => props.theme.colors.blueGray};
+    }
+
+    .token.selector,
+    .token.string,
+    .token.char,
+    .token.builtin,
+    .token.inserted,
+    .token.attr-value {
+        color: ${props => props.theme.colors.orange};
+    }
+
+    .token.attr-equals {
+        color: ${props => props.theme.colors.blueGray};
+    }
+
+    .token.atrule,
+    .token.function {
+        color: ${props => props.theme.colors.blue};
+    }
+
+    .token.keyword {
+        color: ${props => props.theme.colors.pink};
+    }
+
+    .token.class-name,
+    .maybe-class-name {
+        color: ${props => props.theme.colors.green};
+    }
+
+    .token.attr-name,
+    .token.parameter {
+        color: ${props => props.theme.colors.cyan};
+    }
+
+    .token.regex,
+    .token.important {
+        color: ${props => props.theme.colors.orange};
+    }
+
+    .token.important,
+    .token.bold {
+        font-weight: bold;
+    }
+    .token.italic {
+        font-style: italic;
+    }
+
+    .token.entity {
+        cursor: help;
     }
 `

@@ -59,6 +59,26 @@ declare module 'styled-components' {
             pressedSecondary: string;
             draggedSecondary: string;
 
+            red: string;
+            pink: string;
+            purple: string;
+            deepPurple: string;
+            indigo: string;
+            blue: string;
+            lightBlue: string;
+            cyan: string;
+            teal: string;
+            green: string;
+            lightGreen: string;
+            Lime: string;
+            yellow: string;
+            amber: string;
+            orange: string;
+            deepOrange: string;
+            brown: string;
+            gray: string;
+            blueGray: string;
+
             navBar: string;
             onNavBar: string;
             sideNav: string;
