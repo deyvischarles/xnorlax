@@ -8,11 +8,7 @@ const resourcesToCache = [
   '/adaptive-icon.svg',
   '/favicon.png',
   '/logo-192.png',
-  '/logo-512.png',
-  '/fonts/roboto-400.woff2',
-  '/fonts/roboto-700.woff2',
-  '/fonts/roboto-mono-400.woff2',
-  '/fonts/roboto-mono-700.woff2'
+  '/logo-512.png'
 ]
 
 self.addEventListener('install', event => {
