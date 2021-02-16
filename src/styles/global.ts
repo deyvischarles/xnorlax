@@ -77,38 +77,6 @@ export default createGlobalStyle`
         background: ${props => props.theme.colors.divider} !important;
     }
 
-    @font-face {
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(/fonts/roboto-400.woff2) format('woff2');
-    }
-
-    @font-face {
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url(/fonts/roboto-700.woff2) format('woff2');
-    }
-
-    @font-face {
-        font-family: 'Roboto Mono';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(/fonts/roboto-mono-400.woff2) format('woff2');
-    }
-
-    @font-face {
-        font-family: 'Roboto Mono';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url(/fonts/roboto-mono-700.woff2) format('woff2');
-    }
-
     html {
         font-family: 'Roboto', monospace;
         font-size: 14px;
@@ -775,7 +743,7 @@ export default createGlobalStyle`
 
     pre {
         display: block;
-        font-family: 'Roboto Mono', monospace;
+        font-family: monospace;
         white-space: pre-wrap;
         margin: 24px auto;
         padding: 16px;
