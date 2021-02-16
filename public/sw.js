@@ -1,18 +1,23 @@
-const cacheStatic = 'C-29-01-21'
+const cacheName = 'C-15-02-21'
 
 const resourcesToCache = [
   '/',
+  '/offline.html',
   '/manifest.json',
   '/robots.txt',
   '/adaptive-icon.svg',
   '/favicon.png',
   '/logo-192.png',
   '/logo-512.png',
+  '/fonts/roboto-400.woff2',
+  '/fonts/roboto-700.woff2',
+  '/fonts/roboto-mono-400.woff2',
+  '/fonts/roboto-mono-700.woff2'
 ]
 
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(cacheStatic).then(cache => {
+    caches.open(cacheName).then(cache => {
       return cache.addAll(resourcesToCache)
     })
   )
@@ -20,13 +25,28 @@ self.addEventListener('install', event => {
 
 self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        if (response) {
+    caches.match(event.request).then((response) => {
+        if(response) {
           return response
         }
-        return fetch(event.request)
+        
+        return fetch(event.request).catch(() => caches.match('/offline.html'))
       }
     )
+  )
+})
+
+self.addEventListener('active', event => {
+  const cacheWhiteList = []
+  cacheWhiteList.push(cacheName)
+
+  event.waitUntil(
+    caches.keys().then((cacheNames) => Promise.all(
+      cacheNames.map((cacheName) => {
+        if(!cacheWhiteList.includes(cacheName)) {
+          return caches.delete(cacheName)
+        }
+      })
+    ))
   )
 })

@@ -1,6 +1,5 @@
-import Head from 'next/head'
 import { useState, useEffect } from 'react'
-import { ThemeProvider, DefaultTheme } from 'styled-components'
+import { ThemeProvider } from 'styled-components'
 
 // import UsePersistedState from '../utils/usePersistedState'
 import Light from '../styles/Themes/light'

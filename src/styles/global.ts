@@ -77,8 +77,40 @@ export default createGlobalStyle`
         background: ${props => props.theme.colors.divider} !important;
     }
 
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/fonts/roboto-400.woff2) format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(/fonts/roboto-700.woff2) format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Roboto Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/fonts/roboto-mono-400.woff2) format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Roboto Mono';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(/fonts/roboto-mono-700.woff2) format('woff2');
+    }
+
     html {
-        font-family: Roboto, sans-serif;
+        font-family: 'Roboto', monospace;
         font-size: 14px;
         font-weight: normal;
         line-height: 1.43;
@@ -98,7 +130,7 @@ export default createGlobalStyle`
     select,
     textarea,
     optgroup {
-        font-family: Roboto, sans-serif;
+        font-family: 'Roboto', monospace;
     }
       
     h1 {
@@ -230,16 +262,16 @@ export default createGlobalStyle`
         text-transform: uppercase;
     }
       
-    .thin {
-        font-weight: 200 !important;
-    }
-      
     .light {
         font-weight: 300 !important;
     }
       
     .bold {
-        font-weight: 500 !important;
+        font-weight: 700 !important;
+    }
+
+    .txt-center {
+        text-align: center;
     }
       
     .text-shadow {
@@ -740,11 +772,10 @@ export default createGlobalStyle`
     &.marg-48 {
         margin: 48px;
     }
-    
 
     pre {
         display: block;
-        font-family: monospace;
+        font-family: 'Roboto Mono', monospace;
         white-space: pre-wrap;
         margin: 24px auto;
         padding: 16px;
@@ -757,6 +788,7 @@ export default createGlobalStyle`
 
     code[class*="language-"] {
         display: inline-block;
+        font-family: inherit;
         line-height: 1.5;
         text-align: left;
         white-space: pre;
