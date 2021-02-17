@@ -18,7 +18,7 @@ const Navbar: React.FC<INavbar> = ({toggleTheme}) => {
     const router = useRouter()
 
     function isActive(route: string) {
-        return route == router.pathname ? 'active' : ''
+        return route === router.pathname ? 'active' : ''
     }
 
     return (
