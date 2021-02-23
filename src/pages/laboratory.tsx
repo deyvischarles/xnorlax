@@ -36,7 +36,7 @@ const Laboratory = () => {
                                 <a href="/teste">
                                     <div className="flex-box items-start pad-24 outlined flex-col">
                                         <h5>Classificação de fotos</h5>
-                                        <p>Descubra o quão interessante nossa sistema acha de suas fotos.</p>
+                                        <p>Envie uma foto sua e descubra se nossa IA acha interessante.</p>
                                     </div>
                                 </a>
                             </div>
