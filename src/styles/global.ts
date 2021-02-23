@@ -78,7 +78,7 @@ export default createGlobalStyle`
     }
 
     html {
-        font-family: 'Roboto', monospace;
+        font-family: 'Segoe UI', -apple-system, Roboto, Ubuntu, sans-serif;
         font-size: 14px;
         font-weight: normal;
         line-height: 1.43;
@@ -98,7 +98,7 @@ export default createGlobalStyle`
     select,
     textarea,
     optgroup {
-        font-family: 'Roboto', monospace;
+        font-family: 'Segoe UI', -apple-system, Roboto, Ubuntu, sans-serif;
     }
       
     h1 {
