@@ -6,9 +6,9 @@ const About = () => {
         <>
             <Head>
                 <meta name="description" content="Sobre a supermachine"/>
-                <meta name="keywords" content="supermachine, sobre"/>
-                <link rel="canonical" href={`${process.env.NEXT_PUBLIC_APP_URL}/about`}/>
-                <title>Supermachine - Sobre</title>
+                <meta name="keywords" content="xnorlax, sobre"/>
+                <link rel="canonical" href="/about" />
+                <title>Xnorlax - Sobre</title>
             </Head>
 
             <main>

@@ -5,9 +5,9 @@ const Erro404 = () => {
     <>
       <Head>
         <meta name="description" content="Aplicação Backend e Frontend para a web"/>
-        <meta name="keywords" content="supermachine, 404"/>
-        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_APP_URL}/404`}/>
-        <title>Supermachine</title>
+        <meta name="keywords" content="xnorlax, 404"/>
+        <link rel="canonical" href="/404" />
+        <title>Xnorlax</title>
       </Head>
 
       <main>

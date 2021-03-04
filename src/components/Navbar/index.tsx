@@ -29,7 +29,7 @@ const Navbar: React.FC<INavbar> = ({toggleTheme}) => {
                         <MenuIcon/>
                     </IconButton>
                     
-                    <Link href="/"><a className="logo">Supermachine</a></Link>
+                    <Link href="/"><a className="logo">Xnorlax</a></Link>
 
                     <span className="spacer"></span>
                     
