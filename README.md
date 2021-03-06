@@ -8,7 +8,8 @@ Xnorlax é um aplicação frontend criado com Typescript em cima do Next.js
 Para visualizar este projeto, por favor, acesse: [xnorlax.com](https://xnorlax.com)
 
 ## Tecnologias utilizadas
-- Node js
+- Node
+- Next
 - Typescript
 
 ## Implantação em produção
