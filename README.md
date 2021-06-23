@@ -3,7 +3,7 @@
 
 ## Sobre o projeto
 
-Xnorlax é um aplicação frontend criado com Typescript em cima do Next.js
+Xnorlax é um projeto pessoal onde estou desenvolvendo alguns serviços como blog sobre tecnologias e segurança, a documentação do nosso design system utilizado nesta aplicação entre outras funcionalidades.
 
 Para visualizar este projeto, por favor, acesse: [xnorlax.com](https://xnorlax.com)
 
@@ -18,7 +18,7 @@ Para visualizar este projeto, por favor, acesse: [xnorlax.com](https://xnorlax.c
 ## Como executar o projeto
 ```bash
 # Clonar o repositório
-git clone https://github.com/deyvischarles/xnorlax-frontend
+git clone https://github.com/deyvischarles/xnorlax
 
 # Entrar na pasta do projeto
 cd xnorlax
@@ -27,7 +27,7 @@ cd xnorlax
 npm install
 
 # fazer Build da aplicação
-npm build
+npm run build
 
 # Executar o projeto
 npm start
