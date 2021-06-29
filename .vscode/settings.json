@@ -1,0 +1,6 @@
+{
+    "debug.console.fontFamily": "JetBrainsMono",
+    "editor.fontFamily": "'JetBrainsMono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "terminal.integrated.fontFamily": "monospace",
+    "scm.inputFontFamily": "JetBrainsMono"
+}

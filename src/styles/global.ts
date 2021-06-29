@@ -26,7 +26,7 @@ export default createGlobalStyle`
     }
     
     a {
-        color: ${props => props.theme.colors.link};
+        color: ${props => props.theme.colors.lightBlue};
         outline: none;
         text-decoration: none;
         -webkit-tap-highlight-color: transparent;
@@ -65,7 +65,7 @@ export default createGlobalStyle`
     }
     
     ::-webkit-scrollbar {
-        width: 8px !important;
+        width: 6px !important;
         background: rgba(244, 244, 244, 0) !important;
     }
     

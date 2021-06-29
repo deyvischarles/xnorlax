@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-br">
         <Head>
-          <meta name="theme-color" content="#005662" />
+          <meta name="theme-color" content="#004c8c" />
           <meta name="author" content="Deyvis Charles" />
           <link rel="icon" sizes="32x32" href="/favicon.png" />
           <link rel="apple-touch-icon" sizes="192x192" href="/logo-192.png" />

@@ -1,8 +1,8 @@
 {
   "short_name": "Xnorlax",
   "name": "Xnorlax",
-  "theme_color": "#005662",
-  "background_color": "#00838f",
+  "theme_color": "#004c8c",
+  "background_color": "#0277bd",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",

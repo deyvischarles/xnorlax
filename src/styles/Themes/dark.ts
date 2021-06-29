@@ -1,18 +1,18 @@
 const Dark = {
     title: 'Dark',
     colors: {
-        primaryColor: '#80DEEA',
+        primaryColor: '#81d4fa',
         primaryColorContrast: 'rgba(0, 0, 0, 0.87)',
-        primaryColorLight: '#4fb3bf',
+        primaryColorLight: '#b6ffff',
         primaryColorLightContrast: 'rgba(0, 0, 0, 0.87)',
-        primaryColorDark: '#005662',
+        primaryColorDark: '#4ba3c7',
         primaryColorDarkContrast: '#fff',
 
-        secondaryColor: '#EF9A9A',
+        secondaryColor: '#90caf9',
         secondaryColorContrast: 'rgba(0, 0, 0, 0.87)',
-        secondaryColorLight: '#ff6659',
+        secondaryColorLight: '#c3fdff',
         secondaryColorLightContrast: 'rgba(0, 0, 0, 0.87)',
-        secondaryColorDark: '#9a0007',
+        secondaryColorDark: '#5d99c6',
         secondaryColorDarkContrast: '#fff',
 
         errorColor: '#f44336',
@@ -95,7 +95,6 @@ const Dark = {
         paper: '#424242',
         divider: 'rgba(255, 255, 255, 0.12)',
         border: 'rgba(255, 255, 255, 0.23)',
-        link: '#3ea6ff',
         thumb: '#FF5252',
         thumbText: '#000',
         box: '#333',

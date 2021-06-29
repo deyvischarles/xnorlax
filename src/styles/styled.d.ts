@@ -96,7 +96,6 @@ declare module 'styled-components' {
             paper: string;
             divider: string;
             border: string;
-            link: string;
             thumb: string;
             thumbText: string;
             box: string;
