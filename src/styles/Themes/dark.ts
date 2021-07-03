@@ -28,9 +28,9 @@ const Dark = {
         successColorLight: '#81c784',
         successColorDark: '#388e3c',
 
-        primaryText: 'rgb(255, 255, 255)',
-        secondaryText: 'rgba(255, 255, 255, 0.7)',
-        disabledText: 'rgba(255, 255, 255, 0.5)',
+        primaryText: 'rgba(255, 255, 255, 0.87)',
+        secondaryText: 'rgba(255, 255, 255, 0.6)',
+        disabledText: 'rgba(255, 255, 255, 0.38)',
 
         enabled: 'transparent',
         hovered: 'rgba(255, 255, 255, 0.08)',
@@ -90,6 +90,11 @@ const Dark = {
         btnDisabled: 'rgba(255, 255, 255, 0.12)',
         onBtnDisabled: 'rgba(255, 255, 255, 0.3)',
 
+        box: 'rgba(255, 255, 255, 0.04)',
+        boxHovered: 'rgba(255, 255, 255, 0.08)',
+        boxFocused: 'rgba(255, 255, 255, 0.08)',
+        boxDragged: 'rgba(255, 255, 255, 0.16)',
+
         icon: 'rgba(255, 255, 255, 1)',
         background: '#212121',
         paper: '#424242',
@@ -97,8 +102,7 @@ const Dark = {
         border: 'rgba(255, 255, 255, 0.23)',
         thumb: '#FF5252',
         thumbText: '#000',
-        box: '#333',
-        striped: 'rgba(255, 255, 255, 0.05)',
+        striped: 'rgba(255, 255, 255, 0.04)',
 
         waves: 'rgba(255, 255, 255, 0.4)',
         wavesOnPrimary: ' rgba(128, 222, 234, 0.4)',

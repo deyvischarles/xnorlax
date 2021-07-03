@@ -79,6 +79,11 @@ declare module 'styled-components' {
             gray: string;
             blueGray: string;
 
+            box: string;
+            boxHovered: string;
+            boxFocused: string;
+            boxDragged: string;
+
             navBar: string;
             onNavBar: string;
             sideNav: string;
@@ -98,7 +103,6 @@ declare module 'styled-components' {
             border: string;
             thumb: string;
             thumbText: string;
-            box: string;
             striped: string;
             
             waves: string;

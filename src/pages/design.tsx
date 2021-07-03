@@ -33,6 +33,7 @@ import Info from '../components/Icons/Info'
 import Label from '../components/Icons/Label'
 import Language from '../components/Icons/Language'
 import Lightbulb from '../components/Icons/Lightbulb'
+import TextField from '../components/TextFild'
 
 const Design = () => {
     const codeSvgIcons = 
@@ -70,7 +71,7 @@ export default Home`
                     <div className="container">
                         <div className="row">
                             <div className="col sm12">
-                                <h4 className="light">Grades</h4>
+                                <h4>Grades</h4>
                             </div>
                         </div>
                         
@@ -344,6 +345,43 @@ export default Home`
                         <SyntaxHighlighter language='tsx' style={false}>
                             {codeSvgIcons}
                         </SyntaxHighlighter>
+                    </div>
+                </section>
+                <section>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col sm12">
+                                <h4>Campo de texto</h4>
+                                <p className="description">Campos de texto permitem que os usuários digitem e editem texto.</p>
+                                <p>Campos de texto permitem que os usuários insiram texto em uma interface de usuário.
+                                Eles geralmente aparecem em formulários e diálogos.
+                                Em nosso design system usamos dois tipos de campo de texto: os "preenchidos" e os "delineados".</p>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col sm12">
+                                <p>Campo de texto preenchido:</p>
+                                <br></br>
+                            </div>
+                            <div className="col sm4">
+                                <TextField id="default" type="text" label="Padrão" className="space" />
+                            </div>
+                            <div className="col sm4">
+                                <TextField id="disabled" type="text" label="Desabilitado" className="space" disabled/>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col sm12">
+                                <p>Campo de texto delineado:</p>
+                                <br></br>
+                            </div>
+                            <div className="col sm4">
+                                <TextField id="default" type="text" label="Padrão" variant="outlined" className="space" />
+                            </div>
+                            <div className="col sm4">
+                                <TextField id="disabled" type="text" label="Desabilitado" variant="outlined" className="space" disabled/>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>

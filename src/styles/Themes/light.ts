@@ -89,6 +89,11 @@ const Light = {
         btnOutlinedSecondary: 'rgba(211, 47, 47, 0.5)',
         btnDisabled: 'rgba(0, 0, 0, 0.12)',
         onBtnDisabled: 'rgba(0, 0, 0, 0.26)',
+
+        box: 'rgba(0, 0, 0, 0.04)',
+        boxHovered: 'rgba(0, 0, 0, 0.08)',
+        boxFocused: 'rgba(0, 0, 0, 0.08)',
+        boxDragged: 'rgba(0, 0, 0, 0.16)',
         
         icon: 'rgba(0, 0, 0, 0.54)',
         background: '#fafafa',
@@ -97,8 +102,7 @@ const Light = {
         border: 'rgba(0, 0, 0, 0.23)',
         thumb: '#d32f2f',
         thumbText: '#fff',
-        box: '#f5f5f5',
-        striped: 'rgba(0, 0, 0, 0.05)',
+        striped: 'rgba(0, 0, 0, 0.04)',
 
         waves: 'rgba(0, 0, 0, 0.2)',
         wavesOnPrimary: 'rgba(0, 131, 143, 0.4)',
