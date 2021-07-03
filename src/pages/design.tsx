@@ -363,10 +363,10 @@ export default Home`
                                 <p>Campo de texto preenchido:</p>
                                 <br></br>
                             </div>
-                            <div className="col sm4">
+                            <div className="col sm12 md4">
                                 <TextField id="default" type="text" label="Padrão" className="space" />
                             </div>
-                            <div className="col sm4">
+                            <div className="col sm12 md4">
                                 <TextField id="disabled" type="text" label="Desabilitado" className="space" disabled/>
                             </div>
                         </div>
@@ -375,10 +375,10 @@ export default Home`
                                 <p>Campo de texto delineado:</p>
                                 <br></br>
                             </div>
-                            <div className="col sm4">
+                            <div className="col sm12 md4">
                                 <TextField id="default" type="text" label="Padrão" variant="outlined" className="space" />
                             </div>
-                            <div className="col sm4">
+                            <div className="col sm12 md4">
                                 <TextField id="disabled" type="text" label="Desabilitado" variant="outlined" className="space" disabled/>
                             </div>
                         </div>
