@@ -18,6 +18,10 @@ const SvgIcon = styled.svg<ISvgIcon>`
     ${props => props.color === "secondary" && css`
         color: ${props => props.theme.colors.secondaryColor};
     `}
+
+    ${props => props.color === "disabled" && css`
+        color: ${props => props.theme.colors.disabledText};
+    `}
 `
 
 export default SvgIcon

@@ -57,6 +57,22 @@ const Home: React.FC<IHome> = (props) => {
 
 export default Home`
 
+    const codeInportIcons =
+`import Home from 'components/icons/Home'
+import Favorite from 'components/icons/Favorite'`
+
+    const codeInplementIcons = 
+`<HomeIcon />
+<HomeIcon color="primary" />
+<HomeIcon color="red" />
+<HomeIcon color="disabled" />`
+
+    const codeTextField =
+`<form>
+    <TextField id="filled" label="Filled" variant="filled" />
+    <TextField id="outlined" label="Outlined" variant="outlined" />
+</form>`
+
     return (
         <>
             <Head>
@@ -121,8 +137,30 @@ export default Home`
                     <div className="container">
                         <div className="row">
                             <div className="col sm12">
-                                <h4>SvgIcon</h4>
-                                <p>Nós padronizamos mais de 32 ícones de uso comun (veja abaixo). Para cada ícone SVG, exportamos o respectivo componente React do nosso caminho components/icons. Você pode pesquisar na lista completa destes ícones.</p>
+                                <div className="row">
+                                    <h4>SvgIcon</h4>
+                                    <p>Nós padronizamos mais de 32 ícones de uso comun (veja abaixo). Para cada ícone SVG, exportamos o respectivo componente React presente no diretório "components/icons".</p>
+                                    <h5>Uso</h5>
+                                    <p>Importe ícones usando a seguinte opções:</p>
+                                </div>
+                                <div className="row">
+                                    <SyntaxHighlighter language='tsx' style={false}>
+                                        {codeInportIcons}
+                                    </SyntaxHighlighter>
+                                </div>
+                                <div className="row">
+                                    <div className="flex-box pad-16 nowrap outlined transparent">
+                                        <Lightbulb width="32" height="32" className="space" />
+                                        <Lightbulb width="32" height="32" color="primary" className="space"/>
+                                        <Lightbulb width="32" height="32" color="secondary" className="space"/>
+                                        <Lightbulb width="32" height="32" color="disabled" className="space"/>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <SyntaxHighlighter language='tsx' style={false}>
+                                        {codeInplementIcons}
+                                    </SyntaxHighlighter>
+                                </div>
                             </div>
                         </div>
 
@@ -352,34 +390,58 @@ export default Home`
                         <div className="row">
                             <div className="col sm12">
                                 <h4>Campo de texto</h4>
-                                <p className="description">Campos de texto permitem que os usuários digitem e editem texto.</p>
-                                <p>Campos de texto permitem que os usuários insiram texto em uma interface de usuário.
+                                <p>Campos de texto permitem que os usuários digitem e editem texto em uma interface de usuário.
                                 Eles geralmente aparecem em formulários e diálogos.
                                 Em nosso design system usamos dois tipos de campo de texto: os "preenchidos" e os "delineados".</p>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col sm12">
-                                <p>Campo de texto preenchido:</p>
-                                <br></br>
-                            </div>
-                            <div className="col sm12 md4">
-                                <TextField id="default" type="text" label="Padrão" className="space" />
-                            </div>
-                            <div className="col sm12 md4">
-                                <TextField id="disabled" type="text" label="Desabilitado" className="space" disabled/>
+                                <div className="flex-box pad-16 outlined transparent">
+                                    <TextField
+                                        id="filed"
+                                        type="text"
+                                        label="preenchido"
+                                        className="marg-16"
+                                    />
+
+                                    <TextField 
+                                        id="outlined"
+                                        type="text"
+                                        label="delineados"
+                                        variant="outlined"
+                                        className="marg-16"
+                                    />
+                                </div>
+                                <div className="row">
+                                    <SyntaxHighlighter language='tsx' style={false}>
+                                        {codeTextField}
+                                    </SyntaxHighlighter>
+                                </div>
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col sm12">
-                                <p>Campo de texto delineado:</p>
-                                <br></br>
+                            <div className="col sm12 md6 lg4">
+                                <TextField 
+                                    id="defaultFiled"
+                                    type="text"
+                                    label="Padrão"
+                                    defaultValue="Deyvis"
+                                    required
+                                    helpText="Nome inválido"
+                                    className="marg-16"
+                                />
                             </div>
-                            <div className="col sm12 md4">
-                                <TextField id="default" type="text" label="Padrão" variant="outlined" className="space" />
+                            <div className="col sm12 md6 lg4">
+                                <TextField id="disabledFiled" type="text" label="Desabilitado" className="marg-16" disabled/>
                             </div>
-                            <div className="col sm12 md4">
-                                <TextField id="disabled" type="text" label="Desabilitado" variant="outlined" className="space" disabled/>
+                        </div>
+                        <div className="row">
+                            <div className="col sm12 md6 lg4">
+                                <TextField id="defaultOutlined" type="text" label="Padrão" variant="outlined" required className="marg-16" />
+                            </div>
+                            <div className="col sm12 md6 lg4">
+                                <TextField id="disabledOutlined" type="text" label="Desabilitado" variant="outlined" className="marg-16" disabled/>
                             </div>
                         </div>
                     </div>
