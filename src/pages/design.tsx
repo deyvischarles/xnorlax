@@ -401,14 +401,14 @@ import Favorite from 'components/icons/Favorite'`
                                     <TextField
                                         id="filed"
                                         type="text"
-                                        label="preenchido"
+                                        label="Preenchido"
                                         className="marg-16"
                                     />
 
                                     <TextField 
                                         id="outlined"
                                         type="text"
-                                        label="delineados"
+                                        label="Delineado"
                                         variant="outlined"
                                         className="marg-16"
                                     />
@@ -423,25 +423,36 @@ import Favorite from 'components/icons/Favorite'`
                         <div className="row">
                             <div className="col sm12 md6 lg4">
                                 <TextField 
-                                    id="defaultFiled"
+                                    id="defaultValue"
                                     type="text"
                                     label="Padrão"
-                                    defaultValue="Deyvis"
-                                    required
-                                    helpText="Nome inválido"
+                                    defaultValue="Valor padrão"
                                     className="marg-16"
                                 />
                             </div>
                             <div className="col sm12 md6 lg4">
-                                <TextField id="disabledFiled" type="text" label="Desabilitado" className="marg-16" disabled/>
+                                <TextField 
+                                    id="required"
+                                    type="text"
+                                    label="Obrigatório"
+                                    required
+                                    helpText="Este campo é obrigatório"
+                                    className="marg-16"
+                                />
+                            </div>
+                            <div className="col sm12 md6 lg4">
+                                <TextField id="disabledFiled" type="text" label="Desativado" className="marg-16" disabled/>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col sm12 md6 lg4">
-                                <TextField id="defaultOutlined" type="text" label="Padrão" variant="outlined" required className="marg-16" />
+                                <TextField id="defaultValueOutlined" type="text" label="Padrão" defaultValue="Valor padrão" variant="outlined" className="marg-16" />
                             </div>
                             <div className="col sm12 md6 lg4">
-                                <TextField id="disabledOutlined" type="text" label="Desabilitado" variant="outlined" className="marg-16" disabled/>
+                                <TextField id="requiredOutlined" type="text" label="Obrigatório" required helpText="Este campo é obrigatório" variant="outlined" className="marg-16" />
+                            </div>
+                            <div className="col sm12 md6 lg4">
+                                <TextField id="disabledOutlined" type="text" label="Desativado" variant="outlined" className="marg-16" disabled/>
                             </div>
                         </div>
                     </div>

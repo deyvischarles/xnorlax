@@ -18,18 +18,10 @@ declare module 'styled-components' {
             secondaryColorDark: string;
             secondaryColorDarkContrast: string;
 
-            errorColor: string;
-            errorColorLight: string;
-            errorColorDark: string;
-            warningColor: string;
-            warningColorLight: string;
-            warningColorDark: string;
             infoColor: string;
-            infoColorLight: string;
-            infoColorDark: string;
+            warningColor: string;
+            errorColor: string;
             successColor: string;
-            successColorLight: string;
-            successColorDark: string;
 
             primaryText: string;
             secondaryText: string;
