@@ -64,7 +64,7 @@ import Favorite from 'components/icons/Favorite'`
     const codeInplementIcons = 
 `<HomeIcon />
 <HomeIcon color="primary" />
-<HomeIcon color="red" />
+<HomeIcon color="secondary" />
 <HomeIcon color="disabled" />`
 
     const codeTextField =

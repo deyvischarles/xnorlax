@@ -22,7 +22,7 @@ const TextField = styled.div<ITextField>`
         background-color: ${props => props.theme.colors.box};
         margin-bottom: 16px;
         padding: 24px 12px 8px 16px;
-        font-size: 16px;
+        font-size: 1rem;
         color: ${props => props.theme.colors.primaryText};
         outline: none;
         transition: background-color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
@@ -38,11 +38,13 @@ const TextField = styled.div<ITextField>`
 
         &:focus ~ label {
             color: ${props => props.theme.colors.primaryColor};
-            transform: translate(-6px, -12px) scale(0.75);
+            transform: translateY(-12px);
+            font-size: 0.75rem;
         }
 
         &.used ~ label {
-            transform: translate(-6px, -12px) scale(0.75);
+            transform: translateY(-12px);
+            font-size: 0.75rem;
         }
 
         &:focus ~ .bar:before,
@@ -73,8 +75,8 @@ const TextField = styled.div<ITextField>`
     }
 
     label {
-        font-size: 16px;
-        line-height: 16px;
+        font-size: 1rem;
+        line-height: 1rem;
         color: ${props => props.theme.colors.secondaryText};
         position: absolute;
         top: calc(50% - 16px);
@@ -102,10 +104,10 @@ const TextField = styled.div<ITextField>`
     .helpText {
         position: absolute;
         top: calc(100% - 10px);
-        font-size: 12px;
-        line-height: 12px;
+        left: 16px;
+        font-size: 0.75rem;
+        line-height: 0.75rem;
         color: transparent;
-        margin-left: 16px;
         user-select: none;
         pointer-events: none;
         transition: all 200ms cubic-bezier(.4, 0, .2, 1);
@@ -145,7 +147,7 @@ const TextField = styled.div<ITextField>`
             &.used ~ label {
                 background-color: ${props => props.theme.colors.background};
                 padding: 0 4px;
-                transform: translate(-10px, -24px) scale(0.75);
+                transform: translate(-3px, -24px);
             }
 
             &:invalid {
