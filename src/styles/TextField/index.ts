@@ -38,13 +38,11 @@ const TextField = styled.div<ITextField>`
 
         &:focus ~ label {
             color: ${props => props.theme.colors.primaryColor};
-            transform: translateY(-12px);
-            font-size: 0.75rem;
+            transform: translate(16px, 8px) scale(0.75);
         }
 
         &.used ~ label {
-            transform: translateY(-12px);
-            font-size: 0.75rem;
+            transform: translate(16px, 8px) scale(0.75);
         }
 
         &:focus ~ .bar:before,
@@ -75,17 +73,20 @@ const TextField = styled.div<ITextField>`
     }
 
     label {
+        display: block;
         font-size: 1rem;
-        line-height: 1rem;
+        line-height: 16px;
         color: ${props => props.theme.colors.secondaryText};
         position: absolute;
-        top: calc(50% - 16px);
-        left: 16px;
-        padding: 0;
+        top: 0;
+        left: 0;
+        transform-origin: top left;
+        transform: translate(16px, 16px) scale(1);
         z-index: 1;
         user-select: none;
         pointer-events: none;
-        transition: all 200ms cubic-bezier(.4, 0, .2, 1);
+        //transition: all 200ms cubic-bezier(.4, 0, .2, 1);
+        transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
     }
 
     .bar:before, .bar:after {
@@ -145,9 +146,19 @@ const TextField = styled.div<ITextField>`
 
             &:focus ~ label,
             &.used ~ label {
+                transform: translate(16px, -6px) scale(0.75);
+            }
+
+            &:focus ~ label:before,
+            &.used ~ label:before {
+                position: absolute;
+                top: 0;
+                left: -4px;
+                content: "";
+                width: calc(100% + 8px);
+                height: 1rem;
                 background-color: ${props => props.theme.colors.background};
-                padding: 0 4px;
-                transform: translate(-3px, -24px);
+                z-index: -1;
             }
 
             &:invalid {
