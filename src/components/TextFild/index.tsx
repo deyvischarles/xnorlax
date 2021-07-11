@@ -25,7 +25,7 @@ const TextField: React.FC<ITextField> = (props) => {
                 id={props.id}
                 type={props.type}
                 placeholder={props.placeholder}
-                defaultValue={props.defaultValue}
+                defaultValue={value}
                 onChange={(event) => setValue(event.target.value)}
                 required={props.required}
                 className={(value.length > 0) ? 'used': undefined}
