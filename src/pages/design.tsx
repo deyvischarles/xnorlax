@@ -33,7 +33,7 @@ import Info from '../components/Icons/Info'
 import Label from '../components/Icons/Label'
 import Language from '../components/Icons/Language'
 import Lightbulb from '../components/Icons/Lightbulb'
-import TextField from '../components/TextFild'
+import TextField from '../components/TextField'
 
 const Design = () => {
     const codeSvgIcons = 
@@ -68,10 +68,16 @@ import Favorite from 'components/icons/Favorite'`
 <HomeIcon color="disabled" />`
 
     const codeTextField =
-`<form>
-    <TextField id="filled" label="Filled" variant="filled" />
-    <TextField id="outlined" label="Outlined" variant="outlined" />
-</form>`
+`import TextField from '../components/TextField'
+
+export default function BasicTextFields() {
+    return (
+        <form>
+            <TextField id="filled" label="Filled" />
+            <TextField id="outlined" label="Outlined" variant="outlined" />
+        </form>
+    )
+}`
 
     return (
         <>
@@ -392,19 +398,20 @@ import Favorite from 'components/icons/Favorite'`
                                 <h4>Campo de texto</h4>
                                 <p>Campos de texto permitem que os usuários digitem e editem texto em uma interface de usuário.
                                 Eles geralmente aparecem em formulários e diálogos.
-                                Em nosso design system usamos dois tipos de campo de texto: os "preenchidos" e os "delineados".</p>
+                                Em nosso design system usamos dois tipos de campo de texto: "preenchido" e "delineado".</p>
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col sm12">
-                                <div className="flex-box pad-16 outlined transparent">
+                            <div className="flex-box pad-16 outlined transparent">
+                                <div className="col sm12 md6 lg4">
                                     <TextField
                                         id="filed"
                                         type="text"
                                         label="Preenchido"
                                         className="marg-16"
                                     />
-
+                                </div>
+                                <div className="col sm12 md6 lg4">
                                     <TextField 
                                         id="outlined"
                                         type="text"
@@ -413,46 +420,54 @@ import Favorite from 'components/icons/Favorite'`
                                         className="marg-16"
                                     />
                                 </div>
-                                <div className="row">
-                                    <SyntaxHighlighter language='tsx' style={false}>
-                                        {codeTextField}
-                                    </SyntaxHighlighter>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <SyntaxHighlighter language='tsx' style={false}>
+                                {codeTextField}
+                            </SyntaxHighlighter>
+                        </div>
+                        <div className="row">
+                            <div className="col sm12">
+                                <h5>Propriedades de formulário</h5>
+                                <p>Os atributos padrões de formulários são suportados, por exemplo, required, disabled, type, etc.
+                                assim como o helperText, que é utilizado para dar contexto sobre um campo de entrada, tal como, 
+                                explicar como o campo deve ser preenchido.</p>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="flex-box content-start pad-16 outlined transparent">
+                                <div className="col sm12 md6 lg4">
+                                    <TextField 
+                                        id="defaultValue"
+                                        type="text"
+                                        label="Auto preencido"
+                                        defaultValue="Valor padrão"
+                                        className="marg-16"
+                                    />
                                 </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col sm12 md6 lg4">
-                                <TextField 
-                                    id="defaultValue"
-                                    type="text"
-                                    label="Auto preencido"
-                                    defaultValue="Valor padrão"
-                                    className="marg-16"
-                                />
-                            </div>
-                            <div className="col sm12 md6 lg4">
-                                <TextField 
-                                    id="required"
-                                    type="text"
-                                    label="Obrigatório"
-                                    required
-                                    helpText="Este campo é obrigatório"
-                                    className="marg-16"
-                                />
-                            </div>
-                            <div className="col sm12 md6 lg4">
-                                <TextField id="disabledFiled" type="text" label="Desativado" className="marg-16" disabled/>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col sm12 md6 lg4">
-                                <TextField id="defaultValueOutlined" type="text" label="Auto preencido" defaultValue="Valor padrão" variant="outlined" className="marg-16" />
-                            </div>
-                            <div className="col sm12 md6 lg4">
-                                <TextField id="requiredOutlined" type="text" label="Obrigatório" required helpText="Este campo é obrigatório" variant="outlined" className="marg-16" />
-                            </div>
-                            <div className="col sm12 md6 lg4">
-                                <TextField id="disabledOutlined" type="text" label="Desativado" variant="outlined" className="marg-16" disabled/>
+                                <div className="col sm12 md6 lg4">
+                                    <TextField 
+                                        id="required"
+                                        type="text"
+                                        label="Obrigatório"
+                                        required
+                                        helpText="Este campo é obrigatório"
+                                        className="marg-16"
+                                    />
+                                </div>
+                                <div className="col sm12 md6 lg4">
+                                    <TextField id="disabledFiled" type="text" label="Desativado" className="marg-16" disabled/>
+                                </div>
+                                <div className="col sm12 md6 lg4">
+                                    <TextField id="defaultValueOutlined" type="text" label="Auto preencido" defaultValue="Valor padrão" variant="outlined" className="marg-16" />
+                                </div>
+                                <div className="col sm12 md6 lg4">
+                                    <TextField id="requiredOutlined" type="text" label="Obrigatório" required helpText="Este campo é obrigatório" variant="outlined" className="marg-16" />
+                                </div>
+                                <div className="col sm12 md6 lg4">
+                                    <TextField id="disabledOutlined" type="text" label="Desativado" variant="outlined" className="marg-16" disabled/>
+                                </div>
                             </div>
                         </div>
                     </div>

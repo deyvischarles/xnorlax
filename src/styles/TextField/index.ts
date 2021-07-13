@@ -85,7 +85,6 @@ const TextField = styled.div<ITextField>`
         z-index: 1;
         user-select: none;
         pointer-events: none;
-        //transition: all 200ms cubic-bezier(.4, 0, .2, 1);
         transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
     }
 
