@@ -10,15 +10,15 @@
   "lang": "pt-BR",
   "icons": [
     {
-      "src": "adaptive-icon.svg",
-      "type": "image/svg",
-      "sizes": "150x150",
+      "src": "adaptive-icon.png",
+      "type": "image/png",
+      "sizes": "196x196",
       "purpose": "maskable"
     },
     {
       "src": "favicon.png",
-      "sizes": "32x32",
-      "type": "image/x-icon"
+      "type": "image/x-icon",
+      "sizes": "32x32"
     },
     {
       "src": "logo-192.png",

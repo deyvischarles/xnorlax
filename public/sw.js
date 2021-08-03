@@ -1,11 +1,11 @@
-const cacheName = 'C-02-08-21'
+const cacheName = 'C-03-08-21-06-59-00'
 
 const resourcesToCache = [
   '/',
   '/offline.html',
   '/manifest.json',
   '/robots.txt',
-  '/adaptive-icon.svg',
+  '/adaptive-icon.png',
   '/favicon.png',
   '/logo-192.png',
   '/logo-512.png'
