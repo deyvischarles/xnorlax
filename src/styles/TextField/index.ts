@@ -14,7 +14,7 @@ const TextField = styled.div<ITextField>`
         position: relative;
         box-sizing: border-box;
         width: 100%;
-        min-width: 280px;
+        min-width: 252px;
         height: 48px;
         border: none;
         border-bottom: 1px solid ${props => props.theme.colors.secondaryText};

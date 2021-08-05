@@ -15,14 +15,34 @@ export default createGlobalStyle`
         box-sizing: border-box;
     }
 
+    :root {
+        font-size: 16px;
+    }
+
     html {
+        font-family: 'Segoe UI', -apple-system, Roboto, Ubuntu, sans-serif;
+        font-weight: normal;
+        line-height: 1.43;
         -webkit-font-smoothing: antialiased;
+        color: ${props => props.theme.colors.primaryText};
+    }
+      
+    button,
+    input,
+    select,
+    textarea,
+    optgroup {
+        font-family: 'Segoe UI', -apple-system, Roboto, Ubuntu, sans-serif;
     }
       
     body {
         height: 100%;
         overflow-y: auto;
         background-color: ${props => props.theme.colors.background};
+    }
+
+    main {
+        padding-top: 1rem;
     }
     
     a {
@@ -76,138 +96,6 @@ export default createGlobalStyle`
     ::-webkit-scrollbar-thumb {
         background: ${props => props.theme.colors.divider} !important;
     }
-
-    html {
-        font-family: 'Segoe UI', -apple-system, Roboto, Ubuntu, sans-serif;
-        font-size: 14px;
-        font-weight: normal;
-        line-height: 1.43;
-        color: ${props => props.theme.colors.primaryText};
-
-        @media ${Breakpoints.md} {
-            font-size: 15px;
-        }
-    
-        @media ${Breakpoints.lg} {
-            font-size: 16px;
-        }
-    }
-      
-    button,
-    input,
-    select,
-    textarea,
-    optgroup {
-        font-family: 'Segoe UI', -apple-system, Roboto, Ubuntu, sans-serif;
-    }
-      
-    h1 {
-        font-size: 96px;
-        font-weight: 300;
-        letter-spacing: -1.5px;
-        line-height: 110%;
-        margin: 64px 0 38.4px 0;
-    }
-      
-    h2 {
-        font-size: 60px;
-        font-weight: 300;
-        letter-spacing: -0.5px;
-        line-height: 110%;
-        margin: 40px 0 24px 0;
-    }
-      
-    h3 {
-        font-size: 48px;
-        font-weight: 400;
-        letter-spacing: 0px;
-        line-height: 110%;
-        margin: 32px 0 19.2px 0;
-    }
-      
-    h4 {
-        font-size: 34px;
-        font-weight: 400;
-        letter-spacing: 0.25px;
-        line-height: 110%;
-        margin: 22.6666666667px 0 13.6px 0;
-    }
-      
-    h5 {
-        font-size: 24px;
-        font-weight: 400;
-        letter-spacing: 0px;
-        line-height: 110%;
-        margin: 16px 0 9.6px 0;
-    }
-      
-    h6 {
-        font-size: 20px;
-        font-weight: 500;
-        letter-spacing: 0.15px;
-        line-height: 110%;
-        margin: 13.3333333333px 0 8px 0;
-    }
-      
-    .headline1 {
-        font-size: 96px;
-        font-weight: 300;
-        letter-spacing: -1.5px;
-    }
-      
-    .headline2 {
-        font-size: 60px;
-        font-weight: 300;
-        letter-spacing: -0.5px;
-    }
-      
-    .headline3 {
-        font-size: 48px;
-        font-weight: 400;
-        letter-spacing: 0px;
-    }
-      
-    .headline4 {
-        font-size: 34px;
-        font-weight: 400;
-        letter-spacing: 0.25px;
-    }
-      
-    .headline5 {
-        font-size: 24px;
-        font-weight: 400;
-        letter-spacing: 0px;
-    }
-      
-    .headline6 {
-        font-size: 20px;
-        font-weight: 500;
-        letter-spacing: 0.15px;
-    }
-      
-    .subtitle1 {
-        font-size: 16px;
-        font-weight: 400;
-        letter-spacing: 0.15px;
-    }
-      
-    .subtitle2 {
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 0.1px;
-    }
-      
-    .body1 {
-        font-size: 16px;
-        font-weight: 400;
-        letter-spacing: 0.5px;
-    }
-      
-    .body2 {
-        font-size: 14px;
-        font-weight: 400;
-        letter-spacing: 0.25px;
-    }
       
     .description {
         margin: 0 0 40px;
@@ -217,33 +105,12 @@ export default createGlobalStyle`
         letter-spacing: 0em;
     }
       
-    .caption {
-        font-size: 12px;
-        font-weight: 400;
-        letter-spacing: 0.4px;
-    }
-      
-    .overline {
-        font-size: 10px;
-        font-weight: 400;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-    }
-      
     .light {
         font-weight: 300 !important;
     }
       
     .bold {
         font-weight: 700 !important;
-    }
-
-    .txt-center {
-        text-align: center;
-    }
-      
-    .text-shadow {
-        text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
     }
 
     .container {
@@ -739,6 +606,10 @@ export default createGlobalStyle`
 
     &.marg-48 {
         margin: 48px;
+    }
+
+    .gutterBottom {
+        margin-bottom: 0.35em;
     }
 
     pre {

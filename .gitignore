@@ -4,5 +4,8 @@
 # next build
 /.next/
 
+# Work space
+/xnorlax.code-workspace
+
 # env files
 .env
