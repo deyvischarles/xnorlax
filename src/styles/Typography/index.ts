@@ -128,6 +128,13 @@ const Typography = styled('div').attrs<ITypography>(({component, variant}) => (
     ${props => props.weight === "bold" && css`
         font-weight: 700;
     `}
+
+    &.truncate {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 `
 
 export default Typography

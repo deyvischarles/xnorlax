@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+import Typography from '../styles/Typography'
+
 const Blog = () => {
   return (
     <>
@@ -13,9 +15,11 @@ const Blog = () => {
         <main>
             <section>
                 <div className="container">
-                    <div className="flex-box flex-col transparent">
-                        <h4>Blog</h4>
-                        <p>Nossas últimas notícias, atualizações e tutoriais para desenvolvedores.</p>
+                    <div className="box flex-col transparent">
+                        <Typography variant="h3" component="h1" className="gutterBottom">Blog</Typography>
+                        <Typography variant="h5" component="p">
+                            Nossas últimas notícias, atualizações e tutoriais para desenvolvedores.
+                        </Typography>
                     </div>
                 </div>
             </section>

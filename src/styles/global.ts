@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
 const Breakpoints = {
     xs: '(min-width : 0px)',
@@ -6,6 +6,21 @@ const Breakpoints = {
     md: '(min-width : 960px)',
     lg: '(min-width : 1280px)',
     xl: '(min-width : 1920px)'
+}
+
+function createStyles(prefix: string, amount: number, style1: string, style2?: string) {
+    let styles = '';
+
+    for (let i = 1; i <= amount; i += 1) {
+        styles += `
+            .${prefix}${i} {
+                ${style1}: ${i * 8}px;
+                ${style2 ? `${style2}: ${i * 8}px;` : ''}
+            }
+        `
+    }
+
+    return css`${styles}`;
 }
 
 export default createGlobalStyle`
@@ -96,22 +111,6 @@ export default createGlobalStyle`
     ::-webkit-scrollbar-thumb {
         background: ${props => props.theme.colors.divider} !important;
     }
-      
-    .description {
-        margin: 0 0 40px;
-        font-size: 1.5rem;
-        font-weight: 400;
-        line-height: 1.334;
-        letter-spacing: 0em;
-    }
-      
-    .light {
-        font-weight: 300 !important;
-    }
-      
-    .bold {
-        font-weight: 700 !important;
-    }
 
     .container {
         margin: 0 auto;
@@ -127,26 +126,9 @@ export default createGlobalStyle`
         }
     }
 
-    .section {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-
     section {
         padding-top: 1rem;
         padding-bottom: 1rem;
-    
-        &.no-pad {
-            padding: 0;
-        }
-
-        &.no-pad-top {
-            padding-top: 0;
-        }
-        
-        &.no-pad-bottom {
-            padding-bottom: 0;
-        }
     }
 
     .hide-xs {
@@ -223,34 +205,6 @@ export default createGlobalStyle`
         .col {
             float: left;
             min-height: 1px;
-
-            &.pad-6 {
-                padding: 6px;
-            }
-        
-            &.pad-8 {
-                padding: 8px;
-            }
-        
-            &.pad-12 {
-                padding: 12px;
-            }
-        
-            &.pad-16 {
-                padding: 16px;
-            }
-        
-            &.pad-24 {
-                padding: 24px;
-            }
-        
-            &.pad-32 {
-                padding: 32px;
-            }
-
-            &.pad-48 {
-                padding: 48px;
-            }
 
             &.sm1 {
                 width: 8.3333333333%;
@@ -452,7 +406,7 @@ export default createGlobalStyle`
         }
     }
 
-    .flex-box {
+    .box {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -461,11 +415,7 @@ export default createGlobalStyle`
         background-color: ${props => props.theme.colors.box};
         border-radius: 4px;
         outline: 0;
-      
-        .spacer {
-          flex-grow: 1;
-        }
-
+        overflow-x: hidden;
       
         &.outlined {
           border: 1px solid ${props => props.theme.colors.divider};
@@ -475,35 +425,9 @@ export default createGlobalStyle`
           background-color: transparent !important;
         }
 
-      
-        &.pad-6 {
-          padding: 6px;
+        .spacer {
+          flex-grow: 1;
         }
-      
-        &.pad-8 {
-          padding: 8px;
-        }
-      
-        &.pad-12 {
-          padding: 12px;
-        }
-      
-        &.pad-16 {
-          padding: 16px;
-        }
-      
-        &.pad-24 {
-          padding: 24px;
-        }
-      
-        &.pad-32 {
-          padding: 32px;
-        }
-
-        &.pad-48 {
-          padding: 48px;
-        }
-
       
         &.nowrap {
           flex-wrap: nowrap;
@@ -512,7 +436,6 @@ export default createGlobalStyle`
         &.flex-col {
           flex-direction: column;
         }
-
       
         &.content-start {
           justify-content: flex-start;
@@ -533,7 +456,6 @@ export default createGlobalStyle`
         &.content-evenly {
           justify-content: space-evenly;
         }
-
       
         &.items-start {
           align-items: flex-start;
@@ -546,7 +468,6 @@ export default createGlobalStyle`
         &.items-baseline {
           align-items: baseline;
         }
-
       
         &.items-stretch {
           align-items: stretch;
@@ -560,57 +481,37 @@ export default createGlobalStyle`
         margin: 16px 0;
     }
 
-    .space {
-        margin: 0 8px;
-    }
+    .m1 {margin: 8px;}
+    .m2 {margin: 16px;}
+    .m3 {margin: 24px;}
+    .m4 {margin: 32px;}
+    .m5 {margin: 40px;}
+
+    ${createStyles('mt', 5, 'margin-top')}
+    ${createStyles('mr', 5, 'margin-right')}
+    ${createStyles('mb', 5, 'margin-bottom')}
+    ${createStyles('ml', 5, 'margin-left')}
+    ${createStyles('mx', 5, 'margin-left', 'margin-right')}
+    ${createStyles('my', 5, 'margin-top', 'margin-bottom')}
+
+    .gutterBottom { margin-bottom: 0.35em;}
     
-    .space-left {
-        margin-left: 8px;
-    }
+    .p1 {padding: 8px;}
+    .p2 {padding: 16px;}
+    .p3 {padding: 24px;}
+    .p4 {padding: 32px;}
+    .p5 {padding: 40px;}
 
-    .space-right {
-        margin-right: 8px;
-    }
+    ${createStyles('pt', 5, 'padding-top')}
+    ${createStyles('pr', 5, 'padding-right')}
+    ${createStyles('pb', 5, 'padding-bottom')}
+    ${createStyles('pl', 5, 'padding-left')}
+    ${createStyles('px', 5, 'padding-left', 'padding-right')}
+    ${createStyles('py', 5, 'padding-top', 'padding-bottom')}
 
-    .space-top {
-        margin-top: 8px;
-    }
-
-    .space-botton {
-        margin-bottom: 8px;
-    }
-    
-    &.marg-6 {
-        margin: 6px;
-    }
-
-    &.marg-8 {
-        margin: 8px;
-    }
-
-    &.marg-12 {
-        margin: 12px;
-    }
-
-    &.marg-16 {
-        margin: 16px;
-    }
-
-    &.marg-24 {
-        margin: 24px;
-    }
-
-    &.marg-32 {
-        margin: 32px;
-    }
-
-    &.marg-48 {
-        margin: 48px;
-    }
-
-    .gutterBottom {
-        margin-bottom: 0.35em;
-    }
+    .no-p {padding: 0;}
+    .no-pt {padding-top: 0;}
+    .no-pb {padding-bottom: 0;}
 
     pre {
         display: block;
@@ -664,7 +565,7 @@ export default createGlobalStyle`
     }
 
     .token.property {
-        color: ${props => props.theme.colors.cyan};
+        color: ${props => props.theme.colors.lightBlue};
     }
 
     .token.boolean,
@@ -715,7 +616,7 @@ export default createGlobalStyle`
 
     .token.attr-name,
     .token.parameter {
-        color: ${props => props.theme.colors.cyan};
+        color: ${props => props.theme.colors.lightBlue};
     }
 
     .token.regex,

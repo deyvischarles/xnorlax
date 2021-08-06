@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+import Typography from '../styles/Typography'
+
 const Erro404 = () => {
   return (
     <>
@@ -13,9 +15,13 @@ const Erro404 = () => {
       <main>
         <section>
           <div className="container">
-            <div className="flex-box flex-col transparent">
-              <h1>404</h1>
-              <p>página não encontrada!</p>
+            <div className="box flex-col transparent">
+              <Typography variant="h1" className="gutterBottom">
+                404
+              </Typography>
+              <Typography variant="h5" component="p">
+                página não encontrada!
+              </Typography>
             </div>
           </div>
         </section>

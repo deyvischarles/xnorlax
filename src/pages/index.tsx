@@ -15,9 +15,11 @@ const Home = () => {
       <main>
         <section>
           <div className="container">
-            <div className="flex-box flex-col transparent">
-              <Typography variant="h3" component="h1" className="gutterBottom">Bem-vindo!</Typography>
-              <Typography variant="h5" component="h2">Nosso sistema ainda está em desenvolvimento, mas você pode navegar a vontade pelos conteúdo já existentes.</Typography>
+            <div className="box flex-col transparent">
+              <Typography variant="h3" component="h1" className="gutterBottom">Bem-vindo a Xnorlax!</Typography>
+              <Typography variant="h5" component="h2">
+                Nosso sistema ainda está em desenvolvimento, mas você pode navegar pelo conteúdo existente à vontade.
+              </Typography>
               <br />
               <Typography variant="body1" component="p">Se você gostar do nosso conteúdo também poderar instalar esse app na sua tela principal.</Typography>
             </div>
