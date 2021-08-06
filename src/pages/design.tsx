@@ -105,18 +105,18 @@ export default function BasicTextFields() {
                         <div className="row">
                             <div className="col sm12">
                                 <div className="box items-start flex-col outlined transparent p2">
-                                    <Typography variant="h1" component="h2" className="gutterBottom truncate">h1 Heading</Typography>
-                                    <Typography variant="h2" className="gutterBottom truncate">h2 Heading</Typography>
-                                    <Typography variant="h3" className="gutterBottom">h3 Heading</Typography>
-                                    <Typography variant="h4" className="gutterBottom">h4 Heading</Typography>
-                                    <Typography variant="h5" className="gutterBottom">h5 Heading</Typography>
-                                    <Typography variant="h6" className="gutterBottom">h6 Heading</Typography>
-                                    <Typography variant="subtitle1" component="span" className="gutterBottom">subtitle1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur</Typography>
-                                    <Typography variant="subtitle2" component="span" className="gutterBottom">subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur</Typography>
-                                    <Typography variant="body1" component="p" className="gutterBottom">body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.</Typography>
-                                    <Typography variant="body2" component="p" className="gutterBottom">body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.</Typography>
+                                    <Typography variant="h1" component="h2" className="gutterBottom truncate">H1</Typography>
+                                    <Typography variant="h2" className="gutterBottom">H2</Typography>
+                                    <Typography variant="h3" className="gutterBottom">H3</Typography>
+                                    <Typography variant="h4" className="gutterBottom">H4</Typography>
+                                    <Typography variant="h5" className="gutterBottom">H5</Typography>
+                                    <Typography variant="h6" className="gutterBottom">H6</Typography>
+                                    <Typography variant="subtitle1" component="span" className="gutterBottom">Subtitle1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur</Typography>
+                                    <Typography variant="subtitle2" component="span" className="gutterBottom">Subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur</Typography>
+                                    <Typography variant="body1" component="p" className="gutterBottom">Body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.</Typography>
+                                    <Typography variant="body2" component="p" className="gutterBottom">Body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.</Typography>
                                     <Typography variant="button" className="gutterBottom">Button Text</Typography>
-                                    <Typography variant="caption" component="span" className="gutterBottom">caption text</Typography>
+                                    <Typography variant="caption" component="span" className="gutterBottom">Caption text</Typography>
                                     <Typography variant="overline" component="span" className="gutterBottom">Overline text</Typography>
                                 </div>
                             </div>

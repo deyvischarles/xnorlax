@@ -16,7 +16,6 @@ const Laboratory = () => {
             <main>
                 <section>
                     <div className="container">
-                        <br/>
                         <div className="row">
                             <div className="col sm12">
                                 <div className="box flex-col transparent p3">
