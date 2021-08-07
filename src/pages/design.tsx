@@ -96,9 +96,15 @@ export default function BasicTextFields() {
                         <div className="row">
                             <div className="col sm12">
                                 <Typography variant="h3" component="h1" className="gutterBottom">Tipografia</Typography>
-                                <Typography variant="h5" component="p">Use a tipografia para apresentar seu design e conteúdo da forma mais clara e eficiente possível.</Typography>
+                                <Typography variant="h5" component="p">
+                                    Use a tipografia para apresentar seu design e conteúdo da forma mais clara e eficiente possível.
+                                </Typography>
                                 <br />
-                                <Typography variant="body1" component="p">O uso de diferentes tamanhos e estilos de uma só vez pode estragar qualquer leiaute. Uma escala tipográfica tem um conjunto limitado de tipos de tamanhos que funcionam bem em conjunto com o leiaute de grade.</Typography>
+                                <Typography variant="body1" component="p">
+                                    O uso de diferentes tamanhos e estilos de uma só vez pode estragar qualquer leiaute. Uma 
+                                    escala tipográfica tem um conjunto limitado de tipos de tamanhos que funcionam bem em conjunto 
+                                    com o leiaute de grade.
+                                </Typography>
                                 <br />
                             </div>
                         </div>
@@ -111,10 +117,10 @@ export default function BasicTextFields() {
                                     <Typography variant="h4" className="gutterBottom">H4</Typography>
                                     <Typography variant="h5" className="gutterBottom">H5</Typography>
                                     <Typography variant="h6" className="gutterBottom">H6</Typography>
-                                    <Typography variant="subtitle1" component="span" className="gutterBottom">Subtitle1</Typography>
-                                    <Typography variant="subtitle2" component="span" className="gutterBottom">Subtitle2</Typography>
-                                    <Typography variant="body1" component="p" className="gutterBottom">Body1</Typography>
-                                    <Typography variant="body2" component="p" className="gutterBottom">Body2</Typography>
+                                    <Typography variant="subtitle1" component="span" className="gutterBottom">Subtitle 1</Typography>
+                                    <Typography variant="subtitle2" component="span" className="gutterBottom">Subtitle 2</Typography>
+                                    <Typography variant="body1" component="p" className="gutterBottom">Body 1</Typography>
+                                    <Typography variant="body2" component="p" className="gutterBottom">Body 2</Typography>
                                     <Typography variant="button" className="gutterBottom">Button</Typography>
                                     <Typography variant="caption" component="span" className="gutterBottom">Caption</Typography>
                                     <Typography variant="overline" component="span" className="gutterBottom">Overline</Typography>
@@ -128,10 +134,14 @@ export default function BasicTextFields() {
                         <div className="row">
                             <div className="col sm12">
                                 <Typography variant="h3" component="h2" className="gutterBottom">Grade</Typography>
-                                <Typography variant="h5" component="p">O leiaute responsivo da grade se adapta ao tamanho e orientação da tela, garantindo a consistência entre leiautes.</Typography>
+                                <Typography variant="h5" component="p">
+                                    O leiaute responsivo da grade se adapta ao tamanho e orientação da tela, garantindo a 
+                                    consistência entre leiautes.
+                                </Typography>
                                 <br />
                                 <Typography variant="body1" component="p">
-                                    Uma grade cria consistência visual entre leiautes, enquanto permite flexibilidade em uma ampla variedade de projetos. Nossa UI responsiva é baseada em um leiaute de grade com 12 colunas.
+                                    Uma grade cria consistência visual entre leiautes, enquanto permite flexibilidade em uma ampla 
+                                    variedade de projetos. Nossa UI responsiva é baseada em um leiaute de grade com 12 colunas.
                                 </Typography>
                             </div>
                         </div>
@@ -154,9 +164,11 @@ export default function BasicTextFields() {
                         <div className="row">
                             <div className="col sm12">
                                 <Typography variant="h4" component="h3" className="gutterBottom">Grades Responsivos</Typography>
-                                <Typography variant="body1" component="p">No exemplo abaixo, nós tornamos o leiaute responsivo definindo quantas colunas a div 
-                                deve ocupar em cada tamanho de tela. Tente redimensionar seu navegador e veja o 
-                                leiaute abaixo se auto-ajustando.</Typography>
+                                <Typography variant="body1" component="p">
+                                    No exemplo abaixo, nós tornamos o leiaute responsivo definindo quantas colunas a div 
+                                    deve ocupar em cada tamanho de tela. Tente redimensionar seu navegador e veja o 
+                                    leiaute abaixo se auto-ajustando.
+                                </Typography>
                             </div>
                         </div>
 
@@ -184,7 +196,10 @@ export default function BasicTextFields() {
                             <div className="col sm12">
                                 <div className="row">
                                     <Typography variant="h3" component="h2" className="gutterBottom">SvgIcon</Typography>
-                                    <Typography variant="body1" component="p">Nós padronizamos mais de 32 ícones de uso comun (veja abaixo). Para cada ícone SVG, exportamos o respectivo componente React presente no diretório "components/icons".</Typography>
+                                    <Typography variant="body1" component="p">
+                                        Nós padronizamos mais de 32 ícones de uso comun (veja abaixo). Para cada ícone SVG, 
+                                        exportamos o respectivo componente React presente no diretório "components/icons".
+                                    </Typography>
                                     <br />
                                     <Typography variant="h4" component="h3">Uso</Typography>
                                     <br />
@@ -424,7 +439,10 @@ export default function BasicTextFields() {
                         </div>
                         <div className="row">
                             <div className="col sm12">
-                                <Typography variant="body1" component="p">Se você precisa customizar o ícone SVG (não disponível no conjunto padrão de ícones Material) você pode encapsular em um SvgIcon. Este componente estende o elemento nativo "svg":</Typography>
+                                <Typography variant="body1" component="p">
+                                    Se você precisa customizar o ícone SVG (não disponível no conjunto padrão de ícones Material) 
+                                    você pode encapsular em um SvgIcon. Este componente estende o elemento nativo "svg":
+                                </Typography>
                             </div>
                         </div>
                         <SyntaxHighlighter language='tsx' style={false}>
@@ -437,9 +455,11 @@ export default function BasicTextFields() {
                         <div className="row">
                             <div className="col sm12">
                                 <Typography variant="h3" component="h2" className="gutterBottom">Campo de texto</Typography>
-                                <Typography variant="body1" component="p">Campos de texto permitem que os usuários digitem e editem texto em uma interface de usuário.
-                                Eles geralmente aparecem em formulários e diálogos.
-                                Em nosso design system usamos dois tipos de campo de texto: "preenchido" e "delineado".</Typography>
+                                <Typography variant="body1" component="p">
+                                    Campos de texto permitem que os usuários digitem e editem texto em uma interface de usuário.
+                                    Eles geralmente aparecem em formulários e diálogos.
+                                    Em nosso design system usamos dois tipos de campo de texto: "preenchido" e "delineado".
+                                </Typography>
                             </div>
                         </div>
                         <div className="row">
@@ -472,9 +492,11 @@ export default function BasicTextFields() {
                             <div className="col sm12">
                                 <Typography variant="h4" component="h3" className="gutterBottom">Propriedades de formulário</Typography>
                                 
-                                <Typography variant="body1" component="p">Os atributos padrões de formulários são suportados, por exemplo, required, disabled, type, etc.
-                                assim como o helperText, que é utilizado para dar contexto sobre um campo de entrada, tal como, 
-                                explicar como o campo deve ser preenchido.</Typography>
+                                <Typography variant="body1" component="p">
+                                    Os atributos padrões de formulários são suportados, por exemplo, required, disabled, type, etc.
+                                    assim como o helperText, que é utilizado para dar contexto sobre um campo de entrada, tal como, 
+                                    explicar como o campo deve ser preenchido.
+                                </Typography>
                             </div>
                         </div>
                         <div className="row">
