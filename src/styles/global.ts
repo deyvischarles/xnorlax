@@ -41,6 +41,21 @@ export default createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         color: ${props => props.theme.colors.primaryText};
     }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    body {
+        background-color: ${props => props.theme.colors.background};
+    }
+
+    main {
+        padding-top: 1rem;
+    }
       
     button,
     input,
@@ -48,16 +63,6 @@ export default createGlobalStyle`
     textarea,
     optgroup {
         font-family: 'Segoe UI', -apple-system, Roboto, Ubuntu, sans-serif;
-    }
-      
-    body {
-        height: 100%;
-        overflow-y: auto;
-        background-color: ${props => props.theme.colors.background};
-    }
-
-    main {
-        padding-top: 1rem;
     }
     
     a {
