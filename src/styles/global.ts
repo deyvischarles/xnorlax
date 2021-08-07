@@ -114,11 +114,12 @@ export default createGlobalStyle`
 
     .container {
         margin: 0 auto;
+        padding: 0 1rem;
+        width: 100%;
         max-width: 1280px;
-        width: 90%;
 
         @media ${Breakpoints.md} {
-            width: 85%;
+            width: 90%;
         }
 
         @media ${Breakpoints.lg} {

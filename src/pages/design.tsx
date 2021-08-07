@@ -111,13 +111,13 @@ export default function BasicTextFields() {
                                     <Typography variant="h4" className="gutterBottom">H4</Typography>
                                     <Typography variant="h5" className="gutterBottom">H5</Typography>
                                     <Typography variant="h6" className="gutterBottom">H6</Typography>
-                                    <Typography variant="subtitle1" component="span" className="gutterBottom">Subtitle1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur</Typography>
-                                    <Typography variant="subtitle2" component="span" className="gutterBottom">Subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur</Typography>
-                                    <Typography variant="body1" component="p" className="gutterBottom">Body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.</Typography>
-                                    <Typography variant="body2" component="p" className="gutterBottom">Body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.</Typography>
-                                    <Typography variant="button" className="gutterBottom">Button Text</Typography>
-                                    <Typography variant="caption" component="span" className="gutterBottom">Caption text</Typography>
-                                    <Typography variant="overline" component="span" className="gutterBottom">Overline text</Typography>
+                                    <Typography variant="subtitle1" component="span" className="gutterBottom">Subtitle1</Typography>
+                                    <Typography variant="subtitle2" component="span" className="gutterBottom">Subtitle2</Typography>
+                                    <Typography variant="body1" component="p" className="gutterBottom">Body1</Typography>
+                                    <Typography variant="body2" component="p" className="gutterBottom">Body2</Typography>
+                                    <Typography variant="button" className="gutterBottom">Button</Typography>
+                                    <Typography variant="caption" component="span" className="gutterBottom">Caption</Typography>
+                                    <Typography variant="overline" component="span" className="gutterBottom">Overline</Typography>
                                 </div>
                             </div>
                         </div>
