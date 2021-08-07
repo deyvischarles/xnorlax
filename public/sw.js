@@ -1,4 +1,4 @@
-const cacheName = 'C-07-08-21-11-02-00'
+const cacheName = 'C-07-08-21-18-30-00'
 
 const resourcesToCache = [
   '/',
@@ -7,8 +7,8 @@ const resourcesToCache = [
   '/robots.txt',
   '/adaptive-icon.png',
   '/favicon.png',
-  '/logo-192.png',
-  '/logo-512.png'
+  '/icon-192.png',
+  '/icon-512.png'
 ]
 
 self.addEventListener('install', event => {
