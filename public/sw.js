@@ -1,4 +1,4 @@
-const cacheName = 'C-07-08-21-18-30-00'
+const cacheName = 'C-09-08-21-17-30-00'
 
 const resourcesToCache = [
   '/',

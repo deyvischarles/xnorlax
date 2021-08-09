@@ -80,10 +80,10 @@ export default Home`
 import Favorite from 'components/icons/Favorite'`
 
     const codeInplementIcons = 
-`<HomeIcon />
-<HomeIcon color="primary" />
-<HomeIcon color="secondary" />
-<HomeIcon color="disabled" />`
+`<Lightbulb />
+<Lightbulb color="primary" />
+<Lightbulb color="secondary" />
+<Lightbulb color="disabled" />`
 
     const codeTextField =
 `import TextField from '../components/TextField'

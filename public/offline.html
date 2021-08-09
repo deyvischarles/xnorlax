@@ -12,22 +12,25 @@
                 box-sizing: border-box;
             }
 
+            :root {
+                font-size: 16px;
+            }
+
             html {
                 font-family: 'Segoe UI', -apple-system, Roboto, Ubuntu, sans-serif;
-                font-size: 14px;
                 font-weight: normal;
                 line-height: 1.43;
-                background-color: #212121;
                 color: #FFF;
             }
 
-            @media (min-width: 1280px) {
-                html {font-size: 16px;}
+            html, body {
+                width: 100%;
+                height: auto;
+                overflow: hidden auto;
             }
 
             body {
-                height: 100%;
-                overflow-y: auto;
+                background-color: #212121;
             }
 
             h1 {
@@ -97,12 +100,16 @@
             .bold {
                 font-weight: 700;
             }
+
+            .mt5 {
+                margin-top: 40px;
+            }
         </style>
     </Head>
     <main>
         <section>
             <div class="container">
-                <div class="box col txt-center">
+                <div class="box col txt-center mt5">
                     <h1 class="gutterBottom">¯\_(ツ)_/¯</h1>
                     <h2 class="subtitle bold gutterBottom">Offline</h2>
                     <p>Não foi possível carregar as informações. Verifique sua conexão e tente novamente</p>
