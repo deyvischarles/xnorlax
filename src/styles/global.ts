@@ -517,7 +517,11 @@ export default createGlobalStyle`
 
     .no-p {padding: 0;}
     .no-pt {padding-top: 0;}
+    .no-pr {padding-right: 0;}
     .no-pb {padding-bottom: 0;}
+    .no-pl {padding-left: 0;}
+    .no-px {padding-left: 0; padding-right: 0;}
+    .np-py {padding-top: 0; padding-bottom: 0;}
 
     pre {
         display: block;
