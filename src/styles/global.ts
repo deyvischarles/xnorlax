@@ -79,8 +79,9 @@ export default createGlobalStyle`
         display: inline;
     }
     
-    ul:not(.browser-default) {
-        list-style-type: none;
+    ul {
+        list-style-type: disc;
+        padding-left: 1.875rem;
     }
     
     img {
@@ -542,10 +543,11 @@ export default createGlobalStyle`
         tab-size: 4;
     }
 
-    :not(pre) > code[class*="language-"] {
-        background-color: ${props => props.theme.colors.box};
+    :not(pre) > code {
         color: ${props => props.theme.colors.pink};
-        display: inline-block;
+        background-color: ${props => props.theme.colors.box};
+        border-radius: 2px;
+        padding: 0 4px;
     }
 
     .token.comment,

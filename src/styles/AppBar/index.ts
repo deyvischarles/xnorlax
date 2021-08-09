@@ -54,6 +54,9 @@ const AppBar = styled.header<IAppBar>`
             }
     
             ul {
+                list-style-type: none;
+                padding: 0;
+
                 li {
                     position: relative;
                     transition: background-color .3s;

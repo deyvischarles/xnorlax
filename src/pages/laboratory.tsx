@@ -10,7 +10,7 @@ const Laboratory = () => {
                 <meta name="description" content="Área para testes e experiências"/>
                 <meta name="keywords" content="supermachine, laboratório"/>
                 <link rel="canonical" href={`${process.env.NEXT_PUBLIC_APP_URL}/laboratory`} />
-                <title>Supermachine - Laboratório</title>
+                <title>Xnorlax - Laboratório</title>
             </Head>
 
             <main>

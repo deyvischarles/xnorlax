@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
-import Typography from '../styles/Typography';
+import Typography from '../styles/Typography'
 
 import GitHub from '../components/Icons/GitHub'
 import Linkedin from '../components/Icons/Linkedin'
@@ -36,8 +36,24 @@ import Label from '../components/Icons/Label'
 import Language from '../components/Icons/Language'
 import Lightbulb from '../components/Icons/Lightbulb'
 import TextField from '../components/TextField'
+import Button from '../components/Button'
 
 const Design = () => {
+    const codeInportTypography =
+`import Typography from '../styles/Typography'`
+
+    const codeTypographyExample = 
+`<Typography variant="body1">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    Quos blanditiis tenetur
+</Typography>`
+
+    const codeTypographySemantic = 
+`{/ * Já existe um h1 na página, não vamos duplicá-lo. */}
+<Typography variant="h1" component="h2">
+    h1. Título
+</Typography>`
+
     const codeSvgIcons = 
 `import SvgIcon from '../../styles/SvgIcon'
 
@@ -110,6 +126,7 @@ export default function BasicTextFields() {
                         </div>
                         <div className="row">
                             <div className="col sm12">
+                                <Typography variant="h4" component="h2" className="mb2">Componente</Typography>
                                 <div className="box items-start flex-col outlined transparent p2">
                                     <Typography variant="h1" component="h2" className="gutterBottom truncate">H1</Typography>
                                     <Typography variant="h2" className="gutterBottom">H2</Typography>
@@ -125,6 +142,60 @@ export default function BasicTextFields() {
                                     <Typography variant="caption" component="span" className="gutterBottom">Caption</Typography>
                                     <Typography variant="overline" component="span" className="gutterBottom">Overline</Typography>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col sm12">
+                                <Typography variant="h4" component="h2" className="mb2">Uso</Typography>
+
+                                <Typography variant="body1" component="p">
+                                    faça os Importes dos componentes tipograficos da seguinte forma:
+                                </Typography>
+                            
+                                <SyntaxHighlighter language='tsx' style={false}>
+                                    {codeInportTypography}
+                                </SyntaxHighlighter>
+                            
+                                <div className="box nowrap outlined transparent p2">
+                                    <Typography variant="body1">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                        Quos blanditiis tenetur
+                                    </Typography>
+                                </div>
+                            
+                                <SyntaxHighlighter language='tsx' style={false}>
+                                    {codeTypographyExample}
+                                </SyntaxHighlighter>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col sm12">
+                                <Typography variant="h4" component="h2" className="mb2">Alterando o elemento semântico</Typography>
+                                <Typography variant="body1" component="p" className="mb2">
+                                    O componente de Tipografia (Typography) usa a propriedade <code>variant</code> para associar 
+                                    a variação da UI com um elemento semântico. É importante ressaltar que o estilo de uma 
+                                    tipografia é independente do elemento semântico por baixo dela.
+                                </Typography>
+                                
+                                <ul>
+                                    <li>
+                                        Você pode alterar o elemento subjacente para uma ocasião em específico com a 
+                                        propriedade <code>component</code>:
+                                    </li>
+                                </ul>
+
+                                <SyntaxHighlighter language='tsx' style={false}>
+                                    {codeTypographySemantic}
+                                </SyntaxHighlighter>
                             </div>
                         </div>
                     </div>
@@ -203,7 +274,7 @@ export default function BasicTextFields() {
                                     <br />
                                     <Typography variant="h4" component="h3">Uso</Typography>
                                     <br />
-                                    <Typography variant="body1" component="p">Importe ícones usando a seguinte opções:</Typography>
+                                    <Typography variant="body1" component="p">Importe ícones usando as seguintes opções:</Typography>
                                 </div>
                                 <div className="row">
                                     <SyntaxHighlighter language='tsx' style={false}>
