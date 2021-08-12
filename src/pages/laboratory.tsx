@@ -1,9 +1,22 @@
+import React, { useState, useEffect } from 'react'
+
 import Head from 'next/head'
 
+import Skeleton from '../styles/Skeleton'
 import Typography from '../styles/Typography'
 import Assistant from '../components/Assistant'
 
 const Laboratory = () => {
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        const init = setTimeout(() => {
+            setLoading(false)
+        }, 1000)
+
+        return () => clearTimeout(init)
+    }, [])
+
     return (
         <>
             <Head>
@@ -19,7 +32,11 @@ const Laboratory = () => {
                         <div className="row">
                             <div className="col sm12">
                                 <div className="box flex-col transparent p3">
-                                    <Assistant />
+                                    {loading ? (
+                                        <Skeleton variant="circle" animation="wave" width={96} height={96} />
+                                    ) : (
+                                        <Assistant />
+                                    )}
                                 </div>
                             </div>
                         </div>

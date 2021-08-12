@@ -68,6 +68,7 @@ const Light = {
         gray: '#616161',
         blueGray: '#455A64',
 
+        skeleton: 'rgba(0, 0, 0, 0.11)',
         navBar: '#0277bd',
         onNavBar: '#fff',
         sideNav: '#fff',

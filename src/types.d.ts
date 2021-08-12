@@ -1,0 +1,3 @@
+interface Loading {
+    isLoading: boolean;
+}

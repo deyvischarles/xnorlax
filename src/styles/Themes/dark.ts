@@ -68,6 +68,7 @@ const Dark = {
         gray: '#EEEEEE',
         blueGray: '#B0BEC5',
 
+        skeleton: 'rgba(255, 255, 255, 0.13)',
         navBar: '#333',
         onNavBar: '#fff',
         sideNav: '#424242',

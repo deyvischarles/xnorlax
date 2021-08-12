@@ -14,8 +14,22 @@ function createStyles(prefix: string, amount: number, style1: string, style2?: s
     for (let i = 1; i <= amount; i += 1) {
         styles += `
             .${prefix}${i} {
-                ${style1}: ${i * 8}px;
-                ${style2 ? `${style2}: ${i * 8}px;` : ''}
+                ${style1}: ${i * 8}px !important;
+                ${style2 ? `${style2}: ${i * 8}px !important;` : ''}
+            }
+        `
+    }
+
+    return css`${styles}`;
+}
+
+function createCols(prefix: string, amount: number){
+    let styles = '';
+
+    for (let i = 1; i <= amount; i += 1) {
+        styles += `
+            &.${prefix}${i} {
+                width: ${100 / 12 * i}%;
             }
         `
     }
@@ -197,10 +211,40 @@ export default createGlobalStyle`
         }
     }
 
+    .grid {
+        display: grid;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+
+        &.surface  {
+            background-color: ${props => props.theme.colors.box};
+        }
+
+        &.outlined {
+          border: 1px solid ${props => props.theme.colors.divider};
+        }
+
+        &.r1 { border-radius: 2px; }
+        &.r2 { border-radius: 4px; }
+        &.r3 { border-radius: 6px; }
+        &.r4 { border-radius: 8px; }
+        &.r5 { border-radius: 10px; }
+        &.r6 { border-radius: 12px; }
+        &.r7 { border-radius: 16px; }
+
+        &.circle { border-radius: 50%; }
+
+        &.row {grid-auto-flow: row; }
+        &.col { grid-auto-flow: column; }
+
+        &.spacex1 { column-gap: 8px; }
+        &.spacey1 { row-gap: 8px; }
+    }
+
     .row {
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 16px;
+        display: block;
+        width: 100%;
 
         &:after {
             content: "";
@@ -209,205 +253,22 @@ export default createGlobalStyle`
         }
 
         .col {
+            display: grid;
             float: left;
-            min-height: 1px;
+            min-height: 8px;
 
-            &.sm1 {
-                width: 8.3333333333%;
-            }
-              
-            &.sm2 {
-                width: 16.6666666667%;
-            }
-
-            &.sm3 {
-                width: 25%;
-            }
-
-            &.sm4 {
-                width: 33.3333333333%;
-            }
-
-            &.sm5 {
-                width: 41.6666666667%;
-            }
-
-            &.sm6 {
-                width: 50%;
-            }
-
-            &.sm7 {
-                width: 58.3333333333%;
-            }
-
-            &.sm8 {
-                width: 66.6666666667%;
-            }
-
-            &.sm9 {
-                width: 75%;
-            }
-
-            &.sm10 {
-                width: 83.3333333333%;
-            }
-
-            &.sm11 {
-                width: 91.6666666667%;
-            }
-
-            &.sm12 {
-                width: 100%;
-            }
+            ${createCols('sm', 12)}
 
             @media ${Breakpoints.md} {
-                &.md1 {
-                    width: 8.3333333333%;
-                }
-
-                &.md2 {
-                    width: 16.6666666667%;
-                }
-
-                &.md3 {
-                    width: 25%;
-                }
-
-                &.md4 {
-                    width: 33.3333333333%;
-                }
-
-                &.md5 {
-                    width: 41.6666666667%;
-                }
-
-                &.md6 {
-                    width: 50%;
-                }
-
-                &.md7 {
-                    width: 58.3333333333%;
-                }
-
-                &.md8 {
-                    width: 66.6666666667%;
-                }
-
-                &.md9 {
-                    width: 75%;
-                }
-
-                &.md10 {
-                    width: 83.3333333333%;
-                }
-
-                &.md11 {
-                    width: 91.6666666667%;
-                }
-
-                &.md12 {
-                    width: 100%;
-                }
+                ${createCols('md', 12)} 
             }
 
             @media ${Breakpoints.lg} {
-                &.lg1 {
-                    width: 8.3333333333%;
-                }
-
-                &.lg2 {
-                    width: 16.6666666667%;
-                }
-
-                &.lg3 {
-                    width: 25%;
-                }
-
-                &.lg4 {
-                    width: 33.3333333333%;
-                }
-
-                &.lg5 {
-                    width: 41.6666666667%;
-                }
-
-                &.lg6 {
-                    width: 50%;
-                }
-
-                &.lg7 {
-                    width: 58.3333333333%;
-                }
-
-                &.lg8 {
-                    width: 66.6666666667%;
-                }
-
-                &.lg9 {
-                    width: 75%;
-                }
-
-                &.lg10 {
-                    width: 83.3333333333%;
-                }
-
-                &.lg11 {
-                    width: 91.6666666667%;
-                }
-
-                &.lg12 {
-                    width: 100%;
-                }
+                ${createCols('lg', 12)}
             }
-
+            
             @media ${Breakpoints.xl} {
-                &.xl1 {
-                    width: 8.3333333333%;
-                }
-
-                &.xl2 {
-                    width: 16.6666666667%;
-                }
-
-                &.xl3 {
-                    width: 25%;
-                }
-
-                &.xl4 {
-                    width: 33.3333333333%;
-                }
-
-                &.xl5 {
-                    width: 41.6666666667%;
-                }
-
-                &.xl6 {
-                    width: 50%;
-                }
-
-                &.xl7 {
-                    width: 58.3333333333%;
-                }
-
-                &.xl8 {
-                    width: 66.6666666667%;
-                }
-
-                &.xl9 {
-                    width: 75%;
-                }
-
-                &.xl10 {
-                    width: 83.3333333333%;
-                }
-
-                &.xl11 {
-                    width: 91.6666666667%;
-                }
-
-                &.xl12 {
-                    width: 100%;
-                }
+                ${createCols('xl', 12)}
             }
         }
     }
@@ -422,6 +283,11 @@ export default createGlobalStyle`
         border-radius: 4px;
         outline: 0;
         overflow-x: hidden;
+
+        .item {
+            &:last-of-type { margin-right: 0 !important; }
+            &:first-of-type { margin-left: 0 !important; }
+        }
       
         &.outlined {
           border: 1px solid ${props => props.theme.colors.divider};
@@ -487,11 +353,11 @@ export default createGlobalStyle`
         margin: 16px 0;
     }
 
-    .m1 {margin: 8px;}
-    .m2 {margin: 16px;}
-    .m3 {margin: 24px;}
-    .m4 {margin: 32px;}
-    .m5 {margin: 40px;}
+    .m1 {margin: 8px !important;}
+    .m2 {margin: 16px !important;}
+    .m3 {margin: 24px !important;}
+    .m4 {margin: 32px !important;}
+    .m5 {margin: 40px !important;}
 
     ${createStyles('mt', 5, 'margin-top')}
     ${createStyles('mr', 5, 'margin-right')}
@@ -502,11 +368,11 @@ export default createGlobalStyle`
 
     .gutterBottom { margin-bottom: 0.35em;}
     
-    .p1 {padding: 8px;}
-    .p2 {padding: 16px;}
-    .p3 {padding: 24px;}
-    .p4 {padding: 32px;}
-    .p5 {padding: 40px;}
+    .p1 {padding: 8px !important;}
+    .p2 {padding: 16px !important;}
+    .p3 {padding: 24px !important;}
+    .p4 {padding: 32px !important;}
+    .p5 {padding: 40px !important;}
 
     ${createStyles('pt', 5, 'padding-top')}
     ${createStyles('pr', 5, 'padding-right')}
@@ -515,13 +381,13 @@ export default createGlobalStyle`
     ${createStyles('px', 5, 'padding-left', 'padding-right')}
     ${createStyles('py', 5, 'padding-top', 'padding-bottom')}
 
-    .no-p {padding: 0;}
-    .no-pt {padding-top: 0;}
-    .no-pr {padding-right: 0;}
-    .no-pb {padding-bottom: 0;}
-    .no-pl {padding-left: 0;}
-    .no-px {padding-left: 0; padding-right: 0;}
-    .np-py {padding-top: 0; padding-bottom: 0;}
+    .no-p {padding: 0 !important;}
+    .no-pt {padding-top: 0 !important;}
+    .no-pr {padding-right: 0 !important;}
+    .no-pb {padding-bottom: 0 !important;}
+    .no-pl {padding-left: 0 !important;}
+    .no-px {padding-left: 0 !important; padding-right: 0 !important;}
+    .np-py {padding-top: 0 !important; padding-bottom: 0 !important;}
 
     pre {
         display: block;

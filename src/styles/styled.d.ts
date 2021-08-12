@@ -76,6 +76,7 @@ declare module 'styled-components' {
             boxFocused: string;
             boxDragged: string;
 
+            skeleton: string;
             navBar: string;
             onNavBar: string;
             sideNav: string;
