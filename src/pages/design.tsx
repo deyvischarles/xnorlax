@@ -144,475 +144,452 @@ export default function BasicTextFields() {
             <main>
                 <section>
                     <div className="container">
-                        <div className="row mb2">
-                            <Typography variant="h3" component="h1" className="mb2">Esqueleto</Typography>
+                        <Typography variant="h3" component="h1" className="mb2">Esqueleto</Typography>
 
-                            <Typography variant="h5" component="p" className="mb2">
-                                Exibe uma visualização do espaço reservado de seu conteúdo antes que os dados sejam carregados, reduzindo a sensação de lentidão do tempo de carregamento.
-                            </Typography>
+                        <Typography variant="h5" component="p" className="mb2">
+                            Exibe uma visualização do espaço reservado de seu conteúdo antes que os dados sejam carregados, reduzindo a sensação de lentidão do tempo de carregamento.
+                        </Typography>
 
-                            <Typography variant="body1" component="p" className="mb2">
-                                Os dados dos seus componentes podem não estar imediatamente disponíveis. Você 
-                                pode aumentar o desempenho percebido pelos usuários usando esqueletos. Ele passa 
-                                a sensação de que as coisas estão acontecendo imediatamente, então a informação 
-                                é mostrada incrementalmente na tela.
-                            </Typography>
+                        <Typography variant="body1" component="p" className="mb2">
+                            Os dados dos seus componentes podem não estar imediatamente disponíveis. Você 
+                            pode aumentar o desempenho percebido pelos usuários usando esqueletos. Ele passa 
+                            a sensação de que as coisas estão acontecendo imediatamente, então a informação 
+                            é mostrada incrementalmente na tela.
+                        </Typography>
 
-                            <Typography variant="body1" component="p">
-                                O componente é projetado para ser usado diretamente em seus componentes. Por exemplo:
-                            </Typography>
+                        <Typography variant="body1" component="p">
+                            O componente é projetado para ser usado diretamente em seus componentes. Por exemplo:
+                        </Typography>
 
-                            <SyntaxHighlighter language='tsx' style={false}>
-                                {codeSkeletonUse}
-                            </SyntaxHighlighter>
-                        </div>
+                        <SyntaxHighlighter language='tsx' style={false}>
+                            {codeSkeletonUse}
+                        </SyntaxHighlighter>
                     </div>
                 </section>
                 <section>
                     <div className="container">
-                        <div className="row mb2">
-                            <Typography variant="h4" component="h2" className="mb2">
-                                Variantes
-                            </Typography>
+                        <Typography variant="h4" component="h2" className="mb2">
+                            Variantes
+                        </Typography>
 
-                            <Typography variant="body1" component="p" className="mb2">
-                                O componente suporta 3 variantes de forma.
-                            </Typography>
-                            
-                            <div className="box flex-col outlined transparent p2">
-                                <div className="box flex-col items-start transparent p1">
-                                    <Skeleton variant="text" width={210} animation="wave" className="mb1" />
-                                    <Skeleton variant="circle" width={50} height={50} animation="wave" className="mb1" />
-                                    <Skeleton variant="rect" width={210} height={118} animation="wave" />
+                        <Typography variant="body1" component="p" className="mb2">
+                            O componente suporta 3 variantes de forma.
+                        </Typography>
+                        
+                        <div className="box outlined p2 r2">
+                            <div className="item p1">
+                                <Skeleton variant="text" width={210} animation="wave" className="mb1" />
+                                <Skeleton variant="circle" width={50} height={50} animation="wave" className="mb1" />
+                                <Skeleton variant="rect" width={210} height={118} animation="wave" />
+                            </div>
+                        </div>
+
+                        <SyntaxHighlighter language='tsx' style={false}>
+                            {codeSkeletonVariants}
+                        </SyntaxHighlighter>
+                    </div>
+                </section>
+                <section>
+                    <div className="container">
+                        <Typography variant="h4" component="h2" className="mb2">
+                            Animações
+                        </Typography>
+
+                        <Typography variant="body1" component="p" className="mb2">
+                            Por padrão, o skeleton pulsa, mas você pode mudar a animação para uma onda ou 
+                            desativá-la completamente.
+                        </Typography>
+                        
+                        <div className="box outlined r2 p2">
+                            <div className="item p1">
+                                <Skeleton variant="text" width={210} className="mb1" />
+                                <Skeleton variant="text" width={210} animation="wave" className="mb1" />
+                                <Skeleton variant="text" width={210} animation={false} />
+                            </div>
+                        </div>
+
+                        <SyntaxHighlighter language='tsx' style={false}>
+                            {codeSkeletonAnimation}
+                        </SyntaxHighlighter>
+                    </div>
+                </section>
+                <section>
+                    <div className="container">
+                        <Typography variant="h4" component="h2" className="mb2">
+                            Inferindo dimensões
+                        </Typography>
+
+                        <Typography variant="body1" component="p" className="mb2">
+                            Além de aceitar as propriedades <code>width</code> e <code>height</code>, o componente também pode inferir as dimensões.
+                        </Typography>
+
+                        <div className="grid outlined r2 p2 my2">
+                            <div className="row mb2">
+                                <div className="col sm6 p2">
+                                    <Typography variant="h1" component="span" className="mb1">
+                                        <Skeleton variant="text" />
+                                    </Typography>
+                                    <Typography variant="h3" component="span" className="mb1">
+                                        <Skeleton variant="text" />
+                                    </Typography>
+                                    <Typography variant="body1" component="span" className="mb1">
+                                        <Skeleton variant="text" />
+                                    </Typography>
+                                    <Typography variant="caption" component="span" className="mb1">
+                                        <Skeleton variant="text" />
+                                    </Typography>
+                                </div>
+                                <div className="col sm6 p2">
+                                    <Typography variant="h1" component="span" className="mb1">
+                                        H1    
+                                    </Typography>
+                                    <Typography variant="h3" component="span" className="truncate mb1">
+                                        H3
+                                    </Typography>
+                                    <Typography variant="body1" component="span" className="mb1">
+                                        Body 1
+                                    </Typography>
+                                    <Typography variant="caption" component="span" className="truncate mb1">
+                                        Caption
+                                    </Typography>
                                 </div>
                             </div>
+                        </div>
 
-                            <SyntaxHighlighter language='tsx' style={false}>
-                                {codeSkeletonVariants}
-                            </SyntaxHighlighter>
+                        <SyntaxHighlighter language='tsx' style={false}>
+                            {codeSkeletonDimension}
+                        </SyntaxHighlighter>
+                    </div>
+                </section>
+                <section>
+                    <div className="container">
+                        <Typography variant="h3" component="h2" className="mb2">Tipografia</Typography>
+
+                        <Typography variant="h5" component="p" className="mb2">
+                            Use a tipografia para apresentar seu design e conteúdo da forma mais clara e eficiente possível.
+                        </Typography>
+
+                        <Typography variant="body1" component="p">
+                            O uso de diferentes tamanhos e estilos de uma só vez pode estragar qualquer leiaute. Uma 
+                            escala tipográfica tem um conjunto limitado de tipos de tamanhos que funcionam bem em conjunto 
+                            com o leiaute de grade.
+                        </Typography>
+                    </div>
+                </section>
+                <section>
+                    <div className="container">
+                        <Typography variant="h4" component="h2" className="mb2">Componente</Typography>
+
+                        <div className="grid outlined r2 p2 mb2">
+                            <Typography variant="h1" component="h2" className="gutterBottom truncate">H1</Typography>
+                            <Typography variant="h2" className="gutterBottom">H2</Typography>
+                            <Typography variant="h3" className="gutterBottom">H3</Typography>
+                            <Typography variant="h4" className="gutterBottom">H4</Typography>
+                            <Typography variant="h5" className="gutterBottom">H5</Typography>
+                            <Typography variant="h6" className="gutterBottom">H6</Typography>
+                            <Typography variant="subtitle1" component="span" className="gutterBottom">Subtitle 1</Typography>
+                            <Typography variant="subtitle2" component="span" className="gutterBottom">Subtitle 2</Typography>
+                            <Typography variant="body1" component="p" className="gutterBottom">Body 1</Typography>
+                            <Typography variant="body2" component="p" className="gutterBottom">Body 2</Typography>
+                            <Typography variant="button" className="gutterBottom">Button</Typography>
+                            <Typography variant="caption" component="span" className="gutterBottom">Caption</Typography>
+                            <Typography variant="overline" component="span" className="gutterBottom">Overline</Typography>
                         </div>
                     </div>
                 </section>
                 <section>
                     <div className="container">
-                        <div className="row mb2">
-                            <Typography variant="h4" component="h2" className="mb2">
-                                Animações
-                            </Typography>
+                        <Typography variant="h4" component="h2" className="mb2">Uso</Typography>
 
-                            <Typography variant="body1" component="p" className="mb2">
-                                Por padrão, o skeleton pulsa, mas você pode mudar a animação para uma onda ou 
-                                desativá-la completamente.
-                            </Typography>
-                            
-                            <div className="box flex-col outlined transparent p2">
-                                <div className="box flex-col items-start transparent p1">
-                                    <Skeleton variant="text" width={210} className="mb1" />
-                                    <Skeleton variant="text" width={210} animation="wave" className="mb1" />
-                                    <Skeleton variant="text" width={210} animation={false} />
-                                </div>
-                            </div>
-
-                            <SyntaxHighlighter language='tsx' style={false}>
-                                {codeSkeletonAnimation}
-                            </SyntaxHighlighter>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div className="container">
-                        <div className="row mb2">
-                            <Typography variant="h4" component="h2" className="mb2">
-                                Inferindo dimensões
-                            </Typography>
-
-                            <Typography variant="body1" component="p" className="mb2">
-                                Além de aceitar as propriedades <code>width</code> e <code>height</code>, o componente também pode inferir as dimensões.
-                            </Typography>
-
-                            <div className="grid outlined radiu2 p2 my2">
-                                <div className="row mb2">
-                                    <div className="col sm6 p2">
-                                        <Typography variant="h1" component="span" className="mb1">
-                                            <Skeleton variant="text" />
-                                        </Typography>
-                                        <Typography variant="h3" component="span" className="mb1">
-                                            <Skeleton variant="text" />
-                                        </Typography>
-                                        <Typography variant="body1" component="span" className="mb1">
-                                            <Skeleton variant="text" />
-                                        </Typography>
-                                        <Typography variant="caption" component="span" className="mb1">
-                                            <Skeleton variant="text" />
-                                        </Typography>
-                                    </div>
-                                    <div className="col sm6 p2">
-                                        <Typography variant="h1" component="span" className="mb1">
-                                            H1    
-                                        </Typography>
-                                        <Typography variant="h3" component="span" className="truncate mb1">
-                                            H3
-                                        </Typography>
-                                        <Typography variant="body1" component="span" className="mb1">
-                                            Body 1
-                                        </Typography>
-                                        <Typography variant="caption" component="span" className="truncate mb1">
-                                            Caption
-                                        </Typography>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <SyntaxHighlighter language='tsx' style={false}>
-                                {codeSkeletonDimension}
-                            </SyntaxHighlighter>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div className="container">
-                        <div className="row mb2">
-                            <Typography variant="h3" component="h2" className="mb2">Tipografia</Typography>
-
-                            <Typography variant="h5" component="p" className="mb2">
-                                Use a tipografia para apresentar seu design e conteúdo da forma mais clara e eficiente possível.
-                            </Typography>
-
+                        <Typography variant="body1" component="p">
+                            Faça a importação do componente tipografico da seguinte forma:
+                        </Typography>
+                    
+                        <SyntaxHighlighter language='tsx' style={false}>
+                            {codeInportTypography}
+                        </SyntaxHighlighter>
+                    
+                        <div className="box outlined r2 p2">
                             <Typography variant="body1" component="p">
-                                O uso de diferentes tamanhos e estilos de uma só vez pode estragar qualquer leiaute. Uma 
-                                escala tipográfica tem um conjunto limitado de tipos de tamanhos que funcionam bem em conjunto 
-                                com o leiaute de grade.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                Quos blanditiis tenetur...
                             </Typography>
                         </div>
+                    
+                        <SyntaxHighlighter language='tsx' style={false}>
+                            {codeTypographyExample}
+                        </SyntaxHighlighter>
                     </div>
                 </section>
                 <section>
                     <div className="container">
-                        <div className="row mb2">
-                            <Typography variant="h4" component="h2" className="mb2">Componente</Typography>
+                        <Typography variant="h4" component="h2" className="mb2">
+                            Alterando o elemento semântico
+                        </Typography>
 
-                            <div className="grid outlined r2 p2">
-                                <Typography variant="h1" component="h2" className="gutterBottom truncate">H1</Typography>
-                                <Typography variant="h2" className="gutterBottom">H2</Typography>
-                                <Typography variant="h3" className="gutterBottom">H3</Typography>
-                                <Typography variant="h4" className="gutterBottom">H4</Typography>
-                                <Typography variant="h5" className="gutterBottom">H5</Typography>
-                                <Typography variant="h6" className="gutterBottom">H6</Typography>
-                                <Typography variant="subtitle1" component="span" className="gutterBottom">Subtitle 1</Typography>
-                                <Typography variant="subtitle2" component="span" className="gutterBottom">Subtitle 2</Typography>
-                                <Typography variant="body1" component="p" className="gutterBottom">Body 1</Typography>
-                                <Typography variant="body2" component="p" className="gutterBottom">Body 2</Typography>
-                                <Typography variant="button" className="gutterBottom">Button</Typography>
-                                <Typography variant="caption" component="span" className="gutterBottom">Caption</Typography>
-                                <Typography variant="overline" component="span" className="gutterBottom">Overline</Typography>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div className="container">
-                        <div className="row mb2">
-                            <Typography variant="h4" component="h2" className="mb2">Uso</Typography>
-
-                            <Typography variant="body1" component="p">
-                                Faça a importação do componente tipografico da seguinte forma:
-                            </Typography>
+                        <Typography variant="body1" component="p" className="mb2">
+                            O componente de Tipografia (Typography) usa a propriedade <code>variant</code> para associar 
+                            a variação da UI com um elemento semântico. É importante ressaltar que o estilo de uma 
+                            tipografia é independente do elemento semântico por baixo dela.
+                        </Typography>
                         
-                            <SyntaxHighlighter language='tsx' style={false}>
-                                {codeInportTypography}
-                            </SyntaxHighlighter>
+                        <ul>
+                            <li>
+                                Você pode alterar o elemento subjacente para uma ocasião em específico com a 
+                                propriedade <code>component</code>:
+                            </li>
+                        </ul>
+
+                        <SyntaxHighlighter language='tsx' style={false}>
+                            {codeTypographySemantic}
+                        </SyntaxHighlighter>
+                    </div>
+                </section>
+                <section>
+                    <div className="container">
+                        <Typography variant="h3" component="h2" className="mb2">
+                            Grade
+                        </Typography>
+
+                        <Typography variant="h5" component="p" className="mb2">
+                            O leiaute responsivo da grade se adapta ao tamanho e orientação da tela, garantindo a 
+                            consistência entre leiautes.
+                        </Typography>
+
+                        <Typography variant="body1" component="p" className="mb2">
+                            Uma grade cria consistência visual entre leiautes, enquanto permite flexibilidade em uma ampla 
+                            variedade de projetos. Nossa UI responsiva é baseada em um leiaute de grade com 12 colunas.
+                        </Typography>
+
+                        <div className="row mb2">
+                            <div className="col sm1 box surface outlined r2 py1">1</div>
+                            <div className="col sm1 box surface outlined r2 py1">2</div>
+                            <div className="col sm1 box surface outlined r2 py1">3</div>
+                            <div className="col sm1 box surface outlined r2 py1">4</div>
+                            <div className="col sm1 box surface outlined r2 py1">5</div>
+                            <div className="col sm1 box surface outlined r2 py1">6</div>
+                            <div className="col sm1 box surface outlined r2 py1">7</div>
+                            <div className="col sm1 box surface outlined r2 py1">8</div>
+                            <div className="col sm1 box surface outlined r2 py1">9</div>
+                            <div className="col sm1 box surface outlined r2 py1">10</div>
+                            <div className="col sm1 box surface outlined r2 py1">11</div>
+                            <div className="col sm1 box surface outlined r2 py1">12</div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div className="container">
+                        <Typography variant="h4" component="h3" className="mb2">
+                            Grades Responsivos
+                        </Typography>
                         
-                            <div className="box nowrap outlined transparent p2">
-                                <Typography variant="body1" component="p">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                    Quos blanditiis tenetur...
-                                </Typography>
-                            </div>
-                        
-                            <SyntaxHighlighter language='tsx' style={false}>
-                                {codeTypographyExample}
-                            </SyntaxHighlighter>
+                        <Typography variant="body1" component="p" className="mb2">
+                            No exemplo abaixo, nós tornamos o leiaute responsivo definindo quantas colunas a div 
+                            deve ocupar em cada tamanho de tela. Tente redimensionar seu navegador e veja o 
+                            leiaute abaixo se auto-ajustando.
+                        </Typography>
+
+                        <div className="row my2">
+                            <div className="col sm12 box surface outlined r2 p1">SM12</div>
+                        </div>
+
+                        <div className="row mb2">
+                            <div className="col sm12 md4 lg2 box surface outlined r2 p1">SM12 - MD4 - LG2</div>
+                            <div className="col sm12 md4 lg8 box surface outlined r2 p1">SM12 - MD4 - LG8</div>
+                            <div className="col sm12 md4 lg2 box surface outlined r2 p1">SM12 - MD4 - LG2</div>
+                        </div>
+
+                        <div className="row mb2">
+                            <div className="col sm12 md6 lg3 box surface outlined r2 p1">SM12 - MD6 - LG3</div>
+                            <div className="col sm12 md6 lg3 box surface outlined r2 p1">SM12 - MD6 - LG3</div>
+                            <div className="col sm12 md6 lg3 box surface outlined r2 p1">SM12 - MD6 - LG3</div>
+                            <div className="col sm12 md6 lg3 box surface outlined r2 p1">SM12 - MD6 - LG3</div>
                         </div>
                     </div>
                 </section>
                 <section>
                     <div className="container">
-                        <div className="row mb2">
-                            <Typography variant="h4" component="h2" className="mb2">
-                                Alterando o elemento semântico
-                            </Typography>
+                        <Typography variant="h3" component="h2" className="mb2">
+                            SvgIcon
+                        </Typography>
 
-                            <Typography variant="body1" component="p" className="mb2">
-                                O componente de Tipografia (Typography) usa a propriedade <code>variant</code> para associar 
-                                a variação da UI com um elemento semântico. É importante ressaltar que o estilo de uma 
-                                tipografia é independente do elemento semântico por baixo dela.
-                            </Typography>
-                            
-                            <ul>
-                                <li>
-                                    Você pode alterar o elemento subjacente para uma ocasião em específico com a 
-                                    propriedade <code>component</code>:
-                                </li>
-                            </ul>
-
-                            <SyntaxHighlighter language='tsx' style={false}>
-                                {codeTypographySemantic}
-                            </SyntaxHighlighter>
-                        </div>
+                        <Typography variant="body1" component="p" className="mb2">
+                            Nós padronizamos mais de 32 ícones de uso comun (veja abaixo). Para cada ícone SVG, 
+                            exportamos o respectivo componente React presente no diretório "components/icons".
+                        </Typography>
                     </div>
                 </section>
                 <section>
                     <div className="container">
-                        <div className="row mb2">
-                            <Typography variant="h3" component="h2" className="mb2">
-                                Grade
-                            </Typography>
+                        <Typography variant="h4" component="h3" className="mb2">Uso</Typography>
 
-                            <Typography variant="h5" component="p" className="mb2">
-                                O leiaute responsivo da grade se adapta ao tamanho e orientação da tela, garantindo a 
-                                consistência entre leiautes.
-                            </Typography>
+                        <Typography variant="body1" component="p">
+                            Importe ícones usando as seguintes opções:
+                        </Typography>
 
-                            <Typography variant="body1" component="p" className="mb2">
-                                Uma grade cria consistência visual entre leiautes, enquanto permite flexibilidade em uma ampla 
-                                variedade de projetos. Nossa UI responsiva é baseada em um leiaute de grade com 12 colunas.
-                            </Typography>
+                        <SyntaxHighlighter language='tsx' style={false}>
+                            {codeInportIcons}
+                        </SyntaxHighlighter>
 
-                            <div className="col sm1 box outlined py1">1</div>
-                            <div className="col sm1 box outlined py1">2</div>
-                            <div className="col sm1 box outlined py1">3</div>
-                            <div className="col sm1 box outlined py1">4</div>
-                            <div className="col sm1 box outlined py1">5</div>
-                            <div className="col sm1 box outlined py1">6</div>
-                            <div className="col sm1 box outlined py1">7</div>
-                            <div className="col sm1 box outlined py1">8</div>
-                            <div className="col sm1 box outlined py1">9</div>
-                            <div className="col sm1 box outlined py1">10</div>
-                            <div className="col sm1 box outlined py1">11</div>
-                            <div className="col sm1 box outlined py1">12</div>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div className="container">
-                        <div className="row mb2">
-                            <Typography variant="h4" component="h3" className="mb2">
-                                Grades Responsivos
-                            </Typography>
-                            
-                            <Typography variant="body1" component="p" className="mb2">
-                                No exemplo abaixo, nós tornamos o leiaute responsivo definindo quantas colunas a div 
-                                deve ocupar em cada tamanho de tela. Tente redimensionar seu navegador e veja o 
-                                leiaute abaixo se auto-ajustando.
-                            </Typography>
+                        <div className="box nowrap outlined r2 p2">
+                            <Lightbulb width="32" height="32" className="mx1" />
+                            <Lightbulb width="32" height="32" color="primary" className="mx1"/>
+                            <Lightbulb width="32" height="32" color="secondary" className="mx1"/>
+                            <Lightbulb width="32" height="32" color="disabled" className="mx1"/>
                         </div>
 
-                        <div className="grid">
-                            <div className="row mb2">
-                                <div className="col sm12 grid surface outlined radiu2 p1">SM12</div>
-                            </div>
+                        <SyntaxHighlighter language='tsx' style={false}>
+                            {codeInplementIcons}
+                        </SyntaxHighlighter>
 
-                            <div className="row mb2">
-                                <div className="col sm12 md4 lg2 grid surface outlined radiu2 p1">SM12 - MD4 - LG2</div>
-                                <div className="col sm12 md4 lg8 grid surface outlined radiu2 p1">SM12 - MD4 - LG8</div>
-                                <div className="col sm12 md4 lg2 grid surface outlined radiu2 p1">SM12 - MD4 - LG2</div>
-                            </div>
-
-                            <div className="row mb2">
-                                <div className="col sm12 md6 lg3 grid surface outlined radiu2 p1">SM12 - MD6 - LG3</div>
-                                <div className="col sm12 md6 lg3 grid surface outlined radiu2 p1">SM12 - MD6 - LG3</div>
-                                <div className="col sm12 md6 lg3 grid surface outlined radiu2 p1">SM12 - MD6 - LG3</div>
-                                <div className="col sm12 md6 lg3 grid surface outlined radiu2 p1">SM12 - MD6 - LG3</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div className="container">
-                        <div className="row mb2">
-                            <Typography variant="h3" component="h2" className="mb2">
-                                SvgIcon
-                            </Typography>
-
-                            <Typography variant="body1" component="p" className="mb2">
-                                Nós padronizamos mais de 32 ícones de uso comun (veja abaixo). Para cada ícone SVG, 
-                                exportamos o respectivo componente React presente no diretório "components/icons".
-                            </Typography>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div className="container">
-                        <div className="row mb2">
-                            <Typography variant="h4" component="h3" className="mb2">Uso</Typography>
-
-                            <Typography variant="body1" component="p">
-                                Importe ícones usando as seguintes opções:
-                            </Typography>
-
-                            <SyntaxHighlighter language='tsx' style={false}>
-                                {codeInportIcons}
-                            </SyntaxHighlighter>
-
-                            <div className="box nowrap outlined transparent p2">
-                                <Lightbulb width="32" height="32" className="space" />
-                                <Lightbulb width="32" height="32" color="primary" className="space"/>
-                                <Lightbulb width="32" height="32" color="secondary" className="space"/>
-                                <Lightbulb width="32" height="32" color="disabled" className="space"/>
-                            </div>
-
-                            <SyntaxHighlighter language='tsx' style={false}>
-                                {codeInplementIcons}
-                            </SyntaxHighlighter>
-                        </div>
                         <div className="divider"/>
                     </div>
                     <div className="container px1">
+                        <Typography variant="h5" component="h4" className="mx1 mb2">
+                            Action
+                        </Typography>
+                        
                         <div className="row mb2">
-                            <Typography variant="h5" component="h4" className="mx1 mb2">
-                                Action
-                            </Typography>
-
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <AccountCircle width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">AccountCircle</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Api width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Api</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <ArrowRightAlt width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">ArrowRightAlt</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <BugReport width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">BugReport</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Code width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Code</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <ContactSupport width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">ContactSupport</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <CreditCard width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">CreditCard</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Dashboard width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Dashboard</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Delete width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Delete</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Description width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Description</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Done width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Done</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <DoneAll width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">DoneAll</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Event width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Event</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Extension width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Extension</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Favorite width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Favorite</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <FavoriteBorder width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">FavoriteBorder</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <FeedBack width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">FeedBack</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <FilterAlt width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">FilterAlt</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Help width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Help</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Home width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Home</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Info width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Info</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Label width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Label</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Language width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Language</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Lightbulb width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Lightbulb</Typography>
                                 </div>
@@ -621,56 +598,53 @@ export default function BasicTextFields() {
 
                         <div className="divider mx1"/>
 
-                        <div className="row mb2">
-                            <div className="col sm12">
-                                <Typography variant="h5" className="mx1 mb2">Logos</Typography>
-                            </div>
-                        </div>
+                        <Typography variant="h5" className="mx1 mb2">Logos</Typography>
+
                         <div className="row mb2">
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <GitHub className="mb1"/>
                                     <Typography variant="caption" component="p">GitHub</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Linkedin className="mb1"/>
                                     <Typography variant="caption" component="p">Linkedin</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <YouTube className="mb1"/>
                                     <Typography variant="caption" component="p">YouTube</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Instagram className="mb1"/>
                                     <Typography variant="caption" component="p">Instagram</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Facebook className="mb1"/>
                                     <Typography variant="caption" component="p">Facebook</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Whatsapp className="mb1"/>
                                     <Typography variant="caption" component="p">Whatsapp</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <Telegram className="mb1"/>
                                     <Typography variant="caption" component="p">Telegram</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
-                                <div className="box flex-col nowrap outlined transparent p2">
+                                <div className="box col nowrap outlined r2 p2">
                                     <PlayStore className="mb1"/>
                                     <Typography variant="caption" component="p">PlayStore</Typography>
                                 </div>
@@ -678,30 +652,28 @@ export default function BasicTextFields() {
                         </div>
                     </div>
                     <div className="container">
-                        <div className="row mb2">
-                            <Typography variant="body1" component="p">
-                                Se você precisa customizar o ícone SVG (não disponível no conjunto padrão de ícones Material) 
-                                você pode encapsular em um SvgIcon. Este componente estende o elemento nativo "svg":
-                            </Typography>
+                        <Typography variant="body1" component="p">
+                            Se você precisa customizar o ícone SVG (não disponível no conjunto padrão de ícones Material) 
+                            você pode encapsular em um SvgIcon. Este componente estende o elemento nativo "svg":
+                        </Typography>
 
-                            <SyntaxHighlighter language='tsx' style={false}>
-                                {codeSvgIcons}
-                            </SyntaxHighlighter>
-                        </div>
+                        <SyntaxHighlighter language='tsx' style={false}>
+                            {codeSvgIcons}
+                        </SyntaxHighlighter>
                     </div>
                 </section>
                 <section>
                     <div className="container">
-                        <div className="row mb2">
-                            <Typography variant="h3" component="h2" className="mb2">Campo de texto</Typography>
-                            <Typography variant="body1" component="p" className="mb2">
-                                Campos de texto permitem que os usuários digitem e editem texto em uma interface de usuário.
-                                Eles geralmente aparecem em formulários e diálogos.
-                                Em nosso design system usamos dois tipos de campo de texto: "preenchido" e "delineado".
-                            </Typography>
-                        </div>
-                        <div className="row mb2">
-                            <div className="box outlined transparent p2">
+                        <Typography variant="h3" component="h2" className="mb2">Campo de texto</Typography>
+
+                        <Typography variant="body1" component="p" className="mb2">
+                            Campos de texto permitem que os usuários digitem e editem texto em uma interface de usuário.
+                            Eles geralmente aparecem em formulários e diálogos.
+                            Em nosso design system usamos dois tipos de campo de texto: "preenchido" e "delineado".
+                        </Typography>
+
+                        <div className="row">
+                            <div className="box outlined r4 p2">
                                 <div className="col sm12 md6 lg4">
                                     <TextField
                                         id="filed"
@@ -721,28 +693,24 @@ export default function BasicTextFields() {
                                 </div>
                             </div>
                         </div>
-                        <div className="row mb2">
-                            <SyntaxHighlighter language='tsx' style={false}>
-                                {codeTextField}
-                            </SyntaxHighlighter>
-                        </div>
+
+                        <SyntaxHighlighter language='tsx' style={false}>
+                            {codeTextField}
+                        </SyntaxHighlighter>
                     </div>
                 </section>
                 <section>
                     <div className="container">
+                        <Typography variant="h4" component="h3" className="mb2">Propriedades de formulário</Typography>
+                        
+                        <Typography variant="body1" component="p" className="mb2">
+                            Os atributos padrões de formulários são suportados, por exemplo, required, disabled, type, etc.
+                            assim como o helperText, que é utilizado para dar contexto sobre um campo de entrada, tal como, 
+                            explicar como o campo deve ser preenchido.
+                        </Typography>
+
                         <div className="row mb2">
-                            <div className="col sm12">
-                                <Typography variant="h4" component="h3" className="mb2">Propriedades de formulário</Typography>
-                                
-                                <Typography variant="body1" component="p" className="mb2">
-                                    Os atributos padrões de formulários são suportados, por exemplo, required, disabled, type, etc.
-                                    assim como o helperText, que é utilizado para dar contexto sobre um campo de entrada, tal como, 
-                                    explicar como o campo deve ser preenchido.
-                                </Typography>
-                            </div>
-                        </div>
-                        <div className="row mb2">
-                            <div className="box content-start outlined transparent p2">
+                            <div className="box outlined r2 p2">
                                 <div className="col sm12 md6 lg4">
                                     <TextField 
                                         id="defaultValue"

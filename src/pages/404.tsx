@@ -15,10 +15,11 @@ const Erro404 = () => {
       <main>
         <section>
           <div className="container">
-            <div className="box flex-col transparent">
-              <Typography variant="h1" className="gutterBottom">
+            <div className="box col">
+              <Typography variant="h1" className="mb2">
                 404
               </Typography>
+
               <Typography variant="h5" component="p">
                 página não encontrada!
               </Typography>

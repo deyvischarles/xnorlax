@@ -15,14 +15,18 @@ const Home = () => {
       <main>
         <section>
           <div className="container">
-            <div className="box flex-col transparent">
-              <Typography variant="h3" component="h1" className="gutterBottom">Bem-vindo a Xnorlax!</Typography>
-              <Typography variant="h5" component="h2">
-                Nosso sistema ainda está em desenvolvimento, mas você pode navegar pelo conteúdo existente à vontade.
-              </Typography>
-              <br />
-              <Typography variant="body1" component="p">Se você gostar do nosso conteúdo também poderar instalar esse app na sua tela principal.</Typography>
-            </div>
+            <Typography variant="h3" component="h1" className="mb2">
+              Bem-vindo a Xnorlax!
+            </Typography>
+
+            <Typography variant="h5" component="h2" className="mb2">
+              Nosso sistema ainda está em desenvolvimento, mas você pode navegar pelo conteúdo 
+              existente à vontade.
+            </Typography>
+            
+            <Typography variant="body1" component="p">
+              Se você gostar do nosso conteúdo também poderar instalar esse app na sua tela principal.
+            </Typography>
           </div>
         </section>
       </main>

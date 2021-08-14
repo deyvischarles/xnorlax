@@ -23,13 +23,28 @@ function createStyles(prefix: string, amount: number, style1: string, style2?: s
     return css`${styles}`;
 }
 
-function createCols(prefix: string, amount: number){
+function createCols(prefix: string, amount: number) {
     let styles = '';
 
     for (let i = 1; i <= amount; i += 1) {
         styles += `
             &.${prefix}${i} {
                 width: ${100 / 12 * i}%;
+            }
+        `
+    }
+
+    return css`${styles}`;
+}
+
+function createCols2(prefix: string, amount: number) {
+    let styles = '';
+
+    for (let i = 1; i <= amount; i += 1) {
+        styles += `
+            &.${prefix}${i} {
+                flex-basis: ${100 / 12 * i}%;
+                max-width: ${100 / 12 * i}%;
             }
         `
     }
@@ -217,22 +232,6 @@ export default createGlobalStyle`
         height: auto;
         overflow: hidden;
 
-        &.surface  {
-            background-color: ${props => props.theme.colors.box};
-        }
-
-        &.outlined {
-          border: 1px solid ${props => props.theme.colors.divider};
-        }
-
-        &.r1 { border-radius: 2px; }
-        &.r2 { border-radius: 4px; }
-        &.r3 { border-radius: 6px; }
-        &.r4 { border-radius: 8px; }
-        &.r5 { border-radius: 10px; }
-        &.r6 { border-radius: 12px; }
-        &.r7 { border-radius: 16px; }
-
         &.circle { border-radius: 50%; }
 
         &.row {grid-auto-flow: row; }
@@ -243,106 +242,98 @@ export default createGlobalStyle`
     }
 
     .row {
-        display: block;
-        width: 100%;
-
-        &:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
+        display: flex;
+        flex: 0 1 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-right: 0;
+        margin-left: 0;
 
         .col {
-            display: grid;
-            float: left;
-            min-height: 8px;
+            flex: 0 0 auto;
 
-            ${createCols('sm', 12)}
+            &:last-of-type { margin-right: 0 !important; }
+            &:first-of-type { margin-left: 0 !important; }
+
+            ${createCols2('sm', 12)}
 
             @media ${Breakpoints.md} {
-                ${createCols('md', 12)} 
+                ${createCols2('md', 12)} 
             }
 
             @media ${Breakpoints.lg} {
-                ${createCols('lg', 12)}
+                ${createCols2('lg', 12)}
             }
             
             @media ${Breakpoints.xl} {
-                ${createCols('xl', 12)}
+                ${createCols2('xl', 12)}
             }
         }
     }
 
     .box {
         display: flex;
-        flex-wrap: wrap;
+        flex: 0 1 auto;
         flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        background-color: ${props => props.theme.colors.box};
-        border-radius: 4px;
+        width: 100%;
         outline: 0;
         overflow-x: hidden;
-
-        .item {
-            &:last-of-type { margin-right: 0 !important; }
-            &:first-of-type { margin-left: 0 !important; }
-        }
-      
-        &.outlined {
-          border: 1px solid ${props => props.theme.colors.divider};
-        }
-      
-        &.transparent {
-          background-color: transparent !important;
-        }
-
-        .spacer {
-          flex-grow: 1;
-        }
       
         &.nowrap {
           flex-wrap: nowrap;
         }
       
-        &.flex-col {
+        &.col {
           flex-direction: column;
         }
       
-        &.content-start {
+        &.start {
           justify-content: flex-start;
         }
       
-        &.content-end {
+        &.end {
           justify-content: flex-end;
         }
       
-        &.content-between {
+        &.between {
           justify-content: space-between;
         }
       
-        &.content-around {
+        &.around {
           justify-content: space-around;
         }
       
-        &.content-evenly {
+        &.evenly {
           justify-content: space-evenly;
         }
       
-        &.items-start {
+        &.top {
           align-items: flex-start;
         }
       
-        &.items-end {
+        &.bottom {
           align-items: flex-end;
         }
       
-        &.items-baseline {
+        &.baseline {
           align-items: baseline;
         }
       
-        &.items-stretch {
+        &.stretch {
           align-items: stretch;
+        }
+
+        .item {
+            flex: 0 0 auto;
+            &:last-of-type { margin-right: 0 !important; }
+            &:first-of-type { margin-left: 0 !important; }
+        }
+
+        .spacer {
+          flex-grow: 1;
         }
     }
 
@@ -389,15 +380,31 @@ export default createGlobalStyle`
     .no-px {padding-left: 0 !important; padding-right: 0 !important;}
     .np-py {padding-top: 0 !important; padding-bottom: 0 !important;}
 
+    .surface  {
+        background-color: ${props => props.theme.colors.box};
+    }
+
+    .outlined {
+        border: 1px solid ${props => props.theme.colors.divider};
+    }
+
+    .r1 { border-radius: 2px; }
+    .r2 { border-radius: 4px; }
+    .r3 { border-radius: 6px; }
+    .r4 { border-radius: 8px; }
+    .r5 { border-radius: 10px; }
+    .r6 { border-radius: 12px; }
+    .r7 { border-radius: 16px; }
+
     pre {
-        display: block;
+        display: flex;
         font-family: monospace;
         white-space: pre-wrap;
         margin: 24px auto;
         padding: 16px;
         overflow: auto;
         direction: ltr;
-        max-width: calc(100vw - 32px);
+        width: 100%;
         border-radius: 4px;
         background-color: ${props => props.theme.colors.box} !important;
     }
