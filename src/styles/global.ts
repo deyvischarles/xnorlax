@@ -29,20 +29,6 @@ function createCols(prefix: string, amount: number) {
     for (let i = 1; i <= amount; i += 1) {
         styles += `
             &.${prefix}${i} {
-                width: ${100 / 12 * i}%;
-            }
-        `
-    }
-
-    return css`${styles}`;
-}
-
-function createCols2(prefix: string, amount: number) {
-    let styles = '';
-
-    for (let i = 1; i <= amount; i += 1) {
-        styles += `
-            &.${prefix}${i} {
                 flex-basis: ${100 / 12 * i}%;
                 max-width: ${100 / 12 * i}%;
             }
@@ -255,18 +241,18 @@ export default createGlobalStyle`
             &:last-of-type { margin-right: 0 !important; }
             &:first-of-type { margin-left: 0 !important; }
 
-            ${createCols2('sm', 12)}
+            ${createCols('sm', 12)}
 
             @media ${Breakpoints.md} {
-                ${createCols2('md', 12)} 
+                ${createCols('md', 12)} 
             }
 
             @media ${Breakpoints.lg} {
-                ${createCols2('lg', 12)}
+                ${createCols('lg', 12)}
             }
             
             @media ${Breakpoints.xl} {
-                ${createCols2('xl', 12)}
+                ${createCols('xl', 12)}
             }
         }
     }

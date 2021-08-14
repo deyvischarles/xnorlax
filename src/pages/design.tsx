@@ -37,20 +37,9 @@ import Label from '../components/Icons/Label'
 import Language from '../components/Icons/Language'
 import Lightbulb from '../components/Icons/Lightbulb'
 import TextField from '../components/TextField'
-import Button from '../components/Button'
 import Skeleton from '../styles/Skeleton'
 
 const Design = () => {
-    const [loading, setLoading] = useState(true)
-
-    useEffect(() => {
-        const init = setTimeout(() => {
-            // setLoading(false)
-        }, 1000)
-
-        return () => clearTimeout(init)
-    }, [])
-
     const codeSkeletonUse = 
 `{loading ? (
     <Skeleton variant="rect" width={210} height={118} />
