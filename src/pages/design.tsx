@@ -39,6 +39,8 @@ import Lightbulb from '../components/Icons/Lightbulb'
 import TextField from '../components/TextField'
 import Skeleton from '../styles/Skeleton'
 
+import Button from '../styles/Button'
+
 const Design = () => {
     const codeSkeletonUse = 
 `{loading ? (
@@ -108,6 +110,27 @@ import Favorite from 'components/icons/Favorite'`
 <Lightbulb color="primary" />
 <Lightbulb color="secondary" />
 <Lightbulb color="disabled" />`
+
+    const codeImplementButton = 
+`<Button>Default</Button>
+<Button color="primary">Primary</Button>
+<Button color="secondary">Secondary</Button>
+<Button disabled>Disabled</Button>
+<Button href="#text-buttons" color="primary">Link</Button>`
+
+    const codeImplementButtonContained = 
+`<Button variant="contained">Default</Button>
+<Button variant="contained" color="primary">Primary</Button>
+<Button variant="contained" color="secondary">Secondary</Button>
+<Button variant="contained" disabled>Disabled</Button>
+<Button variant="contained" color="primary" href="#contained-buttons">Link</Button>`
+
+    const codeImplementButtonOutlined = 
+`<Button variant="outlined">Default</Button>
+<Button variant="outlined" color="primary">Primary</Button>
+<Button variant="outlined" color="secondary">Secondary</Button>
+<Button variant="outlined" disabled>Disabled</Button>
+<Button variant="outlined" color="primary" href="#outlined-buttons">Link</Button>`
 
     const codeTextField =
 `import TextField from '../components/TextField'
@@ -653,6 +676,134 @@ export default function BasicTextFields() {
                 </section>
                 <section>
                     <div className="container">
+                        <Typography variant="h3" component="h2" className="mb2">Botão</Typography>
+
+                        <Typography variant="h5" component="p" className="mb2">
+                            Botões permitem que os usuários tomem ações e decisões com um simples toque.
+                        </Typography>
+
+                        <Typography variant="body1" component="p" className="mb2">
+                            Botões comunicam ações que os usuários podem realizar. Eles são normalmente colocados em toda 
+                            a interface do usuário, em lugares como:
+                        </Typography>
+
+                        <ul>
+                            <li>
+                                Caixa de diálogo
+                            </li>
+                            <li>
+                                Janelas modais
+                            </li>
+                            <li>
+                                Formulários
+                            </li>
+                            <li>
+                                Cartões
+                            </li>
+                            <li>
+                                Barras de ferramentas
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div className="container">
+                        <Typography variant="h4" component="h2" className="mb2">
+                            Botões de Texto
+                        </Typography>
+
+                        <Typography variant="body1" component="p" className="mb2">
+                            Botões de texto são utilizados tipicamente para ações menos significativas, incluindo 
+                            aquelas localizadas em:
+                        </Typography>
+
+                        <ul className="mb2">
+                            <li>
+                                Caixa de diálogo
+                            </li>
+                            <li>
+                                Cartões
+                            </li>
+                        </ul>
+
+                        <Typography variant="body1" component="p" className="mb2">
+                            Em cartões, os botões de texto ajudam a manter a ênfase no conteúdo do cartão.
+                        </Typography>
+                        
+                        <div className="box outlined p2 r2">
+                            <div className="item p1">
+                                <Button className="mx1">Default</Button>
+                                <Button color="primary" className="mx1">Primary</Button>
+                                <Button color="secondary" className="mx1">Secondary</Button>
+                                <Button disabled className="mx1">Disabled</Button>
+                                <Button color="primary" className="mx1">Link</Button>
+                            </div>
+                        </div>
+
+                        <SyntaxHighlighter language='tsx' style={false}>
+                            {codeImplementButton}
+                        </SyntaxHighlighter>
+                    </div>
+                </section>
+                <section>
+                    <div className="container">
+                        <Typography variant="h4" component="h2" className="mb2">
+                            Botões Contidos
+                        </Typography>
+
+                        <Typography variant="body1" component="p" className="mb2">
+                            Botões Contidos tem alta ênfase, distinguem-se pelo uso de elevação e preenchimento. 
+                            Eles contém as principais ações da sua aplicação.
+                        </Typography>
+                        
+                        <div className="box outlined p2 r2">
+                            <div className="item p1">
+                                <Button variant="contained" className="mx1">Default</Button>
+                                <Button variant="contained" color="primary" className="mx1">Primary</Button>
+                                <Button variant="contained" color="secondary" className="mx1">Secondary</Button>
+                                <Button variant="contained" disabled className="mx1">Disabled</Button>
+                                <Button variant="contained" color="primary" className="mx1">Link</Button>
+                            </div>
+                        </div>
+
+                        <SyntaxHighlighter language='tsx' style={false}>
+                            {codeImplementButtonContained}
+                        </SyntaxHighlighter>
+                    </div>
+                </section>
+                <section>
+                    <div className="container">
+                        <Typography variant="h4" component="h2" className="mb2">
+                            Botões Delineados
+                        </Typography>
+
+                        <Typography variant="body1" component="p" className="mb2">
+                            Botões delineados são botões com ênfase média. Eles contém ações que são importantes, 
+                            mas não são as ações primárias de um aplicativo.
+                        </Typography>
+
+                        <Typography variant="body1" component="p" className="mb2">
+                            Botões delineados são uma alternativa de menor ênfase comparado com botões contidos, 
+                            ou uma alternativa de maior ênfase comparado com botões de texto.
+                        </Typography>
+                        
+                        <div className="box outlined p2 r2">
+                            <div className="item p1">
+                                <Button variant="outlined" className="mx1">Default</Button>
+                                <Button variant="outlined" color="primary" className="mx1">Primary</Button>
+                                <Button variant="outlined" color="secondary" className="mx1">Secondary</Button>
+                                <Button variant="outlined" disabled className="mx1">Disabled</Button>
+                                <Button variant="outlined" color="primary" className="mx1">Link</Button>
+                            </div>
+                        </div>
+
+                        <SyntaxHighlighter language='tsx' style={false}>
+                            {codeImplementButtonOutlined}
+                        </SyntaxHighlighter>
+                    </div>
+                </section>
+                <section>
+                    <div className="container">
                         <Typography variant="h3" component="h2" className="mb2">Campo de texto</Typography>
 
                         <Typography variant="body1" component="p" className="mb2">
@@ -662,7 +813,7 @@ export default function BasicTextFields() {
                         </Typography>
 
                         <div className="row">
-                            <div className="box outlined r4 p2">
+                            <div className="box outlined r2 p2">
                                 <div className="col sm12 md6 lg4">
                                     <TextField
                                         id="filed"

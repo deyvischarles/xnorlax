@@ -87,8 +87,8 @@ declare module 'styled-components' {
             btnOutlined: string;
             btnOutlinedPrimary: string;
             btnOutlinedSecondary: string;
-            btnDisabled: string;
-            onBtnDisabled: string;
+            btnOutlinedDisabled: string;
+            onBtnOutlinedDisabled: string;
             icon: string;
             background: string;
             paper: string;
