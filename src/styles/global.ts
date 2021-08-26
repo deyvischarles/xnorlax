@@ -382,6 +382,25 @@ export default createGlobalStyle`
     .r6 { border-radius: 12px; }
     .r7 { border-radius: 16px; }
 
+    .ripplePrimary {
+        position: absolute;
+        background: ${props => props.theme.colors.wavesOnPrimary};
+        border-radius: 50%;
+        pointer-events: none;
+        transform: scale(0);
+
+        &.show {
+            animation: ripple .45s ease-out;
+        }
+
+        @keyframes ripple {
+            to {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+    }
+
     pre {
         display: flex;
         font-family: monospace;

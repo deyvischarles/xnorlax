@@ -7,6 +7,7 @@ interface IIconButton {
 }
 
 const IconButton = styled.button<IIconButton>`
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -24,7 +25,7 @@ const IconButton = styled.button<IIconButton>`
     overflow: hidden;
     cursor: pointer;
     user-select: none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 
     &.edgeStart {
         margin-left: -12px;
@@ -34,13 +35,37 @@ const IconButton = styled.button<IIconButton>`
         margin-right: -12px;
     }
 
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: ${props => props.theme.colors.waves};
+        transform: scale(1);
+        opacity: 0;
+        transition: 550ms cubic-bezier(0.4, 0, 0.2, 1);
+        user-select: none;
+    }
+
     &:hover {
         background-color: ${props => props.theme.colors.hovered};
         box-shadow: none;
     }
+
+    &:active:before {
+        transition: 0s;
+        transform: scale(0);
+        opacity: 1;
+    }
     
     ${props => props.color === "primary" && css`
-        i {
+        svg {
             color: ${props => props.theme.colors.primaryColor};
         }
 
@@ -50,7 +75,7 @@ const IconButton = styled.button<IIconButton>`
     `}
 
     ${props => props.color === "secondary" && css`
-        i {
+        svg {
             color: ${props => props.theme.colors.secondaryColor};
         }
 
@@ -64,7 +89,7 @@ const IconButton = styled.button<IIconButton>`
         cursor: default;
         pointer-events: none;
 
-        i {
+        svg {
             color: ${props => props.theme.colors.disabledText} !important;
         }
     `}

@@ -40,6 +40,7 @@ import TextField from '../components/TextField'
 import Skeleton from '../styles/Skeleton'
 
 import Button from '../styles/Button'
+import IconButton from '../styles/IconButton'
 
 const Design = () => {
     const codeSkeletonUse = 
@@ -143,6 +144,63 @@ export default function BasicTextFields() {
         </form>
     )
 }`
+
+    const ripple = (event) => {
+        const button = event.target
+        const ripple = document.createElement('span')
+
+        ripple.classList.add('ripple')
+        button.insertAdjacentElement('beforeend', ripple)
+
+        const position = button.getBoundingClientRect()
+
+        const top = Math.abs(position.top - event.clientY)
+        const left = Math.abs(position.left - event.clientX)
+        const scale = position.width
+
+        ripple.style.setProperty('--top', `${top}px`)
+        ripple.style.setProperty('--left', `${left}px`)
+        ripple.style.setProperty('--scale', scale)
+        ripple.style.setProperty('--opacity', '0.4')
+
+        function clearEffect() {
+            ripple.removeEventListener('transitionend', clearEffect)
+            ripple.style.setProperty('--opacity', '0')
+
+            ripple.addEventListener('transitionend', () => {
+                ripple.remove()
+            })
+        }
+
+        ripple.addEventListener('transitionend', clearEffect)
+
+
+
+        // if(button.tagName.toLowerCase() !== 'button') {
+        //     return false
+        // } else {
+        //     let rect = button.getBoundingClientRect()
+        //     let ripple = button.querySelector('.ripple')
+
+        //     if(!ripple) {
+        //         ripple = document.createElement('span')
+        //         ripple.className = 'ripple'
+        //         ripple.style.height = ripple.style.width = Math.max(rect.width, rect.height) + 'px'
+        //         button.appendChild(ripple)
+        //     }
+
+        //     ripple.classList.remove('show')
+        //     let top = event.pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop
+        //     let left = event.pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft
+
+        //     ripple.style.top = top + 'px'
+        //     ripple.style.left = left + 'px'
+        //     ripple.classList.add('show')
+        //     return false
+        // }
+    }
+
+    // addEventListener('mousedown', ripple)
 
     return (
         <>
@@ -731,13 +789,11 @@ export default function BasicTextFields() {
                         </Typography>
                         
                         <div className="box outlined p2 r2">
-                            <div className="item p1">
-                                <Button className="mx1">Default</Button>
-                                <Button color="primary" className="mx1">Primary</Button>
-                                <Button color="secondary" className="mx1">Secondary</Button>
-                                <Button disabled className="mx1">Disabled</Button>
-                                <Button color="primary" className="mx1">Link</Button>
-                            </div>
+                            <Button className="m1">Default</Button>
+                            <Button color="primary" className="m1">Primary</Button>
+                            <Button color="secondary" className="m1">Secondary</Button>
+                            <Button disabled className="m1">Disabled</Button>
+                            <Button color="primary" className="m1">Link</Button>
                         </div>
 
                         <SyntaxHighlighter language='tsx' style={false}>
@@ -757,13 +813,11 @@ export default function BasicTextFields() {
                         </Typography>
                         
                         <div className="box outlined p2 r2">
-                            <div className="item p1">
-                                <Button variant="contained" className="mx1">Default</Button>
-                                <Button variant="contained" color="primary" className="mx1">Primary</Button>
-                                <Button variant="contained" color="secondary" className="mx1">Secondary</Button>
-                                <Button variant="contained" disabled className="mx1">Disabled</Button>
-                                <Button variant="contained" color="primary" className="mx1">Link</Button>
-                            </div>
+                            <Button variant="contained" className="m1">Default</Button>
+                            <Button variant="contained" color="primary" className="m1">Primary</Button>
+                            <Button variant="contained" color="secondary" className="m1">Secondary</Button>
+                            <Button variant="contained" disabled className="m1">Disabled</Button>
+                            <Button variant="contained" color="primary" className="m1">Link</Button>
                         </div>
 
                         <SyntaxHighlighter language='tsx' style={false}>
@@ -788,18 +842,30 @@ export default function BasicTextFields() {
                         </Typography>
                         
                         <div className="box outlined p2 r2">
-                            <div className="item p1">
-                                <Button variant="outlined" className="mx1">Default</Button>
-                                <Button variant="outlined" color="primary" className="mx1">Primary</Button>
-                                <Button variant="outlined" color="secondary" className="mx1">Secondary</Button>
-                                <Button variant="outlined" disabled className="mx1">Disabled</Button>
-                                <Button variant="outlined" color="primary" className="mx1">Link</Button>
-                            </div>
+                            <Button onClick={ripple} variant="outlined" className="m1">Default</Button>
+                            <Button onClick={ripple} variant="outlined" color="primary" className="m1">Primary</Button>
+                            <Button onClick={ripple} variant="outlined" color="secondary" className="m1">Secondary</Button>
+                            <Button variant="outlined" disabled className="m1">Disabled</Button>
+                            <Button onClick={ripple} variant="outlined" color="primary" className="m1">Link</Button>
                         </div>
 
                         <SyntaxHighlighter language='tsx' style={false}>
                             {codeImplementButtonOutlined}
                         </SyntaxHighlighter>
+                    </div>
+                </section>
+                <section>
+                    <div className="container">
+                        <Typography variant="h4" component="h2" className="mb2">
+                            Botões de Ícones
+                        </Typography>
+                        
+                        <div className="box outlined p2 r2">
+                            <IconButton className="m1"><Home /></IconButton>
+                            <IconButton color="primary" className="m1"><Home color="primary" /></IconButton>
+                            <IconButton color="secondary" className="m1"><Home color="secondary" /></IconButton>
+                            <IconButton disabled className="m1"><Home /></IconButton>
+                        </div>
                     </div>
                 </section>
                 <section>

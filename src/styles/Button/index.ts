@@ -9,6 +9,8 @@ interface Ibutton {
 }
 
 const Button = styled.button<Ibutton>`
+    position: relative;
+    z-index: 1;
     display: inline-block;
     border: none;
     border-radius: 4px;
@@ -28,6 +30,7 @@ const Button = styled.button<Ibutton>`
     box-shadow: none;
     background-color: transparent;
     color: ${props => props.theme.colors.primaryText};
+    overflow: hidden;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
         box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
         border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -36,12 +39,53 @@ const Button = styled.button<Ibutton>`
         background-color: ${props => props.theme.colors.hovered};
     }
 
-    &:active {
-        background-color: ${props => props.theme.colors.hovered};
+    .ripple {
+        --top: 0;
+        --left: 0;
+        --scale: 0;
+        --opacity: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 1px;
+        height: 1px;
+        pointer-events: none;
+        will-change: transform;
+        transform: scale(0);
+        transform: translateX(var(--left)) translateY(var(--top));
+
+        &:after {
+            content: "";
+            display: block;
+            border-radius: 100%;
+            width: 2px;
+            height: 2px;
+            background: ${props => props.theme.colors.waves};
+            will-change: transform;
+            transform: scale(var(--scale));
+            opacity: var(--opacity);
+            transition: 550ms cubic-bezier(0.4, 0, 0.2, 1);
+            /* transition: transform .5s, opacity .3s; */
+        }
     }
 
-    &:focus {
-        background-color: ${props => props.theme.colors.hovered};
+    &.show {
+        opacity: 0.3;
+        animation: touchRipple 550ms cubic-bezier(0.4, 0, 0.2, 1);
+        transform: scale(1);
+    }
+
+    @keyframes touchRipple {
+        0% {
+            opacity: 0.1;
+            transform: scale(0);
+        }
+        100% {
+            opacity: 0.3;
+            transform: scale(1);
+        }
     }
 
     ${props => props.color === "primary" && css`
@@ -166,14 +210,6 @@ const Button = styled.button<Ibutton>`
             background-color: ${props => props.theme.colors.hovered};
         }
 
-        &:active {
-            background-color: ${props => props.theme.colors.hovered};
-        }
-
-        &:focus {
-            background-color: ${props => props.theme.colors.hovered};
-        }
-
         ${props.color === "primary" && css`
             color: ${props => props.theme.colors.primaryColor};
             border: 1px solid ${props => props.theme.colors.btnOutlinedPrimary};
@@ -187,14 +223,10 @@ const Button = styled.button<Ibutton>`
                 background-color: ${props => props.theme.colors.hoveredPrimary};
             }
 
-            &:active {
-                border: 1px solid ${props => props.theme.colors.primaryColor};
-                background-color: ${props => props.theme.colors.hoveredPrimary};
-            }
-
-            &:focus {
-                border: 1px solid ${props => props.theme.colors.primaryColor};
-                background-color: ${props => props.theme.colors.hoveredPrimary};
+            .ripple {
+                &:after {
+                    background: ${props => props.theme.colors.wavesOnPrimary};
+                }
             }
         `}
 
@@ -211,14 +243,10 @@ const Button = styled.button<Ibutton>`
                 background-color: ${props => props.theme.colors.hoveredSecondary};
             }
 
-            &:active {
-                border: 1px solid ${props => props.theme.colors.secondaryColor};
-                background-color: ${props => props.theme.colors.hoveredSecondary};
-            }
-
-            &:focus {
-                border: 1px solid ${props => props.theme.colors.secondaryColor};
-                background-color: ${props => props.theme.colors.hoveredSecondary};
+            .ripple {
+                &:after {
+                    background: ${props => props.theme.colors.wavesOnSecondary};
+                }
             }
         `}
 

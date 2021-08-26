@@ -10,6 +10,7 @@ const SvgIcon = styled.svg<ISvgIcon>`
     width: ${props => props.width ?? '24px'};
     height: ${props => props.height ?? '24px'};
     color: ${props => props.theme.colors.icon};
+    z-index: 1;
 
     ${props => props.color === "primary" && css`
         color: ${props => props.theme.colors.primaryColor};
