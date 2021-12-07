@@ -24,13 +24,13 @@ git clone https://github.com/deyvischarles/xnorlax
 cd xnorlax
 
 # Instalar as dependências
-npm install
+yarn install
 
 # fazer Build da aplicação
-npm run build
+yarn build
 
 # Executar o projeto
-npm start
+yarn start
 ```
 
 ## Autor

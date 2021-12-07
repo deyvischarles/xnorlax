@@ -484,8 +484,8 @@ export default function BasicTextFields() {
                         </Typography>
 
                         <Typography variant="body1" component="p" className="mb2">
-                            Nós padronizamos mais de 32 ícones de uso comun (veja abaixo). Para cada ícone SVG, 
-                            exportamos o respectivo componente React presente no diretório "components/icons".
+                            {`Nós padronizamos mais de 32 ícones de uso comun (veja abaixo). Para cada ícone SVG, 
+                            exportamos o respectivo componente React presente no diretório "components/icons".`}
                         </Typography>
                     </div>
                 </section>
@@ -723,8 +723,8 @@ export default function BasicTextFields() {
                     </div>
                     <div className="container">
                         <Typography variant="body1" component="p">
-                            Se você precisa customizar o ícone SVG (não disponível no conjunto padrão de ícones Material) 
-                            você pode encapsular em um SvgIcon. Este componente estende o elemento nativo "svg":
+                            {`Se você precisa customizar o ícone SVG (não disponível no conjunto padrão de ícones Material) 
+                            você pode encapsular em um SvgIcon. Este componente estende o elemento nativo "svg":`}
                         </Typography>
 
                         <SyntaxHighlighter language='tsx' style={false}>
@@ -873,9 +873,9 @@ export default function BasicTextFields() {
                         <Typography variant="h3" component="h2" className="mb2">Campo de texto</Typography>
 
                         <Typography variant="body1" component="p" className="mb2">
-                            Campos de texto permitem que os usuários digitem e editem texto em uma interface de usuário.
+                            {`Campos de texto permitem que os usuários digitem e editem texto em uma interface de usuário.
                             Eles geralmente aparecem em formulários e diálogos.
-                            Em nosso design system usamos dois tipos de campo de texto: "preenchido" e "delineado".
+                            Em nosso design system usamos dois tipos de campo de texto: "preenchido" e "delineado".`}
                         </Typography>
 
                         <div className="row">
@@ -921,7 +921,7 @@ export default function BasicTextFields() {
                                     <TextField 
                                         id="defaultValue"
                                         type="text"
-                                        label="Auto preencido"
+                                        label="Auto preenchido"
                                         defaultValue="Valor padrão"
                                         className="m2"
                                     />
@@ -949,7 +949,7 @@ export default function BasicTextFields() {
                                     <TextField 
                                         id="defaultValueOutlined"
                                         type="text"
-                                        label="Auto preencido"
+                                        label="Auto preenchido"
                                         defaultValue="Valor padrão"
                                         variant="outlined"
                                         className="m2"
