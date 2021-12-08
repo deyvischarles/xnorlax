@@ -15,8 +15,10 @@ const AppBar = styled.header<IAppBar>`
         width: 100%;
         height: auto;
         line-height: 56px;
+        border-bottom: 1px solid ${props => props.theme.colors.border};
         background-color: ${props => props.theme.colors.navBar};
         color: ${props => props.theme.colors.onNavBar};
+        backdrop-filter: blur(20px);
         padding: 0 16px;
         box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
 
@@ -44,7 +46,7 @@ const AppBar = styled.header<IAppBar>`
     
             .logo {
                 font-size: 2.1rem;
-                color: ${props => props.theme.colors.onNavBar};
+                color: ${props => props.theme.colors.primaryColor};
                 margin-right: 16px;
     
                 svg {

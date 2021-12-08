@@ -69,7 +69,7 @@ const Dark = {
         blueGray: '#B0BEC5',
 
         skeleton: 'rgba(255, 255, 255, 0.13)',
-        navBar: '#333',
+        navBar: 'rgba(255, 255, 255, 0.12)',
         onNavBar: '#fff',
         sideNav: '#424242',
         footer: '#424242',
@@ -89,7 +89,7 @@ const Dark = {
         boxDragged: 'rgba(255, 255, 255, 0.16)',
 
         icon: 'rgba(255, 255, 255, 1)',
-        background: '#212121',
+        background: '#111a20',
         paper: '#424242',
         divider: 'rgba(255, 255, 255, 0.12)',
         border: 'rgba(255, 255, 255, 0.23)',
