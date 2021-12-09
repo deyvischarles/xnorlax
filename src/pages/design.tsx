@@ -39,7 +39,7 @@ import Lightbulb from '../components/Icons/Lightbulb'
 import TextField from '../components/TextField'
 import Skeleton from '../styles/Skeleton'
 
-import Button from '../styles/Button'
+import Button from '../components/Button'
 import IconButton from '../styles/IconButton'
 
 const Design = () => {
@@ -144,25 +144,6 @@ export default function BasicTextFields() {
         </form>
     )
 }`
-
-    const ripple = (event) => {
-        const button = event.target as HTMLButtonElement
-        let ripple = document.createElement('span')
-
-        ripple.classList.add('ripple')
-        button.insertAdjacentElement('beforeend', ripple)
-        
-        const position = button.getBoundingClientRect()
-        const top = Math.abs(event.clientY - position.top)
-        const left = Math.abs(event.clientX - position.left)
-
-        ripple.style.setProperty('top', `${top}px`)
-        ripple.style.setProperty('left', `${left}px`)
-
-        setTimeout(() => {
-            ripple.remove()
-        }, 1000)
-    }
 
     return (
         <>
@@ -751,11 +732,11 @@ export default function BasicTextFields() {
                         </Typography>
                         
                         <div className="box outlined p2 r2">
-                            <Button onClick={ripple} className="m1">Default</Button>
-                            <Button onClick={ripple} color="primary" className="m1">Primary</Button>
-                            <Button onClick={ripple} color="secondary" className="m1">Secondary</Button>
+                            <Button className="m1">Default</Button>
+                            <Button color="primary" className="m1">Primary</Button>
+                            <Button color="secondary" className="m1">Secondary</Button>
                             <Button disabled className="m1">Disabled</Button>
-                            <Button onClick={ripple} color="primary" className="m1">Link</Button>
+                            <Button color="primary" className="m1">Link</Button>
                         </div>
 
                         <SyntaxHighlighter language='tsx' style={false}>
@@ -775,11 +756,11 @@ export default function BasicTextFields() {
                         </Typography>
                         
                         <div className="box outlined p2 r2">
-                            <Button onClick={ripple} variant="contained" className="m1">Default</Button>
-                            <Button onClick={ripple} variant="contained" color="primary" className="m1">Primary</Button>
-                            <Button onClick={ripple} variant="contained" color="secondary" className="m1">Secondary</Button>
+                            <Button variant="contained" className="m1">Default</Button>
+                            <Button variant="contained" color="primary" className="m1">Primary</Button>
+                            <Button variant="contained" color="secondary" className="m1">Secondary</Button>
                             <Button variant="contained" disabled className="m1">Disabled</Button>
-                            <Button onClick={ripple} variant="contained" color="primary" className="m1">Link</Button>
+                            <Button variant="contained" color="primary" className="m1">Link</Button>
                         </div>
 
                         <SyntaxHighlighter language='tsx' style={false}>
@@ -804,11 +785,11 @@ export default function BasicTextFields() {
                         </Typography>
                         
                         <div className="box outlined p2 r2">
-                            <Button onClick={ripple} variant="outlined" className="m1">Default</Button>
-                            <Button onClick={ripple} variant="outlined" color="primary" className="m1">Primary</Button>
-                            <Button onClick={ripple} variant="outlined" color="secondary" className="m1">Secondary</Button>
+                            <Button variant="outlined" className="m1">Default</Button>
+                            <Button variant="outlined" color="primary" className="m1">Primary</Button>
+                            <Button variant="outlined" color="secondary" className="m1">Secondary</Button>
                             <Button variant="outlined" disabled className="m1">Disabled</Button>
-                            <Button onClick={ripple} variant="outlined" color="primary" className="m1">Link</Button>
+                            <Button variant="outlined" color="primary" className="m1">Link</Button>
                         </div>
 
                         <SyntaxHighlighter language='tsx' style={false}>

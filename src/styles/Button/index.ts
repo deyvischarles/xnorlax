@@ -42,21 +42,20 @@ const Button = styled.button<Ibutton>`
     .ripple {
         position: absolute;
         background: ${props => props.theme.colors.waves};
-        transform: translate(-50%, -50%);
+        padding: 60%;
         pointer-events: none;
         border-radius: 50%;
-        animation: ripple 950ms cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translate(-50%, -50%) scale(0);
+        animation: rippleAnimation 550ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    @keyframes ripple {
+    @keyframes rippleAnimation {
         0% {
-            width: 0px;
-            height: 0px;
+            transform: translate(-50%, -50%) scale(0);
         }
         100% {
-            width: 500px;
-            height: 500px;
             opacity: 0;
+            transform: translate(-50%, -50%) scale(1);
         }
     }
 
