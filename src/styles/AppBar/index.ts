@@ -46,7 +46,14 @@ const AppBar = styled.header<IAppBar>`
     
             .logo {
                 font-size: 2.1rem;
-                color: ${props => props.theme.colors.primaryColor};
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-image: linear-gradient(
+                    91.18deg,
+                    ${props => props.theme.colors.blue} 26.63%,
+                    ${props => props.theme.colors.cyan} 62.22%
+                );
                 margin-right: 16px;
     
                 svg {

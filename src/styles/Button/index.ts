@@ -13,9 +13,9 @@ const Button = styled.button<Ibutton>`
     z-index: 1;
     display: inline-block;
     border: none;
-    border-radius: 4px;
-    height: 36px;
-    line-height: 36px;
+    border-radius: 20px;
+    height: 40px;
+    line-height: 40px;
     padding: 0 16px;
     font-size: 14px;
     font-weight: 500;
@@ -40,51 +40,23 @@ const Button = styled.button<Ibutton>`
     }
 
     .ripple {
-        --top: 0;
-        --left: 0;
-        --scale: 0;
-        --opacity: 0;
-        display: block;
         position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-        width: 1px;
-        height: 1px;
+        background: ${props => props.theme.colors.waves};
+        transform: translate(-50%, -50%);
         pointer-events: none;
-        will-change: transform;
-        transform: scale(0);
-        transform: translateX(var(--left)) translateY(var(--top));
-
-        &:after {
-            content: "";
-            display: block;
-            border-radius: 100%;
-            width: 2px;
-            height: 2px;
-            background: ${props => props.theme.colors.waves};
-            will-change: transform;
-            transform: scale(var(--scale));
-            opacity: var(--opacity);
-            transition: 550ms cubic-bezier(0.4, 0, 0.2, 1);
-            /* transition: transform .5s, opacity .3s; */
-        }
+        border-radius: 50%;
+        animation: ripple 950ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    &.show {
-        opacity: 0.3;
-        animation: touchRipple 550ms cubic-bezier(0.4, 0, 0.2, 1);
-        transform: scale(1);
-    }
-
-    @keyframes touchRipple {
+    @keyframes ripple {
         0% {
-            opacity: 0.1;
-            transform: scale(0);
+            width: 0px;
+            height: 0px;
         }
         100% {
-            opacity: 0.3;
-            transform: scale(1);
+            width: 500px;
+            height: 500px;
+            opacity: 0;
         }
     }
 
@@ -98,6 +70,10 @@ const Button = styled.button<Ibutton>`
         &:hover {
             background-color: ${props => props.theme.colors.hoveredPrimary};
         }
+
+        .ripple {
+            background: ${props => props.theme.colors.wavesOnPrimary};
+        }
     `}
 
     ${props => props.color === "secondary" && css`
@@ -109,6 +85,10 @@ const Button = styled.button<Ibutton>`
 
         &:hover {
             background-color: ${props => props.theme.colors.hoveredSecondary};
+        }
+
+        .ripple {
+            background: ${props => props.theme.colors.wavesOnSecondary};
         }
     `}
 
@@ -145,6 +125,10 @@ const Button = styled.button<Ibutton>`
             background-color: #d5d5d5;
         }
 
+        .ripple {
+            background: ${props => props.theme.colors.wavesOnRaised};
+        }
+
         ${props.color === "primary" && css`
             color: ${props => props.theme.colors.primaryColorContrast};
             background-color: ${props => props.theme.colors.primaryColor};
@@ -163,6 +147,10 @@ const Button = styled.button<Ibutton>`
 
             &:focus {
                 background-color: ${props => props.theme.colors.primaryColor};
+            }
+
+            .ripple {
+                background: ${props => props.theme.colors.wavesOnRaisedPrimary};
             }
         `}
 
@@ -184,6 +172,10 @@ const Button = styled.button<Ibutton>`
 
             &:focus {
                 background-color: ${props => props.theme.colors.secondaryColor};
+            }
+
+            .ripple {
+                background: ${props => props.theme.colors.wavesOnRaisedSecondary};
             }
         `}
 
@@ -224,9 +216,7 @@ const Button = styled.button<Ibutton>`
             }
 
             .ripple {
-                &:after {
-                    background: ${props => props.theme.colors.wavesOnPrimary};
-                }
+                background: ${props => props.theme.colors.wavesOnPrimary};
             }
         `}
 
@@ -244,9 +234,7 @@ const Button = styled.button<Ibutton>`
             }
 
             .ripple {
-                &:after {
-                    background: ${props => props.theme.colors.wavesOnSecondary};
-                }
+                background: ${props => props.theme.colors.wavesOnSecondary};
             }
         `}
 
