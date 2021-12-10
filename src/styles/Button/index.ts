@@ -42,7 +42,7 @@ const Button = styled.button<Ibutton>`
     .ripple {
         position: absolute;
         background: ${props => props.theme.colors.waves};
-        padding: 60%;
+        padding: 50%;
         pointer-events: none;
         border-radius: 50%;
         transform: translate(-50%, -50%) scale(0);
@@ -52,6 +52,9 @@ const Button = styled.button<Ibutton>`
     @keyframes rippleAnimation {
         0% {
             transform: translate(-50%, -50%) scale(0);
+        }
+        50% {
+            opacity: 0.75;
         }
         100% {
             opacity: 0;
