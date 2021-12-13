@@ -157,6 +157,68 @@ export default function BasicTextFields() {
             <main>
                 <section>
                     <div className="container">
+                        <Typography variant="h3" component="h2" className="mb2">
+                            Grade
+                        </Typography>
+
+                        <Typography variant="h5" component="p" className="mb2">
+                            O leiaute responsivo da grade se adapta ao tamanho e orientação da tela, garantindo a 
+                            consistência entre leiautes.
+                        </Typography>
+
+                        <Typography variant="body1" component="p" className="mb2">
+                            Uma grade cria consistência visual entre leiautes, enquanto permite flexibilidade em uma ampla 
+                            variedade de projetos. Nossa UI responsiva é baseada em um leiaute de grade com 12 colunas.
+                        </Typography>
+
+                        <div className="row mb2">
+                            <div className="col sm1 box surface outlined r2 py1">1</div>
+                            <div className="col sm1 box surface outlined r2 py1">2</div>
+                            <div className="col sm1 box surface outlined r2 py1">3</div>
+                            <div className="col sm1 box surface outlined r2 py1">4</div>
+                            <div className="col sm1 box surface outlined r2 py1">5</div>
+                            <div className="col sm1 box surface outlined r2 py1">6</div>
+                            <div className="col sm1 box surface outlined r2 py1">7</div>
+                            <div className="col sm1 box surface outlined r2 py1">8</div>
+                            <div className="col sm1 box surface outlined r2 py1">9</div>
+                            <div className="col sm1 box surface outlined r2 py1">10</div>
+                            <div className="col sm1 box surface outlined r2 py1">11</div>
+                            <div className="col sm1 box surface outlined r2 py1">12</div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div className="container">
+                        <Typography variant="h4" component="h3" className="mb2">
+                            Grades Responsivos
+                        </Typography>
+                        
+                        <Typography variant="body1" component="p" className="mb2">
+                            No exemplo abaixo, nós tornamos o leiaute responsivo definindo quantas colunas a div 
+                            deve ocupar em cada tamanho de tela. Tente redimensionar seu navegador e veja o 
+                            leiaute abaixo se auto-ajustando.
+                        </Typography>
+
+                        <div className="row my2">
+                            <div className="col sm12 box surface outlined r2 p1">SM12</div>
+                        </div>
+
+                        <div className="row mb2">
+                            <div className="col sm12 md4 lg2 box surface outlined r2 p1">SM12 - MD4 - LG2</div>
+                            <div className="col sm12 md4 lg8 box surface outlined r2 p1">SM12 - MD4 - LG8</div>
+                            <div className="col sm12 md4 lg2 box surface outlined r2 p1">SM12 - MD4 - LG2</div>
+                        </div>
+
+                        <div className="row mb2">
+                            <div className="col sm12 md6 lg3 box surface outlined r2 p1">SM12 - MD6 - LG3</div>
+                            <div className="col sm12 md6 lg3 box surface outlined r2 p1">SM12 - MD6 - LG3</div>
+                            <div className="col sm12 md6 lg3 box surface outlined r2 p1">SM12 - MD6 - LG3</div>
+                            <div className="col sm12 md6 lg3 box surface outlined r2 p1">SM12 - MD6 - LG3</div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div className="container">
                         <Typography variant="h3" component="h1" className="mb2">Esqueleto</Typography>
 
                         <Typography variant="h5" component="p" className="mb2">
@@ -356,68 +418,6 @@ export default function BasicTextFields() {
                         <SyntaxHighlighter language='tsx' style={false}>
                             {codeTypographySemantic}
                         </SyntaxHighlighter>
-                    </div>
-                </section>
-                <section>
-                    <div className="container">
-                        <Typography variant="h3" component="h2" className="mb2">
-                            Grade
-                        </Typography>
-
-                        <Typography variant="h5" component="p" className="mb2">
-                            O leiaute responsivo da grade se adapta ao tamanho e orientação da tela, garantindo a 
-                            consistência entre leiautes.
-                        </Typography>
-
-                        <Typography variant="body1" component="p" className="mb2">
-                            Uma grade cria consistência visual entre leiautes, enquanto permite flexibilidade em uma ampla 
-                            variedade de projetos. Nossa UI responsiva é baseada em um leiaute de grade com 12 colunas.
-                        </Typography>
-
-                        <div className="row mb2">
-                            <div className="col sm1 box surface outlined r2 py1">1</div>
-                            <div className="col sm1 box surface outlined r2 py1">2</div>
-                            <div className="col sm1 box surface outlined r2 py1">3</div>
-                            <div className="col sm1 box surface outlined r2 py1">4</div>
-                            <div className="col sm1 box surface outlined r2 py1">5</div>
-                            <div className="col sm1 box surface outlined r2 py1">6</div>
-                            <div className="col sm1 box surface outlined r2 py1">7</div>
-                            <div className="col sm1 box surface outlined r2 py1">8</div>
-                            <div className="col sm1 box surface outlined r2 py1">9</div>
-                            <div className="col sm1 box surface outlined r2 py1">10</div>
-                            <div className="col sm1 box surface outlined r2 py1">11</div>
-                            <div className="col sm1 box surface outlined r2 py1">12</div>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div className="container">
-                        <Typography variant="h4" component="h3" className="mb2">
-                            Grades Responsivos
-                        </Typography>
-                        
-                        <Typography variant="body1" component="p" className="mb2">
-                            No exemplo abaixo, nós tornamos o leiaute responsivo definindo quantas colunas a div 
-                            deve ocupar em cada tamanho de tela. Tente redimensionar seu navegador e veja o 
-                            leiaute abaixo se auto-ajustando.
-                        </Typography>
-
-                        <div className="row my2">
-                            <div className="col sm12 box surface outlined r2 p1">SM12</div>
-                        </div>
-
-                        <div className="row mb2">
-                            <div className="col sm12 md4 lg2 box surface outlined r2 p1">SM12 - MD4 - LG2</div>
-                            <div className="col sm12 md4 lg8 box surface outlined r2 p1">SM12 - MD4 - LG8</div>
-                            <div className="col sm12 md4 lg2 box surface outlined r2 p1">SM12 - MD4 - LG2</div>
-                        </div>
-
-                        <div className="row mb2">
-                            <div className="col sm12 md6 lg3 box surface outlined r2 p1">SM12 - MD6 - LG3</div>
-                            <div className="col sm12 md6 lg3 box surface outlined r2 p1">SM12 - MD6 - LG3</div>
-                            <div className="col sm12 md6 lg3 box surface outlined r2 p1">SM12 - MD6 - LG3</div>
-                            <div className="col sm12 md6 lg3 box surface outlined r2 p1">SM12 - MD6 - LG3</div>
-                        </div>
                     </div>
                 </section>
                 <section>
