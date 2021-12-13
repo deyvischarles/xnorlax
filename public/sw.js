@@ -1,5 +1,4 @@
-const date = new Date()
-const cacheName = `cache-${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+const cacheName = 'cache-2021-12-13_1947'
 
 const resourcesToCache = [
   '/',
