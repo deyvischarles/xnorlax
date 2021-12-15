@@ -5,7 +5,7 @@
   "background_color": "#0277bd",
   "display": "standalone",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "/?source=pwa",
   "orientation": "portrait",
   "lang": "pt-BR",
   "icons": [
