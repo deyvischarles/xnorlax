@@ -3,7 +3,7 @@
     <Head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <link rel="icon" sizes="32x32" href="/favicon.png" />
+        <link rel="icon" sizes="32x32" href="favicon.png" />
         <title>Xnorlax - Offline</title>
         <style rel="preload">
             * {
@@ -30,7 +30,7 @@
             }
 
             body {
-                background-color: #212121;
+                background-color: #111a20;
             }
 
             h1 {
@@ -93,6 +93,10 @@
                 align-items: flex-start;
             }
 
+            .full-height {
+                height: 100vh;
+            }
+
             .txt-center {
                 text-align: center;
             }
@@ -101,20 +105,131 @@
                 font-weight: 700;
             }
 
-            .mt5 {
-                margin-top: 40px;
+            .mb2 {
+                margin-bottom: 16px;
+            }
+
+            .mb4 {
+                margin-bottom: 32px;
+            }
+
+            .button {
+                position: relative;
+                z-index: 1;
+                display: inline-block;
+                border: 1px solid rgba(129, 212, 250, 0.5);
+                border-radius: 20px;
+                height: 40px;
+                line-height: 40px;
+                padding: 0 16px;
+                font-size: 14px;
+                font-weight: 600;
+                vertical-align: middle;
+                text-align: center;
+                cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+                user-select: none;
+                outline: 0;
+                box-shadow: none;
+                background-color: transparent;
+                color: #81d4fa;
+                overflow: hidden;
+                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+                    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+                    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            }
+
+            .button:hover {
+                border: 1px solid #81d4fa;
+                background-color: rgba(129, 212, 250, 0.08);
+            }
+
+            .assistant {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+                width: 96px;
+                height: 96px;
+                border-radius: 50%;
+                
+            }
+
+            .assistant::before,
+            .assistant::after {
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+                animation-timing-function: ease-in-out;
+                filter: drop-shadow(0 0 0.75rem rgba(50, 159, 210, 0));
+            }
+            
+            .assistant::before {
+                width: 100%;
+                height: 100%;
+                box-shadow: inset 0 0 0 12px #329fd2;
+                animation: b_waiting 2s linear infinite;
+            }
+            
+            .assistant::after {
+                width: 100%;
+                height: 100%;
+                background: rgba(50, 159, 210, 0.4);
+                box-shadow: inset 0 0 0 12px rgba(50, 159, 210, 0.5);
+                transform: scale(0.5);
+                animation: a_waiting 2s linear infinite;
+            }
+
+            @keyframes a_waiting {
+                0% {
+                    transform: rotateY(0deg) scale(0.75);
+                    background: rgba(50, 159, 210, 0);
+                }
+            
+                40%, 50%, 60% {
+                    transform: rotateY(180deg) scale(0.75);
+                    background: rgba(50, 159, 210, 0);
+                }
+                90% {
+                    transform: rotateY(0deg) scale(0.75);
+                    background: rgba(50, 159, 210, 0);
+                }
+
+                100% {
+                    transform: scale(0.75);
+                    background: rgba(50, 159, 210, 0);
+                }
+            }
+
+            @keyframes b_waiting {
+                30% {
+                    transform: rotateY(0deg);
+                    background: rgba(50, 159, 210, 0);
+                }
+            
+                65% {
+                    transform: rotateY(-180deg);
+                    background: rgba(50, 159, 210, 0);
+                }
             }
         </style>
     </Head>
     <main>
-        <section>
-            <div class="container">
-                <div class="box col txt-center mt5">
-                    <h1 class="gutterBottom">¯\_(ツ)_/¯</h1>
-                    <h2 class="subtitle bold gutterBottom">Offline</h2>
-                    <p>Não foi possível carregar as informações. Verifique sua conexão e tente novamente</p>
-                </div>
+        <div class="container">
+            <div class="box col txt-center full-height">
+                <span class="assistant mb4"></span>
+                <h2 class="subtitle bold gutterBottom">Sem conexão com a Internet</h2>
+                <p class="mb4">Verifique sua conexão e atualize a página.</p>
+                <button id="refresh" class="button">Atualizar</button>
             </div>
-        </section>
+        </div>
     </main>
+    <script>
+        const button = document.querySelector("#refresh")
+
+        button.addEventListener("click", function() {
+            location.reload()
+        })
+    </script>
 </html>
