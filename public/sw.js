@@ -1,4 +1,4 @@
-const cacheName = 'cache-2021-12-17_1710'
+const cacheName = 'cache-2022-03-30_1650'
 
 const resourcesToCache = [
   '/',
@@ -7,7 +7,6 @@ const resourcesToCache = [
   '/robots.txt',
   '/adaptive-icon.png',
   '/favicon.png',
-  '/icon-192.png',
   '/icon-512.png'
 ]
 
