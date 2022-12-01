@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactComponentElement } from 'react'
 import ButtonStyle from '../../styles/Button'
 
 interface IButtons {
@@ -7,6 +7,7 @@ interface IButtons {
     className?: string;
     disabled?: boolean;
     onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+    children?: any;
 }
 
 const Button: React.FC<IButtons> = ({ variant, color, className, disabled, onClick, children }) => {
