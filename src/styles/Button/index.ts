@@ -15,11 +15,9 @@ const Button = styled.button<Ibutton>`
     border: none;
     border-radius: 20px;
     height: 40px;
-    line-height: 40px;
     padding: 0 16px;
     font-size: 14px;
     font-weight: 500;
-    text-transform: uppercase;
     vertical-align: middle;
     text-align: center;
     cursor: pointer;
@@ -110,74 +108,74 @@ const Button = styled.button<Ibutton>`
     }
 
     ${props => props.variant === "contained" && css`
-        color: rgba(0, 0, 0, .87);
-        background-color: #e0e0e0;
+        color: ${props => props.theme.colors.primaryText};
+        background-color: ${props => props.theme.colors.hovered};
         box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
 
         &:hover {
             box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
-            background-color: #d5d5d5;
+            background-color: ${props => props.theme.colors.hovered};
         }
 
         &:active {
-            background-color: #d5d5d5;
+            background-color: ${props => props.theme.colors.hovered};
         }
 
         &:focus {
-            background-color: #d5d5d5;
+            background-color: ${props => props.theme.colors.hovered};
         }
 
         .ripple {
-            background: ${props => props.theme.colors.wavesOnRaised};
+            background: ${props => props.theme.colors.waves};
         }
 
         ${props.color === "primary" && css`
-            color: ${props => props.theme.colors.primaryColorContrast};
-            background-color: ${props => props.theme.colors.primaryColor};
+            color: ${props => props.theme.colors.primaryColor};
+            background-color: ${props => props.theme.colors.hoveredPrimary};
 
             i {
-                color: ${props => props.theme.colors.primaryColorContrast};
+                color: ${props => props.theme.colors.primaryColor};
             }
 
             &:hover {
-                background-color: ${props => props.theme.colors.primaryColor};
+                background-color: ${props => props.theme.colors.hoveredPrimary};
             }
 
             &:active {
-                background-color: ${props => props.theme.colors.primaryColor};
+                background-color: ${props => props.theme.colors.hoveredPrimary};
             }
 
             &:focus {
-                background-color: ${props => props.theme.colors.primaryColor};
+                background-color: ${props => props.theme.colors.hoveredPrimary};
             }
 
             .ripple {
-                background: ${props => props.theme.colors.wavesOnRaisedPrimary};
+                background: ${props => props.theme.colors.wavesOnPrimary};
             }
         `}
 
         ${props.color === "secondary" && css`
-            color: ${props => props.theme.colors.secondaryColorContrast};
-            background-color: ${props => props.theme.colors.secondaryColor};
+            color: ${props => props.theme.colors.secondaryColor};
+            background-color: ${props => props.theme.colors.hoveredSecondary};
 
             i {
                 color: ${props => props.theme.colors.secondaryColorContrast};
             }
 
             &:hover {
-                background-color: ${props => props.theme.colors.secondaryColor};
+                background-color: ${props => props.theme.colors.hoveredSecondary};
             }
 
             &:active {
-                background-color: ${props => props.theme.colors.secondaryColor};
+                background-color: ${props => props.theme.colors.hoveredSecondary};
             }
 
             &:focus {
-                background-color: ${props => props.theme.colors.secondaryColor};
+                background-color: ${props => props.theme.colors.hoveredSecondary};
             }
 
             .ripple {
-                background: ${props => props.theme.colors.wavesOnRaisedSecondary};
+                background: ${props => props.theme.colors.wavesOnSecondary};
             }
         `}
 
