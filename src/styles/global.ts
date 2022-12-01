@@ -50,7 +50,7 @@ export default createGlobalStyle`
     }
 
     html {
-        font-family: 'Segoe UI', -apple-system, Roboto, Ubuntu, sans-serif;
+        font-family: system-ui, 'Segoe UI', -apple-system, Roboto, Ubuntu;
         font-weight: normal;
         line-height: 1.43;
         -webkit-font-smoothing: antialiased;
@@ -76,7 +76,7 @@ export default createGlobalStyle`
     select,
     textarea,
     optgroup {
-        font-family: 'Segoe UI', -apple-system, Roboto, Ubuntu, sans-serif;
+        font-family: system-ui, 'Segoe UI', -apple-system, Roboto, Ubuntu;
     }
     
     a {
