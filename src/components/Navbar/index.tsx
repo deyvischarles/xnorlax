@@ -29,14 +29,14 @@ const Navbar: React.FC<INavbar> = ({toggleTheme}) => {
                         <MenuIcon/>
                     </IconButton>
                     
-                    <Link href="/"><a className="logo">Xnorlax</a></Link>
+                    <Link href="/" className="logo">Xnorlax</Link>
 
                     <span className="spacer"></span>
                     
                     <ul className="hide-xs show-md">
-                        <li><Link href="/blog"><a className={isActive('/blog')}>Blog<span className="indicator"></span></a></Link></li>
-                        <li><Link href="/design"><a className={isActive('/design')}>Design<span className="indicator"></span></a></Link></li>
-                        <li><Link href="/laboratory"><a className={isActive('/laboratory')}>Laboratório<span className="indicator"></span></a></Link></li>
+                        <li><Link href="/blog" className={isActive('/blog')}>Blog<span className="indicator"></span></Link></li>
+                        <li><Link href="/design" className={isActive('/design')}>Design<span className="indicator"></span></Link></li>
+                        <li><Link href="/laboratory" className={isActive('/laboratory')}>Laboratório<span className="indicator"></span></Link></li>
                     </ul>
 
                     <ul className="space">
@@ -50,9 +50,9 @@ const Navbar: React.FC<INavbar> = ({toggleTheme}) => {
                 <div className="content hide-md">
                     <div className="wrapper">
                         <ul>
-                            <li><Link href="/blog"><a className={isActive('/blog')}>Blog<span className="indicator"></span></a></Link></li>
-                            <li><Link href="/design"><a className={isActive('/design')}>Design<span className="indicator"></span></a></Link></li>
-                            <li><Link href="/laboratory"><a className={isActive('/laboratory')}>Laboratório<span className="indicator"></span></a></Link></li>
+                            <li><Link href="/blog" className={isActive('/blog')}>Blog<span className="indicator"></span></Link></li>
+                            <li><Link href="/design" className={isActive('/design')}>Design<span className="indicator"></span></Link></li>
+                            <li><Link href="/laboratory" className={isActive('/laboratory')}>Laboratório<span className="indicator"></span></Link></li>
                         </ul>
                     </div>
                 </div>
