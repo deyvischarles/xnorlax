@@ -36,6 +36,7 @@ import Info from '../components/Icons/Info'
 import Label from '../components/Icons/Label'
 import Language from '../components/Icons/Language'
 import Lightbulb from '../components/Icons/Lightbulb'
+import Xnorlax from '../components/Icons/Xnorlax'
 import TextField from '../components/TextField'
 import Skeleton from '../styles/Skeleton'
 
@@ -614,6 +615,12 @@ export default function BasicTextFields() {
                         <Typography variant="h5" className="mx1 mb2">Logos</Typography>
 
                         <div className="row mb2">
+                            <div className="col sm4 md2 p1">
+                                <div className="box col nowrap outlined r2 p2">
+                                    <Xnorlax className="mb1"/>
+                                    <Typography variant="caption" component="p">Xnorlax</Typography>
+                                </div>
+                            </div>
                             <div className="col sm4 md2 p1">
                                 <div className="box col nowrap outlined r2 p2">
                                     <GitHub className="mb1"/>
