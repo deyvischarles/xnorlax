@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-br">
         <Head>
-          <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover' />
+          <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2 shrink-to-fit=no, viewport-fit=cover' />
           <meta name="theme-color" content="#004c8c" />
           <meta name="author" content="Deyvis Charles" />
           <link rel="icon" type='image/png' sizes="32x32" href="/favicon.png" />
