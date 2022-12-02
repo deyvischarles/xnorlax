@@ -45,6 +45,8 @@ const AppBar = styled.header<IAppBar>`
             }
     
             .logo {
+                display: flex;
+                align-items: center;
                 font-size: 2.1rem;
                 background-clip: text;
                 -webkit-background-clip: text;
@@ -57,7 +59,6 @@ const AppBar = styled.header<IAppBar>`
                 margin-right: 16px;
     
                 svg {
-                    float: left;
                     margin-right: 12px;
                 }
             }
@@ -145,7 +146,7 @@ const AppBar = styled.header<IAppBar>`
                 }
             }
     
-            svg {
+            > svg {
                 color: ${props => props.theme.colors.onNavBar};
             }
 

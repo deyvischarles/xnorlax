@@ -8,6 +8,7 @@ import IconButton from '../../styles/IconButton'
 import MenuIcon from '../Icons/Menu'
 import Brightness4 from '../Icons/Brightness4'
 import Brightness7 from '../Icons/Brightness7'
+import Xnorlax from '../Icons/Xnorlax'
 
 interface INavbar {
     toggleTheme(): void
@@ -28,8 +29,11 @@ const Navbar: React.FC<INavbar> = ({toggleTheme}) => {
                     <IconButton aria-label="Abrir menu lateral" data-target="slide-out" className="sidenav-trigger edgeStart hide-xs">
                         <MenuIcon/>
                     </IconButton>
-                    
-                    <Link href="/" className="logo">Xnorlax</Link>
+
+                    <Link href="/" className="logo">
+                        <Xnorlax width="36" height="36" color="primary" />
+                        Xnorlax
+                    </Link>
 
                     <span className="spacer"></span>
                     
