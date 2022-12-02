@@ -746,11 +746,11 @@ export default function BasicTextFields() {
                         </Typography>
                         
                         <div className="box outlined p2 r2">
-                            <Button className="m1" aria-label="Default">Default</Button>
-                            <Button color="primary" className="m1" aria-label="Primary">Primary</Button>
-                            <Button color="secondary" className="m1" aria-label="Secondary">Secondary</Button>
-                            <Button disabled className="m1" aria-label="Disabled">Disabled</Button>
-                            <Button color="primary" className="m1" aria-label="Link">Link</Button>
+                            <Button className="m1">Default</Button>
+                            <Button color="primary" className="m1">Primary</Button>
+                            <Button color="secondary" className="m1">Secondary</Button>
+                            <Button disabled className="m1">Disabled</Button>
+                            <Button color="primary" className="m1">Link</Button>
                         </div>
 
                         <SyntaxHighlighter language='tsx' style={false}>
@@ -818,10 +818,10 @@ export default function BasicTextFields() {
                         </Typography>
                         
                         <div className="box outlined p2 r2">
-                            <IconButton className="m1"><Home /></IconButton>
-                            <IconButton color="primary" className="m1"><Home color="primary" /></IconButton>
-                            <IconButton color="secondary" className="m1"><Home color="secondary" /></IconButton>
-                            <IconButton disabled className="m1"><Home /></IconButton>
+                            <IconButton className="m1" aria-label="Default"><Home /></IconButton>
+                            <IconButton color="primary" className="m1" aria-label="Primary"><Home color="primary" /></IconButton>
+                            <IconButton color="secondary" className="m1" aria-label="Secondary"><Home color="secondary" /></IconButton>
+                            <IconButton disabled className="m1" aria-label="Disabled"><Home /></IconButton>
                         </div>
                     </div>
                 </section>
