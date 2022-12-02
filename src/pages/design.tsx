@@ -42,6 +42,7 @@ import Skeleton from '../styles/Skeleton'
 
 import Button from '../components/Button'
 import IconButton from '../styles/IconButton'
+import Heroku from '../components/Icons/Heroku'
 
 const Design = () => {
     const codeSkeletonUse = 
@@ -617,55 +618,61 @@ export default function BasicTextFields() {
                         <div className="row mb2">
                             <div className="col sm4 md2 p1">
                                 <div className="box col nowrap outlined r2 p2">
-                                    <Xnorlax className="mb1"/>
+                                    <Xnorlax width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Xnorlax</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
                                 <div className="box col nowrap outlined r2 p2">
-                                    <GitHub className="mb1"/>
+                                    <GitHub width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">GitHub</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
                                 <div className="box col nowrap outlined r2 p2">
-                                    <Linkedin className="mb1"/>
+                                    <Heroku width="32" height="32" className="mb1"/>
+                                    <Typography variant="caption" component="p">Heroku</Typography>
+                                </div>
+                            </div>
+                            <div className="col sm4 md2 p1">
+                                <div className="box col nowrap outlined r2 p2">
+                                    <Linkedin width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Linkedin</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
                                 <div className="box col nowrap outlined r2 p2">
-                                    <YouTube className="mb1"/>
+                                    <YouTube width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">YouTube</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
                                 <div className="box col nowrap outlined r2 p2">
-                                    <Instagram className="mb1"/>
+                                    <Instagram width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Instagram</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
                                 <div className="box col nowrap outlined r2 p2">
-                                    <Facebook className="mb1"/>
+                                    <Facebook width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Facebook</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
                                 <div className="box col nowrap outlined r2 p2">
-                                    <Whatsapp className="mb1"/>
+                                    <Whatsapp width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Whatsapp</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
                                 <div className="box col nowrap outlined r2 p2">
-                                    <Telegram className="mb1"/>
+                                    <Telegram width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">Telegram</Typography>
                                 </div>
                             </div>
                             <div className="col sm4 md2 p1">
                                 <div className="box col nowrap outlined r2 p2">
-                                    <PlayStore className="mb1"/>
+                                    <PlayStore width="32" height="32" className="mb1"/>
                                     <Typography variant="caption" component="p">PlayStore</Typography>
                                 </div>
                             </div>
