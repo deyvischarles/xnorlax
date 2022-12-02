@@ -401,6 +401,14 @@ export default createGlobalStyle`
         }
     }
 
+    .gradient {
+        background-image: linear-gradient(
+            91.18deg,
+            ${props => props.theme.colors.blue} 26.63%,
+            ${props => props.theme.colors.cyan} 62.22%
+        );
+    }
+
     pre {
         display: flex;
         font-family: monospace;
