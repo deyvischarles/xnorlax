@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { ThemeProvider, DefaultTheme } from 'styled-components'
 
 import UsePersistedState from '../utils/usePersistedState'
@@ -15,11 +16,16 @@ const MyApp = ({ Component, pageProps }) => {
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Navbar toggleTheme={toggleTheme} />
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <>
+      <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2 shrink-to-fit=no, viewport-fit=cover' />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Navbar toggleTheme={toggleTheme} />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
   )
 }
 
