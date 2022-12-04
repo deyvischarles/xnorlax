@@ -20,7 +20,7 @@ const TextField: React.FC<ITextField> = (props) => {
     const [value, setValue] = useState((props.defaultValue ?? ''))
     
     return (
-        <StyleTextField {...props}>
+        <StyleTextField variant={props.variant} disabled={props.disabled} className={props.className} >
             <input
                 id={props.id}
                 type={props.type}
