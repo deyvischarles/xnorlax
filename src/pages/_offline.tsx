@@ -26,10 +26,10 @@ const Offline = () => {
                 <Assistant />
               </div>
               <div className="box col">
-                  <Typography variant="h3" component="h1" className="mt2 mb2 bold">
+                  <Typography variant="h5" component="h1" weight='bold' className="mt2 mb2">
                       Sem conexão com a Internet
                   </Typography>
-                  <Typography variant="h5" component="p" className="mb4">
+                  <Typography variant="body1" component="p" className="mb4">
                       Verifique sua conexão ou atualize a página.
                   </Typography>
                   <Button onClick={reload} variant="outlined" color="primary" className="m1">Atualizar</Button>
