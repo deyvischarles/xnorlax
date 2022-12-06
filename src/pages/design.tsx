@@ -141,8 +141,7 @@ import Favorite from 'components/icons/Favorite'`
 export default function BasicTextFields() {
     return (
         <form>
-            <TextField id="filled" label="Filled" />
-            <TextField id="outlined" label="Outlined" variant="outlined" />
+            <TextField id="outlined" label="Outlined" />
         </form>
     )
 }`
@@ -832,25 +831,16 @@ export default function BasicTextFields() {
                         <Typography variant="body1" component="p" className="mb2">
                             {`Campos de texto permitem que os usuários digitem e editem texto em uma interface de usuário.
                             Eles geralmente aparecem em formulários e diálogos.
-                            Em nosso design system usamos dois tipos de campo de texto: "preenchido" e "delineado".`}
+                            Em nosso design system usamos apenas um tipo de campo de texto: "delineado".`}
                         </Typography>
 
                         <div className="row">
                             <div className="box outlined r2 p2">
                                 <div className="col sm12 md6 lg4">
-                                    <TextField
-                                        id="filed"
-                                        type="text"
-                                        label="Preenchido"
-                                        className="m2"
-                                    />
-                                </div>
-                                <div className="col sm12 md6 lg4">
                                     <TextField 
                                         id="outlined"
                                         type="text"
                                         label="Delineado"
-                                        variant="outlined"
                                         className="m2"
                                     />
                                 </div>
@@ -876,39 +866,10 @@ export default function BasicTextFields() {
                             <div className="box outlined r2 p2">
                                 <div className="col sm12 md6 lg4">
                                     <TextField 
-                                        id="defaultValue"
-                                        type="text"
-                                        label="Auto preenchido"
-                                        defaultValue="Valor padrão"
-                                        className="m2"
-                                    />
-                                </div>
-                                <div className="col sm12 md6 lg4">
-                                    <TextField 
-                                        id="required"
-                                        type="text"
-                                        label="Obrigatório"
-                                        required
-                                        helpText="Este campo é obrigatório"
-                                        className="m2"
-                                    />
-                                </div>
-                                <div className="col sm12 md6 lg4">
-                                    <TextField 
-                                        id="disabled"
-                                        type="text"
-                                        label="Desativado"
-                                        className="m2"
-                                        disabled
-                                    />
-                                </div>
-                                <div className="col sm12 md6 lg4">
-                                    <TextField 
                                         id="defaultValueOutlined"
                                         type="text"
                                         label="Auto preenchido"
                                         defaultValue="Valor padrão"
-                                        variant="outlined"
                                         className="m2"
                                     />
                                 </div>
@@ -918,7 +879,6 @@ export default function BasicTextFields() {
                                         type="text"
                                         label="Obrigatório"
                                         required helpText="Este campo é obrigatório"
-                                        variant="outlined"
                                         className="m2"
                                     />
                                 </div>
@@ -927,7 +887,6 @@ export default function BasicTextFields() {
                                         id="disabledOutlined"
                                         type="text"
                                         label="Desativado"
-                                        variant="outlined"
                                         className="m2"
                                         disabled
                                     />

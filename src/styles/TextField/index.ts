@@ -1,7 +1,6 @@
 import styled, {css} from 'styled-components'
 
 interface ITextField {
-    variant?: string,
     disabled?: boolean
 }
 
@@ -16,38 +15,47 @@ const TextField = styled.div<ITextField>`
         width: 100%;
         min-width: 252px;
         height: 48px;
-        border: none;
-        border-bottom: 1px solid ${props => props.theme.colors.secondaryText};
-        border-radius: 4px 4px 0 0;
-        background-color: ${props => props.theme.colors.box};
+        border: 1px solid ${props => props.theme.colors.secondaryText};
+        border-radius: 4px;
+        background-color: transparent;
         margin-bottom: 16px;
-        padding: 24px 12px 8px 16px;
+        padding: 16px 12px 16px 16px;
+
         font-size: 1rem;
         color: ${props => props.theme.colors.primaryText};
         outline: none;
         transition: background-color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
 
         &:hover {
-            background-color: ${props => props.theme.colors.boxHovered};
-            border-bottom: 1px solid ${props => props.theme.colors.primaryText};
+            border: 1px solid ${props => props.theme.colors.primaryText};
+            background-color: transparent;
         }
 
         &:focus {
-            background-color: ${props => props.theme.colors.boxFocused};
+            padding: 15px 11px 15px 15px;
+            background-color: transparent;
+            border: 2px solid ${props => props.theme.colors.primaryColor};
         }
 
         &:focus ~ label {
             color: ${props => props.theme.colors.primaryColor};
-            transform: translate(16px, 8px) scale(0.75);
+            transform: translate(16px, -6px) scale(0.75);
         }
 
         &.used ~ label {
-            transform: translate(16px, 8px) scale(0.75);
+            transform: translate(16px, -6px) scale(0.75);
         }
 
-        &:focus ~ .bar:before,
-        &:focus ~ .bar:after {
-            width: 50%;
+        &:focus ~ label:before,
+        &.used ~ label:before {
+            position: absolute;
+            top: 0;
+            left: -4px;
+            content: "";
+            width: calc(100% + 8px);
+            height: 1rem;
+            background-color: ${props => props.theme.colors.background};
+            z-index: -1;
         }
 
         &:required ~ label:after {
@@ -55,7 +63,7 @@ const TextField = styled.div<ITextField>`
         }
 
         &:invalid {
-            border-bottom: 1px solid ${props => props.theme.colors.errorColor};
+            border: 1px solid ${props => props.theme.colors.errorColor};
         }
 
         &:invalid ~ label {
@@ -88,19 +96,6 @@ const TextField = styled.div<ITextField>`
         transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
     }
 
-    .bar:before, .bar:after {
-        content: "";
-        position: absolute;
-        bottom: 16px;
-        width: 0;
-        height: 2px;
-        background-color: ${props => props.theme.colors.primaryColor};
-        transition: all 200ms cubic-bezier(.4, 0, .2, 1);
-    }
-
-    .bar:before { left: 50%; }
-    .bar:after { right: 50%; }
-
     .helpText {
         position: absolute;
         top: calc(100% - 10px);
@@ -117,63 +112,12 @@ const TextField = styled.div<ITextField>`
         input {
             pointer-events: none;
             color: ${props => props.theme.colors.disabledText} !important;
-            border-bottom: 1px dotted ${props => props.theme.colors.disabledText} !important;
+            border: 1px dotted ${props => props.theme.colors.disabledText} !important;
         }
 
         label {
             color: ${props => props.theme.colors.disabledText} !important;
         }
-    `}
-
-    ${props => props.variant === "outlined" && css`
-        input {
-            border: 1px solid ${props => props.theme.colors.secondaryText};
-            border-radius: 4px;
-            background-color: transparent;
-            padding: 16px 12px 16px 16px;
-
-            &:hover {
-                border: 1px solid ${props => props.theme.colors.primaryText};
-                background-color: transparent;
-            }
-
-            &:focus {
-                padding: 15px 11px 15px 15px;
-                background-color: transparent;
-                border: 2px solid ${props => props.theme.colors.primaryColor};
-            }
-
-            &:focus ~ label,
-            &.used ~ label {
-                transform: translate(16px, -6px) scale(0.75);
-            }
-
-            &:focus ~ label:before,
-            &.used ~ label:before {
-                position: absolute;
-                top: 0;
-                left: -4px;
-                content: "";
-                width: calc(100% + 8px);
-                height: 1rem;
-                background-color: ${props => props.theme.colors.background};
-                z-index: -1;
-            }
-
-            &:invalid {
-                border-color: ${props => props.theme.colors.errorColor};
-            }
-        }
-
-        .bar:before, .bar:after {
-            content: none;
-        }
-
-        ${props.disabled && css`
-            input {
-                border: 1px solid ${props => props.theme.colors.disabledText} !important;
-            }
-        `}
     `}
 
     input:-webkit-autofill,
