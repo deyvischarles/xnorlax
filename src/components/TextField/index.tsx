@@ -7,7 +7,6 @@ interface ITextField {
     label: string,
     placeholder?: string,
     defaultValue?: string,
-    variant?: string,
     disabled?: boolean,
     required?: boolean,
     pattern?: string,
@@ -20,7 +19,7 @@ const TextField: React.FC<ITextField> = (props) => {
     const [value, setValue] = useState((props.defaultValue ?? ''))
     
     return (
-        <StyleTextField variant={props.variant} disabled={props.disabled} className={props.className} >
+        <StyleTextField disabled={props.disabled} className={props.className} >
             <input
                 id={props.id}
                 type={props.type}
@@ -31,7 +30,6 @@ const TextField: React.FC<ITextField> = (props) => {
                 className={(value.length > 0) ? 'used': undefined}
             />
             <label htmlFor={props.id}>{props.label}</label>
-            <span className="bar" />
             <p className="helpText">{props.helpText}</p>
         </StyleTextField>
     )
