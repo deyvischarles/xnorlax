@@ -20,7 +20,7 @@ const Erro404 = () => {
                 404
               </Typography>
 
-              <Typography variant="h5" component="p">
+              <Typography variant="h5" component="p" className="mb1">
                 página não encontrada!
               </Typography>
             </div>
