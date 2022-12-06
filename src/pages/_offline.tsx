@@ -20,18 +20,22 @@ const Offline = () => {
       </Head>
 
       <main>
-        <div className="container">
-            <div className="box col txt-center vh1">
+        <section>
+          <div className="container">
+              <div className="box p3">
                 <Assistant />
-                <Typography variant="h2" component="h1" className="mt2 mb2 bold">
-                    Sem conexão com a Internet
-                </Typography>
-                <Typography variant="h5" component="p" className="mb4">
-                    Verifique sua conexão e atualize a página.
-                </Typography>
-                <Button onClick={reload} variant="outlined" color="primary" className="m1">Atualizar</Button>
-            </div>
-        </div>
+              </div>
+              <div className="box col">
+                  <Typography variant="h3" component="h1" className="mt2 mb2 bold">
+                      Sem conexão com a Internet
+                  </Typography>
+                  <Typography variant="h5" component="p" className="mb4">
+                      Verifique sua conexão ou atualize a página.
+                  </Typography>
+                  <Button onClick={reload} variant="outlined" color="primary" className="m1">Atualizar</Button>
+              </div>
+          </div>
+        </section>
       </main>
     </>
   )
