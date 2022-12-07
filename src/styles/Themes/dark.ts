@@ -22,7 +22,7 @@ const Dark = {
 
         primaryText: 'rgba(255, 255, 255, 0.87)',
         secondaryText: 'rgba(255, 255, 255, 0.6)',
-        disabledText: 'rgba(255, 255, 255, 0.38)',
+        disabledText: 'rgba(255, 255, 255, 0.48)',
 
         enabled: 'transparent',
         hovered: 'rgba(255, 255, 255, 0.08)',

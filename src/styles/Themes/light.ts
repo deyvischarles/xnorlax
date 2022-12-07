@@ -22,7 +22,7 @@ const Light = {
 
         primaryText: 'rgba(0, 0, 0, 0.87)',
         secondaryText: 'rgba(0, 0, 0, 0.54)',
-        disabledText: 'rgba(0, 0, 0, 0.38)',
+        disabledText: 'rgba(0, 0, 0, 0.48)',
 
         enabled: 'transparent',
         hovered: 'rgba(0, 0, 0, 0.04)',
