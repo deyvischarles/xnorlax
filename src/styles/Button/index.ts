@@ -1,11 +1,13 @@
 import styled, { ThemeProvider, css } from "styled-components";
 
 interface Ibutton {
+    id?: string;
     variant?: 'contained' | 'outlined';
-    color?: string;
+    color?: 'primary' | 'secondary';
     className?: string;
     disabled?: boolean;
     onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+    children?: any;
 }
 
 const Button = styled.button<Ibutton>`

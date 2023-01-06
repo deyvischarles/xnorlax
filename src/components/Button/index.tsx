@@ -2,8 +2,9 @@ import React, { ReactComponentElement } from 'react'
 import ButtonStyle from '../../styles/Button'
 
 interface IButtons {
+    id?: string;
     variant?: 'contained' | 'outlined';
-    color?: string;
+    color?: 'primary' | 'secondary';
     className?: string;
     disabled?: boolean;
     onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
