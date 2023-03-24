@@ -16,7 +16,7 @@ const Home = () => {
         <section>
           <div className="container">
             <Typography variant="h3" component="h1" className="mb2">
-              Bem-vindo a Xnorlax!
+              Bem-vindo a SystemGx!
             </Typography>
 
             <Typography variant="h5" component="h2" className="mb2">
@@ -25,7 +25,7 @@ const Home = () => {
             </Typography>
             
             <Typography variant="body1" component="p">
-              Se você gostar do nosso conteúdo também poderar instalar esse app na sua tela principal.
+              Se você quiser acompanhar nosso progresso também poderar instalar esse app no seu smartphone.
             </Typography>
           </div>
         </section>
