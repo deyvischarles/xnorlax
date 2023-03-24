@@ -20,8 +20,8 @@ const Home = () => {
             </Typography>
 
             <Typography variant="h5" component="h2" className="mb2">
-              Nosso sistema ainda está em desenvolvimento, mas você pode navegar pelo conteúdo 
-              existente à vontade.
+              Nosso sistema ainda está em desenvolvimento, mas você pode espiar nosso design de componentes 
+              à vontade.
             </Typography>
             
             <Typography variant="body1" component="p">
