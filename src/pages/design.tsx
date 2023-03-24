@@ -152,7 +152,7 @@ export default function BasicTextFields() {
                 <meta name="description" content="Nosso sistema de design"/>
                 <meta name="keywords" content="xnorlax, design"/>
                 <link rel="canonical" href={`${process.env.NEXT_PUBLIC_APP_URL}/design`} />
-                <title>Xnorlax - Design</title>
+                <title>SystemGx - Design</title>
             </Head>
 
             <main>

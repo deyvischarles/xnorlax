@@ -16,7 +16,7 @@ const Offline = () => {
         <meta name="description" content="Aplicação Backend e Frontend para a web"/>
         <meta name="keywords" content="xnorlax, offline"/>
         <link rel="canonical" href={`${process.env.NEXT_PUBLIC_APP_URL}/offline`} />
-        <title>Xnorlax - Offline</title>
+        <title>SystemGx - Offline</title>
       </Head>
 
       <main>

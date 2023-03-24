@@ -9,7 +9,7 @@ const Home = () => {
         <meta name="description" content="Frontend web"/>
         <meta name="keywords" content="xnorlax, home"/>
         <link rel="canonical" href={`${process.env.NEXT_PUBLIC_APP_URL}`} />
-        <title>Xnorlax</title>
+        <title>SystemGx</title>
       </Head>
 
       <main>
