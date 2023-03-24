@@ -32,15 +32,13 @@ const Navbar: React.FC<INavbar> = ({toggleTheme}) => {
 
                     <Link href="/" className="logo">
                         <Xnorlax width="36" height="36" color="primary" />
-                        Xnorlax
+                        SystemGx
                     </Link>
 
                     <span className="spacer"></span>
                     
                     <ul className="hide-xs show-md">
-                        <li><Link href="/blog" className={isActive('/blog')}>Blog<span className="indicator"></span></Link></li>
                         <li><Link href="/design" className={isActive('/design')}>Design<span className="indicator"></span></Link></li>
-                        <li><Link href="/laboratory" className={isActive('/laboratory')}>Laboratório<span className="indicator"></span></Link></li>
                     </ul>
 
                     <ul className="space">
