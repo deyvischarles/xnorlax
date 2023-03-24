@@ -9,7 +9,7 @@ const Blog = () => {
             <meta name="description" content="Nosso portal de notícias"/>
             <meta name="keywords" content="xnorlax, blog"/>
             <link rel="canonical" href={`${process.env.NEXT_PUBLIC_APP_URL}/blog`} />
-            <title>Xnorlax - Blog</title>
+            <title>SystemGx - Blog</title>
         </Head>
 
         <main>

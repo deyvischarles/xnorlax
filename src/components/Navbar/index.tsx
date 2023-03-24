@@ -52,9 +52,7 @@ const Navbar: React.FC<INavbar> = ({toggleTheme}) => {
                 <div className="content hide-md">
                     <div className="wrapper">
                         <ul>
-                            <li><Link href="/blog" className={isActive('/blog')}>Blog<span className="indicator"></span></Link></li>
                             <li><Link href="/design" className={isActive('/design')}>Design<span className="indicator"></span></Link></li>
-                            <li><Link href="/laboratory" className={isActive('/laboratory')}>Laboratório<span className="indicator"></span></Link></li>
                         </ul>
                     </div>
                 </div>
